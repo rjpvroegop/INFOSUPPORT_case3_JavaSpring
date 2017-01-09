@@ -6,10 +6,18 @@
 	<groupId>com.example</groupId>
 	<artifactId>kantilever-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>kantilever-backend</name>
 	<description>Demo project for Spring Boot</description>
+	<modules>
+		<module>Bsbestellingbeheer</module>
+		<module>Bscatalogusbeheer</module>
+		<module>Bsklantbeheer</module>
+		<module>Discoveryserver</module>
+		<module>Pcsbestellen</module>
+		<module>Pcswinkelen</module>
+	</modules>
 
 
 </project>
