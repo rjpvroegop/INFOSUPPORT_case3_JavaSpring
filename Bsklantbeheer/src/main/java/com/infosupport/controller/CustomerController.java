@@ -31,7 +31,7 @@ public class CustomerController {
         this.addressRepository = addressRepository;
     }
 
-    @RequestMapping(value = "{id}/", method = GET)
+    @RequestMapping(value = "{id}", method = GET)
     public Customer getCustomer(@PathVariable("id") Long id) {
         return customerRepository.findOne(id);
     }

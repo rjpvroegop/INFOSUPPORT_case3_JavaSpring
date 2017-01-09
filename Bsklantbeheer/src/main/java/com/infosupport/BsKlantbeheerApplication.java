@@ -2,6 +2,7 @@ package com.infosupport;
 
 import com.infosupport.domain.Address;
 import com.infosupport.domain.Customer;
+import com.infosupport.repository.AddressRepository;
 import com.infosupport.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,16 +22,18 @@ public class BsKlantbeheerApplication {
 	}
 
 	@Bean
-	CommandLineRunner onStartUp(CustomerRepository repo){
+	CommandLineRunner onStartUp(CustomerRepository customerRepository, AddressRepository addressRepository){
 		return (String... args) ->{
 			Address address1 = Address.builder().city("Dordrecht").zip("1234 AB").street("Leerpark 50").build();
 			Address address2 = Address.builder().city("Breda").zip("1234 AB").street("Leerpark 50").build();
+			addressRepository.save(address1);
+			addressRepository.save(address2);
 
-			repo.save(Customer.builder().firstName("Sander").lastName("Blijlevens").email("SB@hotmail.com").credit(200).addressCollection(Arrays.asList(address1)).build());
-			repo.save(Customer.builder().firstName("Kenzo").lastName("Dominicus").email("KD@gmail.com").credit(300).build());
-			repo.save(Customer.builder().firstName("Randy").lastName("Vroegop").email("RV@gmail.com").credit(300).build());
-			repo.save(Customer.builder().firstName("Yusuf").lastName("Yusuf").email("YY@outlook.com").credit(300).build());
-			repo.save(Customer.builder().firstName("Maarten").lastName("van den Broek").email("MB@yahoo.com").credit(300).build());
+			customerRepository.save(Customer.builder().firstName("Sander").lastName("Blijlevens").email("SB@hotmail.com").credit(200).addressCollection(Arrays.asList(address1)).build());
+			customerRepository.save(Customer.builder().firstName("Kenzo").lastName("Dominicus").email("KD@gmail.com").credit(300).build());
+			customerRepository.save(Customer.builder().firstName("Randy").lastName("Vroegop").email("RV@gmail.com").credit(300).build());
+			customerRepository.save(Customer.builder().firstName("Yusuf").lastName("Yusuf").email("YY@outlook.com").credit(300).build());
+			customerRepository.save(Customer.builder().firstName("Maarten").lastName("van den Broek").email("MB@yahoo.com").credit(300).build());
 		};
 	}
 }
