@@ -3,6 +3,7 @@ package com.infosupport.resource;
 import com.infosupport.domain.Product;
 import com.infosupport.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,8 +20,27 @@ public class CatalogResource {
     private ProductService productService;
 
     @RequestMapping("/products")
-    public Collection<Product> accounts() {
-        return productService.findAll();
+    public Collection<Product> getAllProducts() {
+        return productService.findAllProducts();
     }
 
+    @RequestMapping("/products/{productid}")
+    public Product getProductById(@PathVariable("productid") Long productid) {
+        return productService.findById(productid);
+    }
+
+    @RequestMapping("/activeproducts")
+    public Collection<Product> getAllActiveProducts() {
+        return productService.findAllActiveProducts();
+    }
+
+    @RequestMapping("/activebikes")
+    public Collection<Product> getAllBikes() {
+        return productService.findAllBikes();
+    }
+
+    @RequestMapping("/activeparts")
+    public Collection<Product> getAllParts() {
+        return productService.findAllParts();
+    }
 }

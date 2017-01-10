@@ -1,0 +1,6 @@
+catalog
+    products
+    products/{productid}
+    activeproducts
+    activebikes
+    activeparts
