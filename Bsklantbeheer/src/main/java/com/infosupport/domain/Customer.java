@@ -31,7 +31,7 @@ public class Customer {
     private LocalDate birthDate;
 
     @OneToMany
-    private Collection<Address> addressCollection;
+    private Collection<Address> addresses;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JsonIgnore

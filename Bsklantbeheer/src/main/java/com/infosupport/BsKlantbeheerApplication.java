@@ -26,11 +26,11 @@ public class BsKlantbeheerApplication {
     CommandLineRunner onStartUp(CustomerRepository customerRepository, AddressRepository addressRepository, WebshopAccountRepository webshopAccountRepository) {
         return (String... args) -> {
             Address address1 = Address.builder().city("Dordrecht").zip("1234 AB").street("Leerpark 50").build();
-            Address address2 = Address.builder().city("Breda").zip("1234 AB").street("Leerpark 50").build();
+            Address address2 = Address.builder().city("Breda").zip("1234 AB").street("Leerpark 50").deleted(true).build();
             addressRepository.save(address1);
             addressRepository.save(address2);
 
-            Customer customer1 = Customer.builder().firstName("Sander").lastName("Blijlevens").email("SB@hotmail.com").credit(200).addressCollection(Arrays.asList(address1)).build();
+            Customer customer1 = Customer.builder().firstName("Sander").lastName("Blijlevens").email("SB@hotmail.com").credit(200).addresses(Arrays.asList(address1,address2)).build();
             Customer customer2 = Customer.builder().firstName("Kenzo").lastName("Dominicus").email("KD@gmail.com").credit(300).build();
             Customer customer3 = Customer.builder().firstName("Randy").lastName("Vroegop").email("RV@gmail.com").credit(300).build();
             Customer customer4 = Customer.builder().firstName("Yusuf").lastName("Yusuf").email("YY@outlook.com").credit(300).build();
