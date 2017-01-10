@@ -3,6 +3,7 @@ package com.infosupport.domain;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by Sander on 9-1-17.
@@ -21,6 +22,8 @@ public class Product {
     String description;
     byte[] image;
     boolean deleted = false;
+    Date availableFrom;
+    Date availableUntil;
 
     @ManyToOne
     Brand brand;
@@ -30,4 +33,6 @@ public class Product {
 
     @Enumerated(EnumType.STRING)
     Category category;
+
+
 }

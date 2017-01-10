@@ -1,6 +1,8 @@
 package com.infosupport.resource;
 
 import com.infosupport.domain.Product;
+import com.infosupport.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,9 +15,12 @@ import java.util.Collection;
 @RequestMapping("/catalog")
 public class CatalogResource {
 
+    @Autowired
+    private ProductService productService;
+
     @RequestMapping("/products")
     public Collection<Product> accounts() {
-        return null;
+        return productService.findAll();
     }
 
 }
