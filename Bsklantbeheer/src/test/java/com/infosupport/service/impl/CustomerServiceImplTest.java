@@ -32,9 +32,9 @@ public class CustomerServiceImplTest {
     @Test
     public void getCustomerNoAddresses() throws Exception {
         //Arrange
-        when(customerRepository.findOne(1L)).thenReturn(null);
-        //Assert
-        assertThat(customerService.getCustomer(1L), is(nullValue()));
+        when(customerRepository.findOne(1L)).thenReturn(Customer.builder().build());
+        //Act & Assert
+        assertThat(customerService.getCustomer(1L).getAddresses(), is(nullValue()));
     }
 
     @Test
