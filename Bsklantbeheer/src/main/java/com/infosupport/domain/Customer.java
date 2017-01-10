@@ -1,5 +1,6 @@
 package com.infosupport.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,5 +32,9 @@ public class Customer {
 
     @OneToMany
     private Collection<Address> addressCollection;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private WebshopAccount webshopAccount;
 
 }
