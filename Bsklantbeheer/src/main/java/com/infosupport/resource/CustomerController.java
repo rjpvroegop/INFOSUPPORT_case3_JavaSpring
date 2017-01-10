@@ -1,4 +1,4 @@
-package com.infosupport.controller;
+package com.infosupport.resource;
 
 import com.infosupport.domain.Address;
 import com.infosupport.domain.Customer;
