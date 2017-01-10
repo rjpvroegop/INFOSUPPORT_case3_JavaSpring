@@ -36,7 +36,7 @@ public class CustomerResource {
     }
 
     @RequestMapping(value = "/**", method = PUT)
-    public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer, HttpServletRequest request) {
+    public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) {
         customerRepository.save(customer);
         return new ResponseEntity<>(customer, HttpStatus.OK);
     }
