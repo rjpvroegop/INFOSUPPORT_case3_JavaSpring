@@ -2,6 +2,7 @@ package com.infosupport.resource;
 
 import com.infosupport.domain.Address;
 import com.infosupport.repository.AddressRepository;
+import com.infosupport.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,29 +22,27 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 @RequestMapping("address")
 public class AddressResource {
 
-    private AddressRepository addressRepository;
+    private AddressService addressService;
 
     @Autowired
-    public AddressResource(AddressRepository addressRepository) {
-        this.addressRepository = addressRepository;
+    public AddressResource(AddressService addressService) {
+        this.addressService = addressService;
     }
 
     @RequestMapping(value = "/{addressId}", method = GET)
     public Address getAddress(@PathVariable("addressId") Long addressId) {
-        return addressRepository.findOne(addressId);
+        return addressService.getAddress(addressId);
     }
 
     @RequestMapping(value = "/newAddress", method = POST)
     public ResponseEntity<Address> addAddress(@RequestBody Address address, HttpServletRequest request) {
-        addressRepository.save(address);
+        addressService.addAddress(address);
         return new ResponseEntity<>(address, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/delete/{addressId}", method = PUT)
     public ResponseEntity<Void> removeAddress(@PathVariable("addressId") Long addressId, HttpServletRequest request) {
-        Address address = addressRepository.findOne(addressId);
-        address.setDeleted(true);
-        addressRepository.save(address);
+        addressService.removeAddress(addressId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

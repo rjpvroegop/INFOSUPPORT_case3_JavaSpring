@@ -2,6 +2,7 @@ package com.infosupport.resource;
 
 import com.infosupport.domain.WebshopAccount;
 import com.infosupport.repository.WebshopAccountRepository;
+import com.infosupport.service.WebshopAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,21 +21,21 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping("accounts")
 public class WebshopAccountResource {
 
-    private WebshopAccountRepository webshopAccountRepository;
+    private WebshopAccountService webshopAccountService;
 
     @Autowired
-    public WebshopAccountResource(WebshopAccountRepository webshopAccountRepository) {
-        this.webshopAccountRepository = webshopAccountRepository;
+    public WebshopAccountResource(WebshopAccountService webshopAccountService) {
+        this.webshopAccountService = webshopAccountService;
     }
 
     @RequestMapping(value = "/{id}", method = GET)
     public WebshopAccount getWebShopAccount(@PathVariable("id") Long id) {
-        return webshopAccountRepository.findOne(id);
+        return webshopAccountService.getWebshopAccount(id);
     }
 
     @RequestMapping(value = "/newCustomer", method = POST)
     public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
-        webshopAccountRepository.save(webshopAccount);
+        webshopAccountService.saveWebshopAccount(webshopAccount);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
