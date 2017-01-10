@@ -17,6 +17,7 @@
 		<module>Discoveryserver</module>
 		<module>Pcsbestellen</module>
 		<module>Pcswinkelen</module>
+		<module>Zuulapi</module>
 	</modules>
 
 
