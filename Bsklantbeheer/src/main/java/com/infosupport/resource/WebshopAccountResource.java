@@ -1,5 +1,6 @@
 package com.infosupport.resource;
 
+import com.infosupport.domain.Customer;
 import com.infosupport.domain.WebshopAccount;
 import com.infosupport.repository.WebshopAccountRepository;
 import com.infosupport.service.WebshopAccountService;
@@ -33,10 +34,17 @@ public class WebshopAccountResource {
         return webshopAccountService.getWebshopAccount(id);
     }
 
-    @RequestMapping(value = "/newCustomer", method = POST)
+    @RequestMapping(value = "/newaccount", method = POST)
     public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
-        webshopAccountService.saveWebshopAccount(webshopAccount);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
+        HttpStatus result;
+        if (webshopAccount != null){
+            result = HttpStatus.CREATED;
+        }
+        else{
+            result = HttpStatus.CONFLICT;
+        }
+        return new ResponseEntity<>(webshopAccount, result);
     }
 
 }

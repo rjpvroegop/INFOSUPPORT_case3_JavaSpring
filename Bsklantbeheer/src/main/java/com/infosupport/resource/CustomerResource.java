@@ -37,7 +37,7 @@ public class CustomerResource {
         return customerService.getCustomer(id);
     }
 
-    @RequestMapping(value = "/**", method = PUT)
+    @RequestMapping(value = "/editcustomer", method = PUT)
     public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) {
         customerService.editCustomer(customer);
         return new ResponseEntity<>(customer, HttpStatus.OK);
