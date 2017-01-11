@@ -34,13 +34,8 @@ public class CatalogResource {
         return productService.findAllActiveProducts();
     }
 
-    @RequestMapping("/activebikes")
-    public Collection<Product> getAllBikes() {
-        return productService.findAllBikes();
-    }
-
-    @RequestMapping("/activeparts")
-    public Collection<Product> getAllParts() {
-        return productService.findAllParts();
+    @RequestMapping("/activeproductsforcategory/{categoryid}")
+    public Collection<Product> getAllBikes(@PathVariable("categoryid") Long categoryid) {
+        return productService.findActiveProductsForCategory(categoryid);
     }
 }
