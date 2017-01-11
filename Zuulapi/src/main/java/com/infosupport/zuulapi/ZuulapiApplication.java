@@ -1,6 +1,5 @@
 package com.infosupport.zuulapi;
 
-import com.infosupport.zuulapi.zuul.LoggingFilter;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,8 +24,4 @@ public class ZuulapiApplication {
         return (String[] args) -> System.out.println("I'm starting! :-)");
     }
 
-    @Bean
-    LoggingFilter loggingFilter() {
-        return new LoggingFilter();
-    }
 }
