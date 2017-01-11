@@ -28,6 +28,8 @@ public class Product {
     Long id;
     String name;
     String description;
+
+    @Column(length=1000000)
     String image;
     boolean deleted = false;
     Double price;
