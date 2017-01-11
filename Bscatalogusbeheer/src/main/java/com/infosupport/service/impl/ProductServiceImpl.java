@@ -2,6 +2,7 @@ package com.infosupport.service.impl;
 
 import com.infosupport.domain.Category;
 import com.infosupport.domain.Product;
+import com.infosupport.repository.CategoryRepository;
 import com.infosupport.repository.ProductRepository;
 import com.infosupport.service.ProductService;
 import org.hibernate.mapping.Collection;
@@ -26,6 +27,9 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+
     @Override
     public List<Product> findAllProducts() {
         return productRepository.findAll();
@@ -41,16 +45,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> findAllBikes() {
+    public List<Product> findActiveProductsForCategory(Long id) {
         return productRepository.findAll()
-                .stream().filter(Product -> Product.getCategory().equals(Category.BIKE))
-                .collect(Collectors.toList());
-    }
-
-    @Override
-    public List<Product> findAllParts() {
-        return productRepository.findAll()
-                .stream().filter(Product -> Product.getCategory().equals(Category.PART))
+                .stream()
+                .filter(Product -> Product.getAvailableFrom().isBefore(LocalDate.now()))
+                .filter(Product -> Product.getAvailableUntil().isAfter(LocalDate.now()))
+                .filter(Product -> Product.getCategoryList().contains(categoryRepository.findOne(id)))
                 .collect(Collectors.toList());
     }
 

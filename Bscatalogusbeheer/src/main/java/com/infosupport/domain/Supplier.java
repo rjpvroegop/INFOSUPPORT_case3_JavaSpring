@@ -1,5 +1,9 @@
 package com.infosupport.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
 import javax.persistence.Entity;
@@ -10,12 +14,14 @@ import javax.persistence.Id;
 /**
  * Created by Sander on 9-1-17.
  */
-
+@Getter
+@Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-
-    public Supplier(){}
+    String name;
 }

@@ -11,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Sander on 9-1-17.
@@ -29,8 +30,9 @@ public class Product {
     String description;
     byte[] image;
     boolean deleted = false;
+    Double price;
     private LocalDate availableFrom;
-
+    String supplierProductId;
     LocalDate availableUntil;
 
     @ManyToOne
@@ -39,8 +41,7 @@ public class Product {
     @ManyToOne
     Supplier supplier;
 
-    @Enumerated(EnumType.STRING)
-    Category category;
-
+    @ManyToMany
+    List<Category> categoryList;
 
 }
