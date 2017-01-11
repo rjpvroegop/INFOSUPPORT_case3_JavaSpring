@@ -28,5 +28,4 @@ public class Address {
     private String city;
     private boolean deleted = false;
 
-
 }

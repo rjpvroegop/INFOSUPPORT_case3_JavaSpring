@@ -30,7 +30,7 @@ public class Customer {
     private double credit;
     private LocalDate birthDate;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Collection<Address> addresses;
 
     @OneToOne(fetch = FetchType.LAZY)
