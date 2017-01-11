@@ -29,12 +29,14 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer getCustomer(Long id){
         Customer customer = customerRepository.findOne(id);
         Collection<Address> notDeletedAddresses = new ArrayList<>();
-        for (Address address: customer.getAddresses()){
-            if (!address.isDeleted()){
-                notDeletedAddresses.add(address);
+        if (customer != null && customer.getAddresses() != null){
+            for (Address address: customer.getAddresses()){
+                if (!address.isDeleted()){
+                    notDeletedAddresses.add(address);
+                }
             }
+            customer.setAddresses(notDeletedAddresses);
         }
-        customer.setAddresses(notDeletedAddresses);
         return customer;
     }
 
