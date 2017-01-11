@@ -39,19 +39,23 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findAllActiveProducts() {
         return productRepository.findAll()
                 .stream()
-                .filter(Product -> Product.getAvailableFrom().isBefore(LocalDate.now()))
-                .filter(Product -> Product.getAvailableUntil().isAfter(LocalDate.now()))
+                .filter(Product -> (Product.getAvailableFrom() == null || Product.getAvailableFrom().isBefore(LocalDate.now())))
+                .filter(Product -> (Product.getAvailableUntil() == null || Product.getAvailableUntil().isAfter(LocalDate.now())))
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<Product> findActiveProductsForCategory(Long id) {
-        return productRepository.findAll()
+        return findAllActiveProducts()
                 .stream()
-                .filter(Product -> Product.getAvailableFrom().isBefore(LocalDate.now()))
-                .filter(Product -> Product.getAvailableUntil().isAfter(LocalDate.now()))
-                .filter(Product -> Product.getCategoryList().contains(categoryRepository.findOne(id)))
+                .filter(Product -> (Product.getCategoryList().contains(categoryRepository.findOne(id))))
                 .collect(Collectors.toList());
+//        return productRepository.findAll()
+//                .stream()
+//                .filter(Product -> (Product.getAvailableFrom() == null || Product.getAvailableFrom().isBefore(LocalDate.now())))
+//                .filter(Product -> (Product.getAvailableUntil() == null ||Product.getAvailableUntil().isAfter(LocalDate.now())))
+//                .filter(Product -> (Product.getCategoryList().contains(categoryRepository.findOne(id))))
+//                .collect(Collectors.toList());
     }
 
     @Override
