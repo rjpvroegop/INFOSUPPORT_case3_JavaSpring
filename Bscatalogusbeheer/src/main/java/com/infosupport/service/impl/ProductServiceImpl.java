@@ -40,7 +40,7 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findAll()
                 .stream()
                 .filter(Product -> Product.getAvailableFrom().isBefore(LocalDate.now()))
-                .filter(Product -> Product.getAvailableUntil().isAfter(LocalDate.now()))
+                .filter(Product -> (Product.getAvailableUntil() == null || Product.getAvailableUntil().isAfter(LocalDate.now())))
                 .collect(Collectors.toList());
     }
 
@@ -49,7 +49,7 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findAll()
                 .stream()
                 .filter(Product -> Product.getAvailableFrom().isBefore(LocalDate.now()))
-                .filter(Product -> Product.getAvailableUntil().isAfter(LocalDate.now()))
+                .filter(Product -> (Product.getAvailableUntil() == null ||Product.getAvailableUntil().isAfter(LocalDate.now())))
                 .filter(Product -> Product.getCategoryList().contains(categoryRepository.findOne(id)))
                 .collect(Collectors.toList());
     }
