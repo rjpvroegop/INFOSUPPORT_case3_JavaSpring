@@ -28,7 +28,7 @@ public class Product {
     Long id;
     String name;
     String description;
-    byte[] image;
+    String image;
     boolean deleted = false;
     Double price;
     private LocalDate availableFrom;
