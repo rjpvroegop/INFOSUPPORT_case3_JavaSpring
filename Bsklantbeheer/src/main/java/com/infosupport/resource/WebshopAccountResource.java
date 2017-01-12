@@ -27,38 +27,32 @@ public class WebshopAccountResource {
 
     @RequestMapping(value = "/{id}", method = GET)
     public ResponseEntity<WebshopAccount> getWebShopAccount(@PathVariable("id") Long id) {
-        WebshopAccount account = webshopAccountService.getWebshopAccount(id);
-        HttpStatus status;
-        if (account != null) {
-            status = HttpStatus.OK;
-        } else {
-            status = HttpStatus.BAD_REQUEST;
-        }
-        return new ResponseEntity<>(account, status);
+        WebshopAccount webshopAccount = webshopAccountService.getWebshopAccount(id);
+        return generateResponse(webshopAccount,HttpStatus.OK, HttpStatus.BAD_REQUEST);
     }
 
     @RequestMapping(method = POST)
     public ResponseEntity<WebshopAccount> getWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
         webshopAccount = webshopAccountService.getWebshopAccount(webshopAccount.getUserName(), webshopAccount.getPassword());
-        HttpStatus status;
-        if (webshopAccount != null) {
-            status = HttpStatus.OK;
-        } else {
-            status = HttpStatus.UNAUTHORIZED;
-        }
-        return new ResponseEntity<>(webshopAccount, status);
+        return generateResponse(webshopAccount, HttpStatus.OK, HttpStatus.UNAUTHORIZED);
     }
 
     @RequestMapping(value = "/newaccount", method = POST)
     public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
         webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
-        HttpStatus status;
-        if (webshopAccount != null) {
-            status = HttpStatus.CREATED;
-        } else {
-            status = HttpStatus.CONFLICT;
-        }
-        return new ResponseEntity<>(webshopAccount, status);
+        return generateResponse(webshopAccount,HttpStatus.CREATED, HttpStatus.CONFLICT);
     }
+
+
+    private ResponseEntity<WebshopAccount> generateResponse(WebshopAccount account, HttpStatus statusSucces, HttpStatus statusFail){
+        HttpStatus statusResult;
+        if (account != null){
+            statusResult = statusSucces;
+        }else{
+            statusResult = statusFail;
+        }
+        return new ResponseEntity<>(account, statusResult);
+    }
+
 
 }

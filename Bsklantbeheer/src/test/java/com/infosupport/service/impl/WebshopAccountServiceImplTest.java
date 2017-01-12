@@ -116,4 +116,17 @@ public class WebshopAccountServiceImplTest {
         assertThat(result, is(nullValue()));
     }
 
+    @Test
+    public void getWebshopAccountValidData(){
+        //Arrange
+        WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").build();
+        when(repo.findByUserName(account.getUserName())).thenReturn(account);
+
+        //Act
+        WebshopAccount result = service.getWebshopAccount("aa", "bb");
+
+        //Assert
+        assertThat(result, is(account));
+    }
+
 }
