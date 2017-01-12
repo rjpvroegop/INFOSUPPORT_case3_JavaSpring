@@ -32,10 +32,16 @@ public class AddressResource {
         return addressService.getAddress(addressId);
     }
 
-    @RequestMapping(value = "/newAddress", method = POST)
+    @RequestMapping(value = "/", method = POST)
     public ResponseEntity<Address> addAddress(@RequestBody Address address, HttpServletRequest request) {
-        addressService.addAddress(address);
-        return new ResponseEntity<>(address, HttpStatus.CREATED);
+        address = addressService.addAddress(address);
+        HttpStatus status;
+        if (address != null){
+            status = HttpStatus.CREATED;
+        }else{
+            status = HttpStatus.BAD_REQUEST;
+        }
+        return new ResponseEntity<>(address, status);
     }
 
     @RequestMapping(value = "/delete/{addressId}", method = PUT)
