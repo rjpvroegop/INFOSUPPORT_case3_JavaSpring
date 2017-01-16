@@ -35,7 +35,10 @@ public class Customer {
     private Collection<Address> addresses;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
     private WebshopAccount webshopAccount;
 
+    @JsonIgnore
+    public WebshopAccount getWebshopAccount() {
+        return this.webshopAccount;
+    }
 }
