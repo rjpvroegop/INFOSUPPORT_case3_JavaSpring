@@ -10,7 +10,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.http.HttpStatus;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
 /**
@@ -37,7 +37,7 @@ public class WebshopAccountResourceTest {
         HttpStatus status = resource.saveWebshopAccount(account).getStatusCode();
 
         //Assert
-        assertThat(status,is(HttpStatus.CREATED));
+        assertThat(status, is(HttpStatus.CREATED));
     }
 
     @Test
@@ -50,9 +50,8 @@ public class WebshopAccountResourceTest {
         HttpStatus status = resource.saveWebshopAccount(account).getStatusCode();
 
         //Assert
-        assertThat(status,is(HttpStatus.CONFLICT));
+        assertThat(status, is(HttpStatus.CONFLICT));
     }
-
 
 
 }

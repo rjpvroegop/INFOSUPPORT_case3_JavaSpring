@@ -1,6 +1,5 @@
 package com.infosupport.repository;
 
-import com.infosupport.domain.Category;
 import com.infosupport.domain.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
 

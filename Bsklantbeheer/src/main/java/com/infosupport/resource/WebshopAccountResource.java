@@ -28,7 +28,7 @@ public class WebshopAccountResource {
     @RequestMapping(value = "/{id}", method = GET)
     public ResponseEntity<WebshopAccount> getWebShopAccount(@PathVariable("id") Long id) {
         WebshopAccount webshopAccount = webshopAccountService.getWebshopAccount(id);
-        return generateResponse(webshopAccount,HttpStatus.OK, HttpStatus.BAD_REQUEST);
+        return generateResponse(webshopAccount, HttpStatus.OK, HttpStatus.BAD_REQUEST);
     }
 
     @RequestMapping(method = POST)
@@ -40,15 +40,15 @@ public class WebshopAccountResource {
     @RequestMapping(value = "/newaccount", method = POST)
     public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
         webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
-        return generateResponse(webshopAccount,HttpStatus.CREATED, HttpStatus.CONFLICT);
+        return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
     }
 
 
-    private ResponseEntity<WebshopAccount> generateResponse(WebshopAccount account, HttpStatus statusSucces, HttpStatus statusFail){
+    private ResponseEntity<WebshopAccount> generateResponse(WebshopAccount account, HttpStatus statusSucces, HttpStatus statusFail) {
         HttpStatus statusResult;
-        if (account != null){
+        if (account != null) {
             statusResult = statusSucces;
-        }else{
+        } else {
             statusResult = statusFail;
         }
         return new ResponseEntity<>(account, statusResult);

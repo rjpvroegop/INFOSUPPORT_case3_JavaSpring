@@ -9,12 +9,8 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static com.infosupport.builders.CustomerBuilder.testCustomerBuilder;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.isNotNull;
-import static org.mockito.Matchers.isNull;
 import static org.mockito.Mockito.when;
 
 /**
@@ -67,7 +63,7 @@ public class WebshopAccountServiceImplTest {
     }
 
     @Test
-    public void getWebshopAccountNull(){
+    public void getWebshopAccountNull() {
         //Arrange
         when(repo.findByUserName(null)).thenReturn(null);
 
@@ -79,7 +75,7 @@ public class WebshopAccountServiceImplTest {
     }
 
     @Test
-    public void getWebshopAccountNullPassword(){
+    public void getWebshopAccountNullPassword() {
         //Arrange
         WebshopAccount account = WebshopAccount.builder().userName("aa").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
@@ -92,7 +88,7 @@ public class WebshopAccountServiceImplTest {
     }
 
     @Test
-    public void getWebshopAccountNullUserName(){
+    public void getWebshopAccountNullUserName() {
         // Is same as getWebShopAccountNull, but if there are ever future changes to the implementation, this should not fail.
         //Arrange
         when(repo.findByUserName(null)).thenReturn(null);
@@ -105,7 +101,7 @@ public class WebshopAccountServiceImplTest {
     }
 
     @Test
-    public void getWebshopAccountInvalidPassword(){
+    public void getWebshopAccountInvalidPassword() {
         //Arrange
         WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
@@ -118,7 +114,7 @@ public class WebshopAccountServiceImplTest {
     }
 
     @Test
-    public void getWebshopAccountValidData(){
+    public void getWebshopAccountValidData() {
         //Arrange
         WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);

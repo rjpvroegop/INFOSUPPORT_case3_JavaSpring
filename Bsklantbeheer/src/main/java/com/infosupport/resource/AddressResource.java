@@ -1,7 +1,6 @@
 package com.infosupport.resource;
 
 import com.infosupport.domain.Address;
-import com.infosupport.repository.AddressRepository;
 import com.infosupport.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,9 +35,9 @@ public class AddressResource {
     public ResponseEntity<Address> addAddress(@RequestBody Address address, HttpServletRequest request) {
         address = addressService.addAddress(address);
         HttpStatus status;
-        if (address != null){
+        if (address != null) {
             status = HttpStatus.CREATED;
-        }else{
+        } else {
             status = HttpStatus.BAD_REQUEST;
         }
         return new ResponseEntity<>(address, status);

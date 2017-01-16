@@ -41,7 +41,7 @@ public class ProductServiceImplTest {
 
 
     @Before
-    public void init(){
+    public void init() {
         categories.add(new Category(1L, "cat1"));
         categories.add(new Category(2L, "cat2"));
         categories.add(new Category(3L, "cat3"));

@@ -41,7 +41,7 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) {
         WebshopAccount result = null;
         if (checkSaveWebshopAccountValidity(webshopAccount)) {
-            if (CustomerValidation.validateCustomer(webshopAccount.getCustomer())){
+            if (CustomerValidation.validateCustomer(webshopAccount.getCustomer())) {
                 result = webshopAccountRepository.save(webshopAccount);
             }
         }
@@ -49,9 +49,8 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     }
 
 
-
     private boolean checkSaveWebshopAccountValidity(WebshopAccount webshopAccount) {
-        if (webshopAccount != null){
+        if (webshopAccount != null) {
             WebshopAccount conflict = webshopAccountRepository.findByUserName(webshopAccount.getUserName());
             if (conflict == null) {
                 return true;
@@ -60,10 +59,10 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
         return false;
     }
 
-    private boolean validateAccountData(WebshopAccount account, String password){
-        if (account != null){
-            if (account.getPassword() != null){
-                if (account.getPassword().equals(password)){
+    private boolean validateAccountData(WebshopAccount account, String password) {
+        if (account != null) {
+            if (account.getPassword() != null) {
+                if (account.getPassword().equals(password)) {
                     return true;
                 }
             }

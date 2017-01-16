@@ -27,12 +27,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer getCustomer(Long id){
+    public Customer getCustomer(Long id) {
         Customer customer = customerRepository.findOne(id);
         Collection<Address> notDeletedAddresses = new ArrayList<>();
-        if (customer != null && customer.getAddresses() != null){
-            for (Address address: customer.getAddresses()){
-                if (!address.isDeleted()){
+        if (customer != null && customer.getAddresses() != null) {
+            for (Address address : customer.getAddresses()) {
+                if (!address.isDeleted()) {
                     notDeletedAddresses.add(address);
                 }
             }
@@ -43,7 +43,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer editCustomer(Customer customer) {
-        if (CustomerValidation.validateCustomer(customer)){
+        if (CustomerValidation.validateCustomer(customer)) {
             customerRepository.save(customer);
         }
         return customer;

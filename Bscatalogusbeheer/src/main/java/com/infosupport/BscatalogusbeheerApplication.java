@@ -1,23 +1,13 @@
 package com.infosupport;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.infosupport.domain.Category;
-import com.infosupport.domain.Product;
-import com.infosupport.domain.Supplier;
 import com.infosupport.repository.CategoryRepository;
 import com.infosupport.repository.ProductRepository;
 import com.infosupport.repository.SupplierRepository;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -105,7 +95,6 @@ public class BscatalogusbeheerApplication {
 //                    .build());
 //
 //            System.out.println("All Products added");
-
 
 
         };

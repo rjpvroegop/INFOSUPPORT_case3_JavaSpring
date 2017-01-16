@@ -17,11 +17,11 @@ public class AddressServiceImpl implements AddressService {
     private AddressRepository addressRepository;
 
     @Autowired
-    public AddressServiceImpl(AddressRepository addressRepository){
+    public AddressServiceImpl(AddressRepository addressRepository) {
         this.addressRepository = addressRepository;
     }
 
-    public Address getAddress(Long id){
+    public Address getAddress(Long id) {
         return addressRepository.findOne(id);
     }
 

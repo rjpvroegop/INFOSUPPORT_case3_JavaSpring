@@ -28,7 +28,7 @@ public class BsKlantbeheerApplication {
             Address address1 = Address.builder().city("Dordrecht").zip("1234 AB").street("Leerpark 50").build();
             Address address2 = Address.builder().city("Breda").zip("1234 AB").street("Leerpark 50").deleted(true).build();
 
-            Customer customer1 = Customer.builder().firstName("Sander").lastName("Blijlevens").email("SB@hotmail.com").birthDate("1993-1-2").phone("123456").credit(200).addresses(Arrays.asList(address1,address2)).build();
+            Customer customer1 = Customer.builder().firstName("Sander").lastName("Blijlevens").email("SB@hotmail.com").birthDate("1993-1-2").phone("123456").credit(200).addresses(Arrays.asList(address1, address2)).build();
             Customer customer2 = Customer.builder().firstName("Kenzo").lastName("Dominicus").email("KD@gmail.com").birthDate("1994-1-1").phone("123456").credit(300).build();
             Customer customer3 = Customer.builder().firstName("Randy").lastName("Vroegop").email("RV@gmail.com").birthDate("1995-2-13").phone("123456").credit(300).build();
             Customer customer4 = Customer.builder().firstName("Yusuf").lastName("Yusuf").email("YY@outlook.com").birthDate("1996-1-21").phone("123456").credit(300).build();

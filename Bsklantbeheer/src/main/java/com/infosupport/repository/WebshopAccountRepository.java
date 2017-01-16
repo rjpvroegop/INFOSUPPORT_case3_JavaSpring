@@ -1,6 +1,5 @@
 package com.infosupport.repository;
 
-import com.infosupport.domain.Customer;
 import com.infosupport.domain.WebshopAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
 

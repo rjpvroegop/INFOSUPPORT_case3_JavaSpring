@@ -3,23 +3,24 @@ package com.infosupport.util;
 /**
  * Created by Sander on 14-1-17.
  */
-import java.io.Serializable;
-import java.util.Date;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Types;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.usertype.EnhancedUserType;
 
-public class LocalDateHibernateUserType implements EnhancedUserType, Serializable{
+import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+
+public class LocalDateHibernateUserType implements EnhancedUserType, Serializable {
 
     private static final long serialVersionUID = -7500395414633111738L;
     private static final int[] sql_types = new int[]{Types.TIMESTAMP};
@@ -42,14 +43,14 @@ public class LocalDateHibernateUserType implements EnhancedUserType, Serializabl
 
     @Override
     public boolean equals(Object obj1, Object obj2) throws HibernateException {
-        if(obj1 == obj2)
+        if (obj1 == obj2)
             return true;
 
-        if(obj1==null || obj2 == null)
+        if (obj1 == null || obj2 == null)
             return false;
 
-        LocalDate ldt1 = (LocalDate)obj1;
-        LocalDate ldt2 = (LocalDate)obj2;
+        LocalDate ldt1 = (LocalDate) obj1;
+        LocalDate ldt2 = (LocalDate) obj2;
 
         return ldt1.equals(ldt2);
     }
@@ -71,7 +72,7 @@ public class LocalDateHibernateUserType implements EnhancedUserType, Serializabl
 
         Object timestamp = StandardBasicTypes.DATE.nullSafeGet(rs, params, session, owner);
 
-        if(timestamp == null){
+        if (timestamp == null) {
             return null;
         }
 
@@ -84,10 +85,9 @@ public class LocalDateHibernateUserType implements EnhancedUserType, Serializabl
     @Override
     public void nullSafeSet(PreparedStatement ps, Object value, int index,
                             SessionImplementor session) throws HibernateException, SQLException {
-        if(value==null){
+        if (value == null) {
             StandardBasicTypes.DATE.nullSafeSet(ps, null, index, session);
-        }
-        else{
+        } else {
             LocalDate ldt = (LocalDate) value;
             Instant instant = ldt.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
             Date date = Date.from(instant);

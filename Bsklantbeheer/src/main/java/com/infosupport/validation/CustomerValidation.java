@@ -24,7 +24,7 @@ public class CustomerValidation {
             if (!validateBirthDate(customer)) {
                 return false;
             }
-            if (!validateAddress(customer)){
+            if (!validateAddress(customer)) {
                 return false;
             }
         } else {
@@ -34,8 +34,8 @@ public class CustomerValidation {
     }
 
     private static boolean validateAddress(Customer customer) {
-        if (customer.getAddresses() != null){
-            if (customer.getAddresses().size() >= 1){
+        if (customer.getAddresses() != null) {
+            if (customer.getAddresses().size() >= 1) {
                 return true;
             }
         }

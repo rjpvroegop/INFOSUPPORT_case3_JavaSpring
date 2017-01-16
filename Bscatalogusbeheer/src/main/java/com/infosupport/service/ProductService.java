@@ -9,7 +9,10 @@ import java.util.List;
  */
 public interface ProductService {
     List<Product> findAllProducts();
+
     List<Product> findAllActiveProducts();
+
     List<Product> findActiveProductsForCategory(Long id);
+
     Product findById(Long id);
 }

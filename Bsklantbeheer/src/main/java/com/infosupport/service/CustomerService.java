@@ -10,7 +10,9 @@ import java.util.Collection;
 public interface CustomerService {
 
     Customer getCustomer(Long id);
+
     Customer editCustomer(Customer customer);
+
     Collection<Customer> getAllCustomers();
 
 }

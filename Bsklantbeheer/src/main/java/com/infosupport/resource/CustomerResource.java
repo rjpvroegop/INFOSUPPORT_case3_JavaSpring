@@ -1,7 +1,6 @@
 package com.infosupport.resource;
 
 import com.infosupport.domain.Customer;
-import com.infosupport.repository.CustomerRepository;
 import com.infosupport.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,10 +38,9 @@ public class CustomerResource {
     public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) {
         customer = customerService.editCustomer(customer);
         HttpStatus status;
-        if (customer != null){
+        if (customer != null) {
             status = HttpStatus.OK;
-        }
-        else{
+        } else {
             status = HttpStatus.NOT_ACCEPTABLE;
         }
         return new ResponseEntity<>(customer, status);
