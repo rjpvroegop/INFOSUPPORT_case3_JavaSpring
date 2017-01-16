@@ -49,23 +49,23 @@ public class ProductServiceImplTest {
         categories.add(new Category(5L, "cat5"));
 
         products.add(Product.builder()
-                //.availableFrom(LocalDate.now().minusDays(3))
-                //.availableUntil(LocalDate.now().plusDays(1))
+                .availableFrom(LocalDate.now().minusDays(3))
+                .availableUntil(LocalDate.now().plusDays(1))
                 .categoryList(Arrays.asList(categories.get(0), categories.get(4)))
                 .build());
         products.add(Product.builder()
-                //.availableFrom(LocalDate.now().minusDays(3))
-                //.availableUntil(LocalDate.now().minusDays(1))
+                .availableFrom(LocalDate.now().minusDays(3))
+                .availableUntil(LocalDate.now().minusDays(1))
                 .categoryList(Arrays.asList(categories.get(1), categories.get(4)))
                 .build());
         products.add(Product.builder()
-                //.availableFrom(LocalDate.now().minusDays(3))
-                //.availableUntil(LocalDate.now().plusDays(1))
+                .availableFrom(LocalDate.now().minusDays(3))
+                .availableUntil(LocalDate.now().plusDays(1))
                 .categoryList(Arrays.asList(categories.get(2), categories.get(4)))
                 .build());
         products.add(Product.builder()
-                //.availableFrom(LocalDate.now().minusDays(3))
-                //.availableUntil(LocalDate.now().plusDays(1))
+                .availableFrom(LocalDate.now().minusDays(3))
+                .availableUntil(LocalDate.now().plusDays(1))
                 .categoryList(Arrays.asList(categories.get(3), categories.get(4)))
                 .build());
     }
