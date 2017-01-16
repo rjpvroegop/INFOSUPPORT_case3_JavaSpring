@@ -22,7 +22,6 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class WebshopAccountServiceImplTest {
 
-
     @Mock
     private WebshopAccountRepository repo;
 
@@ -64,6 +63,70 @@ public class WebshopAccountServiceImplTest {
 
         //Assert
         assertThat(result, is(nullValue()));
+    }
+
+    @Test
+    public void getWebshopAccountNull(){
+        //Arrange
+        when(repo.findByUserName(null)).thenReturn(null);
+
+        //Act
+        WebshopAccount result = service.getWebshopAccount(null, null);
+
+        //Assert
+        assertThat(result, is(nullValue()));
+    }
+
+    @Test
+    public void getWebshopAccountNullPassword(){
+        //Arrange
+        WebshopAccount account = WebshopAccount.builder().userName("aa").build();
+        when(repo.findByUserName(account.getUserName())).thenReturn(account);
+
+        //Act
+        WebshopAccount result = service.getWebshopAccount("aa", null);
+
+        //Assert
+        assertThat(result, is(nullValue()));
+    }
+
+    @Test
+    public void getWebshopAccountNullUserName(){
+        // Is same as getWebShopAccountNull, but if there are ever future changes to the implementation, this should not fail.
+        //Arrange
+        when(repo.findByUserName(null)).thenReturn(null);
+
+        //Act
+        WebshopAccount result = service.getWebshopAccount(null, "aaa");
+
+        //Assert
+        assertThat(result, is(nullValue()));
+    }
+
+    @Test
+    public void getWebshopAccountInvalidPassword(){
+        //Arrange
+        WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").build();
+        when(repo.findByUserName(account.getUserName())).thenReturn(account);
+
+        //Act
+        WebshopAccount result = service.getWebshopAccount("aa", "cc");
+
+        //Assert
+        assertThat(result, is(nullValue()));
+    }
+
+    @Test
+    public void getWebshopAccountValidData(){
+        //Arrange
+        WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").build();
+        when(repo.findByUserName(account.getUserName())).thenReturn(account);
+
+        //Act
+        WebshopAccount result = service.getWebshopAccount("aa", "bb");
+
+        //Assert
+        assertThat(result, is(account));
     }
 
 }

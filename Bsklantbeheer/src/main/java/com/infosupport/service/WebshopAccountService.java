@@ -8,5 +8,6 @@ import com.infosupport.domain.WebshopAccount;
 public interface WebshopAccountService {
 
     WebshopAccount getWebshopAccount(Long id);
+    WebshopAccount getWebshopAccount(String username, String password);
     WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount);
 }

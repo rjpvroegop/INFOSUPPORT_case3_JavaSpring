@@ -25,6 +25,8 @@ public class WebshopAccountResourceTest {
     @InjectMocks
     private WebshopAccountResource resource;
 
+    //Status creation only tested once. The reason for this is that it uses the same generateStatus method.
+
     @Test
     public void saveWebshopAccountStatusCreated() throws Exception {
         //Arrange

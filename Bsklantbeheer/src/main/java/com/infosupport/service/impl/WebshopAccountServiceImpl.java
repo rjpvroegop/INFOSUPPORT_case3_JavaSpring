@@ -27,23 +27,47 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     }
 
     @Override
+    public WebshopAccount getWebshopAccount(String username, String password) {
+        WebshopAccount account = webshopAccountRepository.findByUserName(username);
+        if (validateAccountData(account, password)) {
+            return account;
+        } else {
+            return null;
+        }
+    }
+
+    @Override
     public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) {
         WebshopAccount result = null;
-        if (webshopAccount != null) {
-            if (checkWebshopAccountValidity(webshopAccount)) {
-                result = webshopAccountRepository.save(webshopAccount);
-            }
+        if (checkSaveWebshopAccountValidity(webshopAccount)) {
+            result = webshopAccountRepository.save(webshopAccount);
         }
         return result;
     }
 
-    private boolean checkWebshopAccountValidity(WebshopAccount webshopAccount) {
-        WebshopAccount conflict = webshopAccountRepository.findByUserName(webshopAccount.getUserName());
-        if (conflict == null) {
-            return true;
-        } else {
-            return false;
+
+
+
+
+    private boolean checkSaveWebshopAccountValidity(WebshopAccount webshopAccount) {
+        if (webshopAccount != null){
+            WebshopAccount conflict = webshopAccountRepository.findByUserName(webshopAccount.getUserName());
+            if (conflict == null) {
+                return true;
+            }
         }
+        return false;
+    }
+
+    private boolean validateAccountData(WebshopAccount account, String password){
+        if (account != null){
+            if (account.getPassword() != null){
+                if (account.getPassword().equals(password)){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 }

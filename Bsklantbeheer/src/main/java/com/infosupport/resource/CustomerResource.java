@@ -37,8 +37,15 @@ public class CustomerResource {
 
     @RequestMapping(value = "/editcustomer", method = PUT)
     public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) {
-        customerService.editCustomer(customer);
-        return new ResponseEntity<>(customer, HttpStatus.OK);
+        customer = customerService.editCustomer(customer);
+        HttpStatus status;
+        if (customer != null){
+            status = HttpStatus.OK;
+        }
+        else{
+            status = HttpStatus.NOT_ACCEPTABLE;
+        }
+        return new ResponseEntity<>(customer, status);
     }
 
     @RequestMapping
