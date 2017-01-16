@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.bind.ValidationException;
 import java.util.Collection;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -36,14 +37,12 @@ public class CustomerResource {
 
     @RequestMapping(value = "/editcustomer", method = PUT)
     public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) {
-        customer = customerService.editCustomer(customer);
-        HttpStatus status;
-        if (customer != null) {
-            status = HttpStatus.OK;
-        } else {
-            status = HttpStatus.NOT_ACCEPTABLE;
+        try{
+            customer = customerService.editCustomer(customer);
+            return new ResponseEntity<>(customer, HttpStatus.OK);
+        } catch (ValidationException e) {
+            return new ResponseEntity<>(customer, HttpStatus.NOT_ACCEPTABLE);
         }
-        return new ResponseEntity<>(customer, status);
     }
 
     @RequestMapping

@@ -2,6 +2,7 @@ package com.infosupport.service;
 
 import com.infosupport.domain.Customer;
 
+import javax.xml.bind.ValidationException;
 import java.util.Collection;
 
 /**
@@ -11,7 +12,7 @@ public interface CustomerService {
 
     Customer getCustomer(Long id);
 
-    Customer editCustomer(Customer customer);
+    Customer editCustomer(Customer customer) throws ValidationException;
 
     Collection<Customer> getAllCustomers();
 

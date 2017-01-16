@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.bind.ValidationException;
+
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -25,6 +27,7 @@ public class WebshopAccountResource {
         this.webshopAccountService = webshopAccountService;
     }
 
+    @Deprecated
     @RequestMapping(value = "/{id}", method = GET)
     public ResponseEntity<WebshopAccount> getWebShopAccount(@PathVariable("id") Long id) {
         WebshopAccount webshopAccount = webshopAccountService.getWebshopAccount(id);
@@ -39,8 +42,12 @@ public class WebshopAccountResource {
 
     @RequestMapping(value = "/newaccount", method = POST)
     public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
-        webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
-        return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
+        try{
+            webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
+            return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
+        }catch (ValidationException e){
+            return new ResponseEntity<>(webshopAccount, HttpStatus.NOT_ACCEPTABLE);
+        }
     }
 
 

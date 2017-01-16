@@ -2,11 +2,16 @@ package com.infosupport.service.impl;
 
 import com.infosupport.domain.WebshopAccount;
 import com.infosupport.repository.WebshopAccountRepository;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import org.junit.rules.ExpectedException;
+
+import javax.xml.bind.ValidationException;
 
 import static com.infosupport.builders.CustomerBuilder.testCustomerBuilder;
 import static org.hamcrest.CoreMatchers.*;
@@ -19,6 +24,9 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class WebshopAccountServiceImplTest {
 
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
     @Mock
     private WebshopAccountRepository repo;
 
@@ -26,16 +34,14 @@ public class WebshopAccountServiceImplTest {
     private WebshopAccountServiceImpl service;
 
     @Test
-    public void saveWebshopAccountIsNull() {
+    public void saveWebshopAccountIsNull() throws ValidationException {
+        thrown.expect(ValidationException.class);
         // Arrange & Act
         WebshopAccount result = service.saveWebshopAccount(null);
-
-        // Assert
-        assertThat(result, is(nullValue()));
     }
 
     @Test
-    public void saveWebshopAccountDoesNotExist() {
+    public void saveWebshopAccountDoesNotExist() throws ValidationException {
         // Arrange
         WebshopAccount account = WebshopAccount.builder().userName("AAA").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(null);
@@ -49,7 +55,8 @@ public class WebshopAccountServiceImplTest {
     }
 
     @Test
-    public void saveWebshopAccountExists() throws Exception {
+    public void saveWebshopAccountExists() throws ValidationException {
+        thrown.expect(ValidationException.class);
         //Arrange
         WebshopAccount account = WebshopAccount.builder().userName("AAA").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
@@ -58,8 +65,6 @@ public class WebshopAccountServiceImplTest {
         //ACT
         WebshopAccount result = service.saveWebshopAccount(account);
 
-        //Assert
-        assertThat(result, is(nullValue()));
     }
 
     @Test
