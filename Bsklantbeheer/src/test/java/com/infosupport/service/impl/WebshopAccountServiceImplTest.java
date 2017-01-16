@@ -29,7 +29,6 @@ public class WebshopAccountServiceImplTest {
     @InjectMocks
     private WebshopAccountServiceImpl service;
 
-
     @Test
     public void saveWebshopAccountIsNull() {
         // Arrange & Act

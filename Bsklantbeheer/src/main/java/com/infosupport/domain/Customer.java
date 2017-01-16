@@ -28,9 +28,10 @@ public class Customer {
     private String email;
     private String phone;
     private double credit;
-    private LocalDate birthDate;
+    private String birthDate;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "customer_id")
     private Collection<Address> addresses;
 
     @OneToOne(fetch = FetchType.LAZY)

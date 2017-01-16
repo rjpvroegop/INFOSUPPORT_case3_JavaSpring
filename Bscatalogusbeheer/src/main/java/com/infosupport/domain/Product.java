@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.Type;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -31,14 +33,19 @@ public class Product {
 
     @Column(length=1000000)
     String image;
+    @Column(columnDefinition="tinyint(1) default 0")
     boolean deleted = false;
     Double price;
-    private LocalDate availableFrom;
-    String supplierProductId;
-    LocalDate availableUntil;
 
-    @ManyToOne
-    Brand brand;
+    @Column(columnDefinition="date")
+    @Type(type = "com.infosupport.util.LocalDateHibernateUserType")
+    private LocalDate availableFrom;
+
+    @Column(columnDefinition="date")
+    @Type(type = "com.infosupport.util.LocalDateHibernateUserType")
+    private LocalDate availableUntil;
+
+    String supplierProductId;
 
     @ManyToOne
     Supplier supplier;
