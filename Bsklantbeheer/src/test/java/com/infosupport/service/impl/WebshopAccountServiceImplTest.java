@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static com.infosupport.builders.CustomerBuilder.testCustomerBuilder;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
@@ -40,8 +41,8 @@ public class WebshopAccountServiceImplTest {
     @Test
     public void saveWebshopAccountDoesNotExist() {
         // Arrange
-        WebshopAccount account = WebshopAccount.builder().userName("AAA").build();
-        when(repo.findByUserName("AAA")).thenReturn(null);
+        WebshopAccount account = WebshopAccount.builder().userName("AAA").customer(testCustomerBuilder().build()).build();
+        when(repo.findByUserName(account.getUserName())).thenReturn(null);
         when(repo.save(account)).thenReturn(WebshopAccount.builder().build());
 
         // Act
@@ -54,7 +55,7 @@ public class WebshopAccountServiceImplTest {
     @Test
     public void saveWebshopAccountExists() throws Exception {
         //Arrange
-        WebshopAccount account = WebshopAccount.builder().userName("AAA").build();
+        WebshopAccount account = WebshopAccount.builder().userName("AAA").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
         when(repo.save(account)).thenReturn(null);
 
@@ -80,7 +81,7 @@ public class WebshopAccountServiceImplTest {
     @Test
     public void getWebshopAccountNullPassword(){
         //Arrange
-        WebshopAccount account = WebshopAccount.builder().userName("aa").build();
+        WebshopAccount account = WebshopAccount.builder().userName("aa").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
 
         //Act
@@ -106,7 +107,7 @@ public class WebshopAccountServiceImplTest {
     @Test
     public void getWebshopAccountInvalidPassword(){
         //Arrange
-        WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").build();
+        WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
 
         //Act
@@ -119,7 +120,7 @@ public class WebshopAccountServiceImplTest {
     @Test
     public void getWebshopAccountValidData(){
         //Arrange
-        WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").build();
+        WebshopAccount account = WebshopAccount.builder().userName("aa").password("bb").customer(testCustomerBuilder().build()).build();
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
 
         //Act
