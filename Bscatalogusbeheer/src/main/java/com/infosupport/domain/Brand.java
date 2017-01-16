@@ -13,7 +13,7 @@ public class Brand {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    private Long id;
 
     public Brand (){}
 }

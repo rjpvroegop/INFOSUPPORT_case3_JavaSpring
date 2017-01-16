@@ -25,25 +25,25 @@ import java.util.List;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    String name;
-    String description;
+    private Long id;
+    private String name;
+    private String description;
 
     @Column(length=1000000)
-    String image;
-    boolean deleted = false;
-    Double price;
+    private String image;
+    private boolean deleted = false;
+    private Double price;
     private LocalDate availableFrom;
-    String supplierProductId;
-    LocalDate availableUntil;
+    private String supplierProductId;
+    private LocalDate availableUntil;
 
     @ManyToOne
-    Brand brand;
+    private Brand brand;
 
     @ManyToOne
-    Supplier supplier;
+    private Supplier supplier;
 
     @ManyToMany
-    List<Category> categoryList;
+    private List<Category> categoryList;
 
 }

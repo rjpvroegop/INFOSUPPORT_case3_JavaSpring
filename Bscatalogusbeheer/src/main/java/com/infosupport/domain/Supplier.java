@@ -22,6 +22,6 @@ import javax.persistence.Id;
 public class Supplier {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    String name;
+    private Long id;
+    private String name;
 }

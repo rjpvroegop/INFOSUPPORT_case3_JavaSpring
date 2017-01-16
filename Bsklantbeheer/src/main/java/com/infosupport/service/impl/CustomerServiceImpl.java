@@ -4,6 +4,7 @@ import com.infosupport.domain.Address;
 import com.infosupport.domain.Customer;
 import com.infosupport.repository.CustomerRepository;
 import com.infosupport.service.CustomerService;
+import com.infosupport.validation.CustomerValidation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -42,7 +43,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer editCustomer(Customer customer) {
-        customerRepository.save(customer);
+        if (CustomerValidation.validateCustomer(customer)){
+            customerRepository.save(customer);
+        }
         return customer;
     }
 
