@@ -57,8 +57,8 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     }
 
     private boolean validateAccountData(WebshopAccount account, String password) {
-        if (account != null && account.getPassword() != null){
-            if (account.getPassword().equals(password)){
+        if (account != null && account.getPassword() != null) {
+            if (account.getPassword().equals(password)) {
                 return true;
             }
         }

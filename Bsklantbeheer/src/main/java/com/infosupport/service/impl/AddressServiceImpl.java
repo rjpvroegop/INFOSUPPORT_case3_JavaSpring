@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import javax.xml.bind.ValidationException;
+
 /**
  * Created by maart on 10-1-2017.
  */
@@ -26,8 +28,12 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public Address addAddress(Address address) {
-        return addressRepository.save(address);
+    public Address addAddress(Address address) throws ValidationException {
+        if (address != null) {
+            return addressRepository.save(address);
+        } else {
+            throw new ValidationException("Invalid address data!");
+        }
     }
 
     @Override

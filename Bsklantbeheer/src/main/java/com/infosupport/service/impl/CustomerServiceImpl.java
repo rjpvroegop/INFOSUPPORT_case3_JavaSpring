@@ -46,7 +46,7 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer editCustomer(Customer customer) throws ValidationException {
         if (CustomerValidation.validateCustomer(customer)) {
             customerRepository.save(customer);
-        }else{
+        } else {
             throw new ValidationException("Invalid Customer data!");
         }
         return customer;

@@ -42,10 +42,10 @@ public class WebshopAccountResource {
 
     @RequestMapping(value = "/newaccount", method = POST)
     public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
-        try{
+        try {
             webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
             return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
-        }catch (ValidationException e){
+        } catch (ValidationException e) {
             return new ResponseEntity<>(webshopAccount, HttpStatus.NOT_ACCEPTABLE);
         }
     }

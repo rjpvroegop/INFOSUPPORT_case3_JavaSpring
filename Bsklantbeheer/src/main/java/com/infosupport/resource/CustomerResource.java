@@ -37,7 +37,7 @@ public class CustomerResource {
 
     @RequestMapping(value = "/editcustomer", method = PUT)
     public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) {
-        try{
+        try {
             customer = customerService.editCustomer(customer);
             return new ResponseEntity<>(customer, HttpStatus.OK);
         } catch (ValidationException e) {
