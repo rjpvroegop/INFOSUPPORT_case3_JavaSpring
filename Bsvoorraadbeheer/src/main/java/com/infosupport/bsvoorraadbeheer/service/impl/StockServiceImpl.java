@@ -1,5 +1,6 @@
 package com.infosupport.bsvoorraadbeheer.service.impl;
 
+import com.infosupport.bsvoorraadbeheer.csv.CsvStock;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
 import com.infosupport.bsvoorraadbeheer.repository.StockRepository;
 import com.infosupport.bsvoorraadbeheer.service.StockService;
@@ -7,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by rjpvr on 17-1-2017.
@@ -23,6 +22,7 @@ public class StockServiceImpl implements StockService {
     @Autowired
     public StockServiceImpl(StockRepository stockRepository) {
         this.stockRepository = stockRepository;
+        refreshStock();
     }
 
     @Override
@@ -47,5 +47,17 @@ public class StockServiceImpl implements StockService {
     @Override
     public Collection<StockItem> getAllStock() {
         return stockRepository.findAll();
+    }
+
+    private void refreshStock(){
+
+        Timer timer = new Timer();
+        TimerTask fiveMinTask = new TimerTask() {
+            @Override
+            public void run () {
+                CsvStock.refreshCsv(stockRepository.findAll());
+            }
+        };
+        timer.schedule (fiveMinTask, 0L, 1000*60*5);
     }
 }
