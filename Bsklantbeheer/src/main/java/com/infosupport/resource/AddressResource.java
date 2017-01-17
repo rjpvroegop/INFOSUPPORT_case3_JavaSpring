@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.bind.ValidationException;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -33,14 +34,12 @@ public class AddressResource {
 
     @RequestMapping(value = "/", method = POST)
     public ResponseEntity<Address> addAddress(@RequestBody Address address, HttpServletRequest request) {
-        address = addressService.addAddress(address);
-        HttpStatus status;
-        if (address != null) {
-            status = HttpStatus.CREATED;
-        } else {
-            status = HttpStatus.BAD_REQUEST;
+        try {
+            address = addressService.addAddress(address);
+            return new ResponseEntity<>(address, HttpStatus.CREATED);
+        } catch (ValidationException e) {
+            return new ResponseEntity<>(address, HttpStatus.NOT_ACCEPTABLE);
         }
-        return new ResponseEntity<>(address, status);
     }
 
     @RequestMapping(value = "/delete/{addressId}", method = PUT)

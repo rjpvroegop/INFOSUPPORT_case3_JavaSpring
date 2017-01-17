@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import javax.xml.bind.ValidationException;
+
 /**
  * Created by maart on 10-1-2017.
  */
@@ -38,33 +40,26 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     }
 
     @Override
-    public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) {
-        WebshopAccount result = null;
-        if (checkSaveWebshopAccountValidity(webshopAccount)) {
-            if (CustomerValidation.validateCustomer(webshopAccount.getCustomer())) {
-                result = webshopAccountRepository.save(webshopAccount);
-            }
+    public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) throws ValidationException {
+        if (checkSaveWebshopAccountValidity(webshopAccount) && CustomerValidation.validateCustomer(webshopAccount.getCustomer())) {
+            return webshopAccountRepository.save(webshopAccount);
+        } else {
+            throw new ValidationException("Invalid account data!");
         }
-        return result;
     }
 
 
     private boolean checkSaveWebshopAccountValidity(WebshopAccount webshopAccount) {
-        if (webshopAccount != null) {
-            WebshopAccount conflict = webshopAccountRepository.findByUserName(webshopAccount.getUserName());
-            if (conflict == null) {
-                return true;
-            }
+        if ((webshopAccount != null) && (webshopAccountRepository.findByUserName(webshopAccount.getUserName()) == null)) {
+            return true;
         }
         return false;
     }
 
     private boolean validateAccountData(WebshopAccount account, String password) {
-        if (account != null) {
-            if (account.getPassword() != null) {
-                if (account.getPassword().equals(password)) {
-                    return true;
-                }
+        if (account != null && account.getPassword() != null) {
+            if (account.getPassword().equals(password)) {
+                return true;
             }
         }
         return false;

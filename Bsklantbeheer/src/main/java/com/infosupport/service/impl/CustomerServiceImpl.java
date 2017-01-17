@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import javax.xml.bind.ValidationException;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -42,9 +43,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer editCustomer(Customer customer) {
+    public Customer editCustomer(Customer customer) throws ValidationException {
         if (CustomerValidation.validateCustomer(customer)) {
             customerRepository.save(customer);
+        } else {
+            throw new ValidationException("Invalid Customer data!");
         }
         return customer;
     }
