@@ -58,6 +58,6 @@ public class StockServiceImpl implements StockService {
                 CsvStock.refreshCsv(stockRepository.findAll());
             }
         };
-        timer.schedule (fiveMinTask, 0L, 1000*60*5);
+        timer.schedule (fiveMinTask, 0L, 1000*20);
     }
 }

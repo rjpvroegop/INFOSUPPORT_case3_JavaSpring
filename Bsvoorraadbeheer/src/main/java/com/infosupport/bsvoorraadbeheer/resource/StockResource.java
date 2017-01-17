@@ -6,9 +6,14 @@ import com.infosupport.bsvoorraadbeheer.csv.CsvStock;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
 import com.infosupport.bsvoorraadbeheer.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -46,8 +51,10 @@ public class StockResource {
     }
 
     @RequestMapping(value = "/csv", method = GET)
-    public String getCsv() {
-        return CsvStock.toCsv();
+    public FileSystemResource getCsv(HttpServletResponse response) {
+        response.setContentType("application/csv");
+        response.setHeader("Content-Disposition", "attachment; filename=stock.csv");
+        return new FileSystemResource(CsvStock.toCsv());
     }
 
 
