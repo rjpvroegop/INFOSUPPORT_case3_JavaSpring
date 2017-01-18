@@ -4,6 +4,7 @@ import com.infosupport.domain.Category;
 import com.infosupport.domain.Product;
 import com.infosupport.repository.CategoryRepository;
 import com.infosupport.repository.ProductRepository;
+import org.antlr.stringtemplate.language.Cat;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 
@@ -24,7 +26,7 @@ import static org.mockito.Mockito.when;
  * Created by maart on 11-1-2017.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class ProductServiceImplTest {
+public class CategoryServiceImplTest {
 
     @Mock
     private ProductRepository prodRepo;
@@ -33,7 +35,7 @@ public class ProductServiceImplTest {
     private CategoryRepository catRepo;
 
     @InjectMocks
-    private ProductServiceImpl service;
+    private CategoryServiceImpl service;
 
     private List<Category> categories = new ArrayList<>();
 
@@ -51,7 +53,7 @@ public class ProductServiceImplTest {
         products.add(Product.builder()
                 .availableFrom(LocalDate.now().minusDays(3))
                 .availableUntil(LocalDate.now().plusDays(1))
-                .categoryList(Arrays.asList(categories.get(0), categories.get(4)))
+                .categoryList(Arrays.asList(categories.get(0), categories.get(3)))
                 .build());
         products.add(Product.builder()
                 .availableFrom(LocalDate.now().minusDays(3))
@@ -61,62 +63,38 @@ public class ProductServiceImplTest {
         products.add(Product.builder()
                 .availableFrom(LocalDate.now().minusDays(3))
                 .availableUntil(LocalDate.now().plusDays(1))
-                .categoryList(Arrays.asList(categories.get(2), categories.get(4)))
+                .categoryList(Arrays.asList(categories.get(2), categories.get(3)))
                 .build());
         products.add(Product.builder()
                 .availableFrom(LocalDate.now().minusDays(3))
                 .availableUntil(LocalDate.now().plusDays(1))
-                .categoryList(Arrays.asList(categories.get(3), categories.get(4)))
+                .categoryList(Arrays.asList(categories.get(2), categories.get(4)))
                 .build());
     }
 
     @Test
-    public void findAllActiveProducts3Active1Inactive() throws Exception {
+    public void findAllCategoriesForCategoryEmptyList() throws Exception {
         //Arrange
-        when(prodRepo.findAll()).thenReturn(products);
+        when(catRepo.findByName("catName")).thenReturn(null);
 
         //Act
-        List<Product> products = service.findAllActiveProducts();
+        List<Category> categories = service.findAllCategoriesForCategory("catName");
 
         //Assert
-        assertThat(products.size(), is(3));
+        assertThat(categories.size(), is(0));
     }
 
     @Test
-    public void findAllActiveProductsNullDates() throws Exception {
+    public void findAllCategoriesForCategory() throws Exception {
         //Arrange
-        when(prodRepo.findAll()).thenReturn(Arrays.asList(new Product(), new Product()));
-
-        //Act
-        List<Product> products = service.findAllActiveProducts();
-
-        //Assert
-        assertThat(products.size(), is(2));
-    }
-
-    @Test
-    public void findActiveProductsForCategory() throws Exception {
-        //Arrange
+        when(catRepo.findByName("cat3")).thenReturn(categories.get(2));
         when(prodRepo.findAll()).thenReturn(products);
-        when(catRepo.findOne(1L)).thenReturn(categories.get(0));
+
         //Act
-        List<Product> products = service.findActiveProductsForCategory(1L);
+        List<Category> categories = service.findAllCategoriesForCategory("cat3");
 
         //Assert
-        assertThat(products.size(), is(1));
+        assertThat(categories.get(0), is(this.categories.get(3)));
+        assertThat(categories.get(1), is(this.categories.get(4)));
     }
-
-    @Test
-    public void findActiveProductsForNoCategory() throws Exception {
-        //Arrange
-        when(prodRepo.findAll()).thenReturn(products);
-        when(catRepo.findOne(1L)).thenReturn(null);
-        //Act
-        List<Product> products = service.findActiveProductsForCategory(1L);
-
-        //Assert
-        assertThat(products.size(), is(0));
-    }
-
-
 }
