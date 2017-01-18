@@ -1,8 +1,7 @@
 package com.infosupport.bsbestellingbeheer.service;
 
 import com.infosupport.bsbestellingbeheer.domain.Order;
-import com.infosupport.bsbestellingbeheer.domain.OrderState;
-import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
+import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 
 import java.util.Collection;
 
@@ -11,8 +10,12 @@ import java.util.Collection;
  */
 public interface OrderService {
     Collection<Order> getAllOrders();
+
     Order getOrder(String id);
+
     Collection<Order> getAllPostedOrders(OrderState orderState);
+
     Order packOrder(String id) throws Exception;
+
     Order sendOrder(String id) throws Exception;
 }

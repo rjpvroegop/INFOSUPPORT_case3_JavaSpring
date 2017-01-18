@@ -1,6 +1,9 @@
-package com.infosupport.bsbestellingbeheer.domain;
+package com.infosupport.bsbestellingbeheer.domain.orderState;
 
-import com.infosupport.bsbestellingbeheer.domain.orderState.*;
+import com.infosupport.bsbestellingbeheer.domain.AbstractOrderState;
+import com.infosupport.bsbestellingbeheer.domain.Order;
+import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
+
 /**
  * Created by Sander on 16-1-17.
  */
@@ -13,7 +16,7 @@ public enum OrderState {
 
     private final AbstractOrderState orderState;
 
-    OrderState(AbstractOrderState orderState){
+    OrderState(AbstractOrderState orderState) {
         this.orderState = orderState;
     }
 

@@ -10,6 +10,7 @@ import java.util.Collection;
 public interface StockService {
 
     StockItem getStock(Long productId);
+
     Collection<StockItem> getAllStock();
 
 }

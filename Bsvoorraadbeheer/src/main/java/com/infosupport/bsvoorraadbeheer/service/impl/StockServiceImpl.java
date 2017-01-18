@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
-import java.util.*;
+import java.util.Collection;
 
 /**
  * Created by rjpvr on 17-1-2017.
@@ -32,9 +32,9 @@ public class StockServiceImpl implements StockService {
 
         SecureRandom r = new SecureRandom();
 
-        if(stockItem == null){
+        if (stockItem == null) {
             // todo: random stock if product is new -- test data only for PO demo purposes
-            stockItem = StockItem.builder().productId(productId).stock((long)r.nextInt(5)).build();
+            stockItem = StockItem.builder().productId(productId).stock((long) r.nextInt(5)).build();
 
             // todo: set stock to 0 if product is new
             // stockItem = StockItem.builder().productId(productId).stock(0L).build();
@@ -50,7 +50,7 @@ public class StockServiceImpl implements StockService {
         return stockRepository.findAll();
     }
 
-    private void refreshStock(){
+    private void refreshStock() {
         int intevalMinutes = 60;
 
         CsvStock csvStock = CsvStock.getInstance();

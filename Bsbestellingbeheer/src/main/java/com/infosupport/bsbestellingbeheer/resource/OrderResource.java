@@ -1,16 +1,14 @@
 package com.infosupport.bsbestellingbeheer.resource;
 
 import com.infosupport.bsbestellingbeheer.domain.Order;
-import com.infosupport.bsbestellingbeheer.domain.OrderState;
-import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
+import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
-import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;

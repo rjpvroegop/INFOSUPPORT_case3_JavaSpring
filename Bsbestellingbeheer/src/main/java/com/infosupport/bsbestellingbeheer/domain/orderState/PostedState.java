@@ -2,7 +2,6 @@ package com.infosupport.bsbestellingbeheer.domain.orderState;
 
 import com.infosupport.bsbestellingbeheer.domain.AbstractOrderState;
 import com.infosupport.bsbestellingbeheer.domain.Order;
-import com.infosupport.bsbestellingbeheer.domain.OrderState;
 import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
 
 /**

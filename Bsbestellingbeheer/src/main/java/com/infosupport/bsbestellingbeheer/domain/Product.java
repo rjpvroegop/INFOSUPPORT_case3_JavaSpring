@@ -1,11 +1,6 @@
 package com.infosupport.bsbestellingbeheer.domain;
 
 import lombok.*;
-import org.hibernate.annotations.Type;
-
-import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.List;
 
 /**
  * Created by Sander on 16-1-17.

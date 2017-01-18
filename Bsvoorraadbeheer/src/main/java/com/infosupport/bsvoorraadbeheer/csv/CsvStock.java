@@ -3,7 +3,9 @@ package com.infosupport.bsvoorraadbeheer.csv;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
 import com.infosupport.bsvoorraadbeheer.repository.StockRepository;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -14,14 +16,15 @@ import java.util.TimerTask;
 public class CsvStock {
     // singleton
     private static CsvStock instance = new CsvStock();
-
-    private CsvStock() {}
-
-    public static CsvStock getInstance() { return instance; }
-
-    private StockRepository repository;
     private static Timer refreshTimer = new Timer();
+    private StockRepository repository;
     private TimerTask csvTask;
+    private CsvStock() {
+    }
+
+    public static CsvStock getInstance() {
+        return instance;
+    }
 
     public void refreshCsv(Collection<StockItem> stockItems) {
         try {
@@ -42,24 +45,24 @@ public class CsvStock {
         return new File("stock.csv");
     }
 
-    public void setRepository(StockRepository repository){
+    public void setRepository(StockRepository repository) {
         this.repository = repository;
     }
 
-    public void setRefreshInterval(int minutes){
-        if(csvTask != null)
+    public void setRefreshInterval(int minutes) {
+        if (csvTask != null)
             csvTask.cancel();
 
         csvTask = new TimerTask() {
             @Override
-            public void run () {
+            public void run() {
                 CsvStock.getInstance().refreshCsv(repository.findAll());
             }
         };
-        refreshTimer.schedule (csvTask, 0L, 1000*60*minutes);
+        refreshTimer.schedule(csvTask, 0L, 1000 * 60 * minutes);
     }
 
-    private String stockItemToCsvString(StockItem si){
+    private String stockItemToCsvString(StockItem si) {
         return si.getProductId() + "," + si.getStock() + ";";
     }
 }
