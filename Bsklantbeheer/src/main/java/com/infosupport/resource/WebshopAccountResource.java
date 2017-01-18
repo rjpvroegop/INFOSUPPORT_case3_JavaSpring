@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.xml.bind.ValidationException;
 
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static org.hibernate.jpa.internal.EntityManagerImpl.LOG;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -47,7 +48,7 @@ public class WebshopAccountResource {
             webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
             return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
         } catch (ValidationException e) {
-            LOG.error("Exception while validating webshopAccount");
+            LOGGER.info(e.getMessage());
             return new ResponseEntity<>(webshopAccount, HttpStatus.NOT_ACCEPTABLE);
         }
     }

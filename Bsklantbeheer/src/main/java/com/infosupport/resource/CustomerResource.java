@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.xml.bind.ValidationException;
 import java.util.Collection;
 
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static org.hibernate.jpa.internal.EntityManagerImpl.LOG;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.PUT;
@@ -42,7 +43,7 @@ public class CustomerResource {
             customer = customerService.editCustomer(customer);
             return new ResponseEntity<>(customer, HttpStatus.OK);
         } catch (ValidationException e) {
-            LOG.error("Exception while validating customer");
+            LOGGER.info(e.getMessage());
             return new ResponseEntity<>(customer, HttpStatus.NOT_ACCEPTABLE);
         }
     }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.xml.bind.ValidationException;
 
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static org.hibernate.jpa.internal.EntityManagerImpl.LOG;
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -39,7 +40,7 @@ public class AddressResource {
             address = addressService.addAddress(address);
             return new ResponseEntity<>(address, HttpStatus.CREATED);
         } catch (ValidationException e) {
-            LOG.error("Exception while validating user address");
+            LOGGER.info(e.getMessage());
             return new ResponseEntity<>(address, HttpStatus.NOT_ACCEPTABLE);
         }
     }

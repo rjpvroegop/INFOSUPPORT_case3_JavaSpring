@@ -50,7 +50,7 @@ public class OrderResource {
         return orderService.packOrder(id);
     }
 
-    @RequestMapping(value = "/send/{id}", method = POST)
+    @RequestMapping(value = "/sent/{id}", method = POST)
     public Order sendOder(@PathVariable("id") String id) throws Exception {
         return orderService.sendOrder(id);
     }

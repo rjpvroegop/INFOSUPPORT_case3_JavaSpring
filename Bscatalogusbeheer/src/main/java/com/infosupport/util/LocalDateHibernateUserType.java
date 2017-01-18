@@ -43,11 +43,11 @@ public class LocalDateHibernateUserType implements EnhancedUserType, Serializabl
 
     @Override
     public boolean equals(Object obj1, Object obj2) throws HibernateException {
-        if (obj1.equals(obj2))
-            return true;
-
         if (obj1 == null || obj2 == null)
             return false;
+
+        if (obj1.equals(obj2))
+            return true;
 
         LocalDate ldt1 = (LocalDate) obj1;
         LocalDate ldt2 = (LocalDate) obj2;
