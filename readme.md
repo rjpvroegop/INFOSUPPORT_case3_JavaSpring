@@ -14,6 +14,8 @@ Redirects the API calls to the voorraadbeheer API endpoints
 
 ####API Methods
 
+---
+
 > GET **/stock**
 
 Returns one array with all stock items.
@@ -41,3 +43,5 @@ Returns the stock items in a CSV file
 Change the CSV Generator interval in minutes
 
 The request body should be an integer representing the amount of minutes.
+
+---
