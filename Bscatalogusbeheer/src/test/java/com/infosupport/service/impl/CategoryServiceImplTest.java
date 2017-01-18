@@ -4,7 +4,6 @@ import com.infosupport.domain.Category;
 import com.infosupport.domain.Product;
 import com.infosupport.repository.CategoryRepository;
 import com.infosupport.repository.ProductRepository;
-import org.antlr.stringtemplate.language.Cat;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +17,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
 

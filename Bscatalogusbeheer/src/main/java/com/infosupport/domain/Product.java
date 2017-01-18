@@ -17,16 +17,15 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
+    @Column(columnDefinition = "tinyint(1) default 0")
+    boolean deleted = false;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String description;
-
     @Column(length = 1000000)
     private String image;
-    @Column(columnDefinition = "tinyint(1) default 0")
-    boolean deleted = false;
     private Double price;
 
     @Column(columnDefinition = "date")

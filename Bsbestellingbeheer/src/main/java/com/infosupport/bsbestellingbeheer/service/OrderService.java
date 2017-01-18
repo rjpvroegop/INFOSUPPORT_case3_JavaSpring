@@ -10,8 +10,12 @@ import java.util.Collection;
  */
 public interface OrderService {
     Collection<Order> getAllOrders();
+
     Order getOrder(String id);
+
     Collection<Order> getAllPostedOrders(OrderState orderState);
+
     Order packOrder(String id) throws Exception;
+
     Order sendOrder(String id) throws Exception;
 }

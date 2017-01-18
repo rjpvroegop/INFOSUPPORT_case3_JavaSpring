@@ -27,7 +27,7 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.findAll();
     }
 
-    public Order getOrder(String id){
+    public Order getOrder(String id) {
         return orderRepository.findOne(id);
     }
 

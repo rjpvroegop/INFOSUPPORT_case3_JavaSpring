@@ -1,9 +1,7 @@
 package com.infosupport.resource;
 
 import com.infosupport.domain.Category;
-import com.infosupport.domain.Supplier;
 import com.infosupport.service.CategoryService;
-import com.infosupport.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;

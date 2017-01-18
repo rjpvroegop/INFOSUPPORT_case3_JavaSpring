@@ -2,7 +2,7 @@ package com.infosupport.bsbestellingbeheer.domain;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.OneToOne;
 
 /**
  * Created by Sander on 16-1-17.

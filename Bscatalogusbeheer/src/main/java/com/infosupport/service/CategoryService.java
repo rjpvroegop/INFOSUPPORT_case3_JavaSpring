@@ -1,7 +1,6 @@
 package com.infosupport.service;
 
 import com.infosupport.domain.Category;
-import com.infosupport.domain.Supplier;
 
 import java.util.List;
 
@@ -10,5 +9,6 @@ import java.util.List;
  */
 public interface CategoryService {
     List<Category> findAllCategories();
+
     List<Category> findAllCategoriesForCategory(String category);
 }

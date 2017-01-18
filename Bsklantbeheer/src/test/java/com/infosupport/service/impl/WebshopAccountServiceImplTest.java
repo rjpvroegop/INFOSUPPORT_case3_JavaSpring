@@ -4,12 +4,11 @@ import com.infosupport.domain.WebshopAccount;
 import com.infosupport.repository.WebshopAccountRepository;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import org.junit.rules.ExpectedException;
 
 import javax.xml.bind.ValidationException;
 

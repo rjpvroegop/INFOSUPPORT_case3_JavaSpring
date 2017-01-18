@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by rjpvr on 17-1-2017.
@@ -31,9 +34,9 @@ public class StockServiceImpl implements StockService {
 
         Random r = new Random();
 
-        if(stockItem == null){
+        if (stockItem == null) {
             // todo: random stock if product is new -- test data only for PO demo purposes
-            stockItem = StockItem.builder().productId(productId).stock((long)r.nextInt(5)).build();
+            stockItem = StockItem.builder().productId(productId).stock((long) r.nextInt(5)).build();
 
             // todo: set stock to 0 if product is new
             // stockItem = StockItem.builder().productId(productId).stock(0L).build();
@@ -49,15 +52,15 @@ public class StockServiceImpl implements StockService {
         return stockRepository.findAll();
     }
 
-    private void refreshStock(){
+    private void refreshStock() {
 
         Timer timer = new Timer();
         TimerTask fiveMinTask = new TimerTask() {
             @Override
-            public void run () {
+            public void run() {
                 CsvStock.refreshCsv(stockRepository.findAll());
             }
         };
-        timer.schedule (fiveMinTask, 0L, 1000*20);
+        timer.schedule(fiveMinTask, 0L, 1000 * 20);
     }
 }

@@ -7,7 +7,9 @@ import com.infosupport.bsbestellingbeheer.util.OrderStateSerializer;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.time.LocalDateTime;
 import java.util.List;
 
