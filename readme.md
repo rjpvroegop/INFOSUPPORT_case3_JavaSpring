@@ -20,15 +20,21 @@ Returns one array with all stock items.
 
 Example: `[{"productId":1,"stock":3}]`
 
+---
+
 > GET **/stock/{stockitemId}**
 
 Returns one stockitem.
 
 Example: `{"productId":1,"stock":3}`
 
+---
+
 > GET **/stock/csv**
 
 Returns the stock items in a CSV file
+
+---
 
 > PUT **/stock/csv/interval**
 
