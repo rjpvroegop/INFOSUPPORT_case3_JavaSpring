@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.xml.bind.ValidationException;
 
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 

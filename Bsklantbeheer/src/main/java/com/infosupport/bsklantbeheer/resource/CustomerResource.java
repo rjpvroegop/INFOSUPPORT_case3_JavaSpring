@@ -13,7 +13,7 @@ import java.util.Collection;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.PUT;
-import lombok.extern.slf4j.Slf4j;
+
 /**
  * Created by Sander on 9-1-17.
  */
