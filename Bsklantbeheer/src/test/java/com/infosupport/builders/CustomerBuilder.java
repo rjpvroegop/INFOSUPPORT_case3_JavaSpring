@@ -1,7 +1,7 @@
 package com.infosupport.builders;
 
-import com.infosupport.domain.Address;
-import com.infosupport.domain.Customer;
+import com.infosupport.bsklantbeheer.domain.Address;
+import com.infosupport.bsklantbeheer.domain.Customer;
 
 import java.util.Arrays;
 
