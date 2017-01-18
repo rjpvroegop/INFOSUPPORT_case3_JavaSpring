@@ -1,8 +1,7 @@
 package com.infosupport.bsbestellingbeheer.service;
 
 import com.infosupport.bsbestellingbeheer.domain.Order;
-import com.infosupport.bsbestellingbeheer.domain.OrderState;
-import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
+import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 
 import java.util.Collection;
 

@@ -11,4 +11,7 @@ public class DiscoveryserverApplication {
     public static void main(String[] args) {
         SpringApplication.run(DiscoveryserverApplication.class, args);
     }
+
+    private DiscoveryserverApplication() {
+    }
 }

@@ -1,6 +1,7 @@
 package com.infosupport.bsbestellingbeheer;
 
 import com.infosupport.bsbestellingbeheer.domain.*;
+import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

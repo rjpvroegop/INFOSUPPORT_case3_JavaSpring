@@ -1,13 +1,9 @@
 package com.infosupport.service.impl;
 
 import com.infosupport.domain.Category;
-import com.infosupport.domain.Product;
-import com.infosupport.domain.Supplier;
 import com.infosupport.repository.CategoryRepository;
 import com.infosupport.repository.ProductRepository;
-import com.infosupport.repository.SupplierRepository;
 import com.infosupport.service.CategoryService;
-import com.infosupport.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -46,9 +42,8 @@ public class CategoryServiceImpl implements CategoryService {
                 .filter(product -> product.getCategoryList().contains(category))
                 .flatMap(product -> product.getCategoryList().stream())
                 .distinct()
-                .filter(category1 -> category1 != category)
+                .filter(category1 -> !category1.equals(category))
                 .collect(Collectors.toList());
-
     }
 
 }

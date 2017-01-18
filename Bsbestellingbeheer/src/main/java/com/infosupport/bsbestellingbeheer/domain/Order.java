@@ -1,15 +1,13 @@
 package com.infosupport.bsbestellingbeheer.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.util.CustomLocalDateTimeSerializer;
 import com.infosupport.bsbestellingbeheer.util.OrderStateSerializer;
 import lombok.*;
-import org.hibernate.annotations.Type;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 

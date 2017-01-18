@@ -1,8 +1,7 @@
 package com.infosupport.bsbestellingbeheer.repository;
 
 import com.infosupport.bsbestellingbeheer.domain.Order;
-import com.infosupport.bsbestellingbeheer.domain.OrderState;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

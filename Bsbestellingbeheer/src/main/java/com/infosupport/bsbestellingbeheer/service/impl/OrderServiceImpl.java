@@ -1,15 +1,13 @@
 package com.infosupport.bsbestellingbeheer.service.impl;
 
 import com.infosupport.bsbestellingbeheer.domain.Order;
-import com.infosupport.bsbestellingbeheer.domain.OrderState;
-import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
+import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.repository.OrderRepository;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by Sander on 16-1-17.
