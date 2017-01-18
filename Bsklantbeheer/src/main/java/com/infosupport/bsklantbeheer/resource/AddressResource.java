@@ -39,7 +39,6 @@ public class AddressResource {
             address = addressService.addAddress(address);
             return new ResponseEntity<>(address, HttpStatus.CREATED);
         } catch (ValidationException e) {
-            LOGGER.info(e.getMessage());
             return new ResponseEntity<>(address, HttpStatus.NOT_ACCEPTABLE);
         }
     }

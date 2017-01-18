@@ -11,10 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.xml.bind.ValidationException;
 import java.util.Collection;
 
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.PUT;
-
+import lombok.extern.slf4j.Slf4j;
 /**
  * Created by Sander on 9-1-17.
  */
@@ -42,7 +41,6 @@ public class CustomerResource {
             customer = customerService.editCustomer(customer);
             return new ResponseEntity<>(customer, HttpStatus.OK);
         } catch (ValidationException e) {
-            LOGGER.info(e.getMessage());
             return new ResponseEntity<>(customer, HttpStatus.NOT_ACCEPTABLE);
         }
     }

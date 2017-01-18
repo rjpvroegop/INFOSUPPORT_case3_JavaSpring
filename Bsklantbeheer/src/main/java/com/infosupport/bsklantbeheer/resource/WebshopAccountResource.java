@@ -47,7 +47,6 @@ public class WebshopAccountResource {
             webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
             return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
         } catch (ValidationException e) {
-            LOGGER.info(e.getMessage());
             return new ResponseEntity<>(webshopAccount, HttpStatus.NOT_ACCEPTABLE);
         }
     }

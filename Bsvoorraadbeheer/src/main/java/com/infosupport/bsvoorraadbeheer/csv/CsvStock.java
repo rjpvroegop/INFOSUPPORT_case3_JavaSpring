@@ -10,8 +10,6 @@ import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
-
 /**
  * Created by rjpvr on 17-1-2017.
  */
@@ -34,12 +32,11 @@ public class CsvStock {
             PrintWriter writer = new PrintWriter("stock.csv", "UTF-8");
 
             stockItems.forEach(item ->
-                    LOGGER.info(stockItemToCsvString(item))
+                    writer.println(stockItemToCsvString(item))
             );
 
             writer.close();
         } catch (IOException e) {
-            LOGGER.info(e.getMessage());
             System.out.println("Could not write file");
             e.printStackTrace();
         }
