@@ -10,6 +10,8 @@ import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
+
 /**
  * Created by rjpvr on 17-1-2017.
  */
@@ -19,6 +21,7 @@ public class CsvStock {
     private static Timer refreshTimer = new Timer();
     private StockRepository repository;
     private TimerTask csvTask;
+
     private CsvStock() {
     }
 
@@ -31,11 +34,12 @@ public class CsvStock {
             PrintWriter writer = new PrintWriter("stock.csv", "UTF-8");
 
             stockItems.forEach(item ->
-                    writer.println(stockItemToCsvString(item))
+                    LOGGER.info(stockItemToCsvString(item))
             );
 
             writer.close();
         } catch (IOException e) {
+            LOGGER.info(e.getMessage());
             System.out.println("Could not write file");
             e.printStackTrace();
         }
@@ -63,6 +67,11 @@ public class CsvStock {
     }
 
     private String stockItemToCsvString(StockItem si) {
-        return si.getProductId() + "," + si.getStock() + ";";
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(si.getProductId());
+        stringBuilder.append(",");
+        stringBuilder.append(si.getStock());
+        stringBuilder.append(";");
+        return stringBuilder.toString();
     }
 }
