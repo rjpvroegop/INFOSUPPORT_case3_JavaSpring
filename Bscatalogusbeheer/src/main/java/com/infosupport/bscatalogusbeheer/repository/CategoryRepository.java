@@ -1,6 +1,6 @@
-package com.infosupport.bsklantbeheer.repository;
+package com.infosupport.bscatalogusbeheer.repository;
 
-import com.infosupport.bsklantbeheer.domain.Category;
+import com.infosupport.bscatalogusbeheer.domain.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

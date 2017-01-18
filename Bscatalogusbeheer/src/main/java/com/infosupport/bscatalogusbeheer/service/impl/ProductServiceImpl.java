@@ -1,9 +1,9 @@
-package com.infosupport.bsklantbeheer.service.impl;
+package com.infosupport.bscatalogusbeheer.service.impl;
 
-import com.infosupport.bsklantbeheer.domain.Product;
-import com.infosupport.bsklantbeheer.repository.CategoryRepository;
-import com.infosupport.bsklantbeheer.repository.ProductRepository;
-import com.infosupport.bsklantbeheer.service.ProductService;
+import com.infosupport.bscatalogusbeheer.domain.Product;
+import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;
+import com.infosupport.bscatalogusbeheer.repository.ProductRepository;
+import com.infosupport.bscatalogusbeheer.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -35,8 +35,8 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findAllActiveProducts() {
         return productRepository.findAll()
                 .stream()
-                .filter(Product -> (Product.getAvailableFrom() == null || Product.getAvailableFrom().isBefore(LocalDate.now())))
-                .filter(Product -> (Product.getAvailableUntil() == null || Product.getAvailableUntil().isAfter(LocalDate.now())))
+                .filter(product -> (product.getAvailableFrom() == null || product.getAvailableFrom().isBefore(LocalDate.now())))
+                .filter(product -> (product.getAvailableUntil() == null || product.getAvailableUntil().isAfter(LocalDate.now())))
                 .collect(Collectors.toList());
     }
 
@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findActiveProductsForCategory(Long id) {
         return findAllActiveProducts()
                 .stream()
-                .filter(Product -> (Product.getCategoryList().contains(categoryRepository.findOne(id))))
+                .filter(product -> (product.getCategoryList().contains(categoryRepository.findOne(id))))
                 .collect(Collectors.toList());
     }
 

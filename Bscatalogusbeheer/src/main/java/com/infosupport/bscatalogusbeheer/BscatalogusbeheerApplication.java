@@ -1,4 +1,4 @@
-package com.infosupport;
+package com.infosupport.bscatalogusbeheer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

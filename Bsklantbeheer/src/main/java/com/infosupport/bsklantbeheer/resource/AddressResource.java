@@ -5,6 +5,7 @@ import com.infosupport.bsklantbeheer.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,12 +34,12 @@ public class AddressResource {
     }
 
     @RequestMapping(value = "/", method = POST)
-    public ResponseEntity<Address> addAddress(@RequestBody Address address, HttpServletRequest request) {
+    public ResponseEntity<Address> addAddress(@RequestBody Address address, HttpServletRequest request) throws HttpMediaTypeNotAcceptableException {
         try {
             address = addressService.addAddress(address);
             return new ResponseEntity<>(address, HttpStatus.CREATED);
         } catch (ValidationException e) {
-            return new ResponseEntity<>(address, HttpStatus.NOT_ACCEPTABLE);
+            throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
     }
 

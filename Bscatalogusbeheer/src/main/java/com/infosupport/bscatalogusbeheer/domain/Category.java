@@ -1,4 +1,4 @@
-package com.infosupport.bsklantbeheer.domain;
+package com.infosupport.bscatalogusbeheer.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,9 +1,9 @@
-package com.infosupport.bsklantbeheer.service.impl;
+package com.infosupport.bscatalogusbeheer.service.impl;
 
-import com.infosupport.bsklantbeheer.domain.Category;
-import com.infosupport.bsklantbeheer.repository.CategoryRepository;
-import com.infosupport.bsklantbeheer.repository.ProductRepository;
-import com.infosupport.bsklantbeheer.service.CategoryService;
+import com.infosupport.bscatalogusbeheer.domain.Category;
+import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;
+import com.infosupport.bscatalogusbeheer.repository.ProductRepository;
+import com.infosupport.bscatalogusbeheer.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;

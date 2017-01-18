@@ -5,6 +5,7 @@ import com.infosupport.bsklantbeheer.service.WebshopAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.bind.ValidationException;
@@ -41,13 +42,14 @@ public class WebshopAccountResource {
     }
 
     @RequestMapping(value = "/newaccount", method = POST)
-    public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
+    public ResponseEntity<WebshopAccount> saveWebshopAccount(@RequestBody WebshopAccount webshopAccount) throws HttpMediaTypeNotAcceptableException {
         try {
             webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
             return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
         } catch (ValidationException e) {
-            return new ResponseEntity<>(webshopAccount, HttpStatus.NOT_ACCEPTABLE);
+            throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
+
     }
 
 
