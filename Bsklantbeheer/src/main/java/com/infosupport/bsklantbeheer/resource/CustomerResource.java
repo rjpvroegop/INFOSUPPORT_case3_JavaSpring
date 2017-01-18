@@ -5,6 +5,7 @@ import com.infosupport.bsklantbeheer.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,12 +37,12 @@ public class CustomerResource {
     }
 
     @RequestMapping(value = "/editcustomer", method = PUT)
-    public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) {
+    public ResponseEntity<Customer> editCustomer(@RequestBody Customer customer, HttpServletRequest request) throws HttpMediaTypeNotAcceptableException {
         try {
             customer = customerService.editCustomer(customer);
             return new ResponseEntity<>(customer, HttpStatus.OK);
         } catch (ValidationException e) {
-            return new ResponseEntity<>(customer, HttpStatus.NOT_ACCEPTABLE);
+            throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
     }
 

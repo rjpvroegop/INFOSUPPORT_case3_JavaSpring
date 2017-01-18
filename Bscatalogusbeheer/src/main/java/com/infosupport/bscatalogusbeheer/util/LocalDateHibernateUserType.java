@@ -1,4 +1,4 @@
-package com.infosupport.util;
+package com.infosupport.bscatalogusbeheer.util;
 
 /**
  * Created by Sander on 14-1-17.

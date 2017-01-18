@@ -1,6 +1,6 @@
-package com.infosupport.bsklantbeheer.service;
+package com.infosupport.bscatalogusbeheer.service;
 
-import com.infosupport.bsklantbeheer.domain.Product;
+import com.infosupport.bscatalogusbeheer.domain.Product;
 
 import java.util.List;
 

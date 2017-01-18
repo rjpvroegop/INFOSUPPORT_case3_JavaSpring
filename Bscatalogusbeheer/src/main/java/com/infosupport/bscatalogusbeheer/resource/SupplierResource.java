@@ -1,7 +1,7 @@
-package com.infosupport.bsklantbeheer.resource;
+package com.infosupport.bscatalogusbeheer.resource;
 
-import com.infosupport.bsklantbeheer.domain.Supplier;
-import com.infosupport.bsklantbeheer.service.SupplierService;
+import com.infosupport.bscatalogusbeheer.domain.Supplier;
+import com.infosupport.bscatalogusbeheer.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;

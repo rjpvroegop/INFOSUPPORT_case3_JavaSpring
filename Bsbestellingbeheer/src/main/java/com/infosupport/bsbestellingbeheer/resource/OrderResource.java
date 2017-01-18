@@ -1,9 +1,12 @@
 package com.infosupport.bsbestellingbeheer.resource;
 
 import com.infosupport.bsbestellingbeheer.domain.Order;
+import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,12 +50,24 @@ public class OrderResource {
 
     @RequestMapping(value = "/pack/{id}", method = POST)
     public Order packOder(@PathVariable("id") String id) throws Exception {
-        return orderService.packOrder(id);
+        try {
+            return orderService.packOrder(id);
+        } catch (OrderStateException e) {
+            throw new HttpRequestMethodNotSupportedException(e.getMessage());
+        } catch (Exception e) {
+            throw new HttpMessageNotReadableException(e.getMessage());
+        }
     }
 
     @RequestMapping(value = "/sent/{id}", method = POST)
     public Order sendOder(@PathVariable("id") String id) throws Exception {
-        return orderService.sendOrder(id);
+        try {
+            return orderService.sendOrder(id);
+        } catch (OrderStateException e) {
+            throw new HttpRequestMethodNotSupportedException(e.getMessage());
+        } catch (Exception e) {
+            throw new HttpMessageNotReadableException(e.getMessage());
+        }
     }
 
 }

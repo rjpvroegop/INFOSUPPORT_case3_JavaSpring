@@ -1,4 +1,4 @@
-package com.infosupport.bsklantbeheer.domain;
+package com.infosupport.bscatalogusbeheer.domain;
 
 import lombok.*;
 import org.hibernate.annotations.Type;
@@ -30,11 +30,11 @@ public class Product {
     private Double price;
 
     @Column(columnDefinition = "date")
-    @Type(type = "com.infosupport.util.LocalDateHibernateUserType")
+    @Type(type = "com.infosupport.bscatalogusbeheer.util.LocalDateHibernateUserType")
     private LocalDate availableFrom;
 
     @Column(columnDefinition = "date")
-    @Type(type = "com.infosupport.util.LocalDateHibernateUserType")
+    @Type(type = "com.infosupport.bscatalogusbeheer.util.LocalDateHibernateUserType")
     private LocalDate availableUntil;
 
     private String supplierProductId;
