@@ -1,8 +1,26 @@
 #Kantilever backend
 
+## Discovery server
+
+### Ports
+
+**Eureka**: 10000
+
+**Zuul API**: 10001
+
+**BSCatalogusbeher**: 10003
+
+**BSKlantbeheer**: 10005
+
+**BSBestellingenbeheer**: 10007
+
+**BSVoorraadbeheer**: 10009
+
+**PcSBestellen**: 10011
+
 ## Zuul API
 
-#### API Methods
+### API Methods
 
 **/bsvoorraadbeheer**
 
