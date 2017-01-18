@@ -1,6 +1,5 @@
 package com.infosupport.bsvoorraadbeheer.resource;
 
-import com.infosupport.bsvoorraadbeheer.csv.CsvStock;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
 import com.infosupport.bsvoorraadbeheer.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,18 +40,5 @@ public class StockResource {
     @RequestMapping
     public Collection<StockItem> getAllStock() {
         return stockService.getAllStock();
-    }
-
-    @RequestMapping(value = "/csv", method = GET)
-    public FileSystemResource getCsv(HttpServletResponse response) {
-        response.setContentType("application/csv");
-        response.setHeader("Content-Disposition", "attachment; filename=stock.csv");
-        return new FileSystemResource(CsvStock.getInstance().toCsv());
-    }
-
-    @RequestMapping(value = "/csv/interval", method = PUT)
-    public ResponseEntity<Integer> setUpdateInterval(@RequestBody Integer interval, HttpServletRequest request) {
-        CsvStock.getInstance().setRefreshInterval(interval);
-        return new ResponseEntity<>(interval, HttpStatus.ACCEPTED);
     }
 }

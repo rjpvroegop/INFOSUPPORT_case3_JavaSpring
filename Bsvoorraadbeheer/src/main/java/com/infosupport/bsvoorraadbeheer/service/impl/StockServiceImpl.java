@@ -1,6 +1,5 @@
 package com.infosupport.bsvoorraadbeheer.service.impl;
 
-import com.infosupport.bsvoorraadbeheer.csv.CsvStock;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
 import com.infosupport.bsvoorraadbeheer.repository.StockRepository;
 import com.infosupport.bsvoorraadbeheer.service.StockService;
@@ -23,7 +22,6 @@ public class StockServiceImpl implements StockService {
     @Autowired
     public StockServiceImpl(StockRepository stockRepository) {
         this.stockRepository = stockRepository;
-        refreshStock();
     }
 
     @Override
@@ -48,13 +46,5 @@ public class StockServiceImpl implements StockService {
     @Override
     public Collection<StockItem> getAllStock() {
         return stockRepository.findAll();
-    }
-
-    private void refreshStock() {
-        int intevalMinutes = 60;
-
-        CsvStock csvStock = CsvStock.getInstance();
-        csvStock.setRepository(stockRepository);
-        csvStock.setRefreshInterval(intevalMinutes);
     }
 }
