@@ -58,18 +58,41 @@ public class BsbestellingbeheerApplication {
                     .price(742.35)
                     .build();
             Product product5 = Product.builder()
-                    .id(1L)
+                    .id(5L)
                     .name("product5")
                     .supplierProductId("BK-M18B-40")
                     .price(742.35)
                     .build();
             Product product6 = Product.builder()
-                    .id(5L)
+                    .id(6L)
                     .name("product6")
                     .supplierProductId("BK-R19B-52")
                     .price(20.24)
                     .build();
-
+            Product product7 = Product.builder()
+                    .id(7L)
+                    .name("product7")
+                    .supplierProductId("BS-R19B-52")
+                    .price(29.24)
+                    .build();
+            Product product8 = Product.builder()
+                    .id(8L)
+                    .name("product8")
+                    .supplierProductId("BS-R18B-29")
+                    .price(35.24)
+                    .build();
+            Product product9 = Product.builder()
+                    .id(9L)
+                    .name("product9")
+                    .supplierProductId("BS-S18B-29")
+                    .price(35.24)
+                    .build();
+            Product product10 = Product.builder()
+                    .id(10L)
+                    .name("product10")
+                    .supplierProductId("BS-R18B-50")
+                    .price(50.59)
+                    .build();
 
             Address address1 = Address.builder().city("Dordrecht").zip("1234 AB").street("Leerpark 50").build();
             Address address2 = Address.builder().city("Breda").zip("1234 AB").street("Leerpark 50").build();
@@ -78,11 +101,15 @@ public class BsbestellingbeheerApplication {
             List<OrderItem> orderItemList1 = new ArrayList<>();
             orderItemList1.add(OrderItem.builder().product(product1).amount(1).build());
             orderItemList1.add(OrderItem.builder().product(product2).amount(7).build());
+            orderItemList1.add(OrderItem.builder().product(product9).amount(2).build());
             List<OrderItem> orderItemList2 = new ArrayList<>();
             orderItemList2.add(OrderItem.builder().product(product3).amount(4).build());
             orderItemList2.add(OrderItem.builder().product(product4).amount(3).build());
             orderItemList2.add(OrderItem.builder().product(product5).amount(2).build());
             orderItemList2.add(OrderItem.builder().product(product6).amount(6).build());
+            orderItemList2.add(OrderItem.builder().product(product7).amount(2).build());
+            orderItemList2.add(OrderItem.builder().product(product8).amount(1).build());
+            orderItemList2.add(OrderItem.builder().product(product10).amount(5).build());
             Payment payment = Payment.builder().paidDateTime(LocalDateTime.now().minusDays(30)).method("IDeal").build();
 
             // save a couple of customers
@@ -102,6 +129,7 @@ public class BsbestellingbeheerApplication {
                     .orderState(OrderState.PACKED)
                     .items(orderItemList2)
                     .shippingAddress(address3)
+                    .billingAddress(address3)
                     .build());
 
             // fetch all customers

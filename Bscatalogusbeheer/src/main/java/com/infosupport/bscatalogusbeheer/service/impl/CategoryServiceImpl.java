@@ -1,4 +1,4 @@
-package com.infosupport.bscatalogusbeheer.service;
+package com.infosupport.bscatalogusbeheer.service.impl;
 
 import com.infosupport.bscatalogusbeheer.domain.Category;
 import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;

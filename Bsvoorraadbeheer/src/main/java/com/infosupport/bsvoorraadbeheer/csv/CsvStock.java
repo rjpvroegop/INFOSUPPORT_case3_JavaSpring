@@ -60,7 +60,7 @@ public class CsvStock {
                 CsvStock.getInstance().refreshCsv(repository.findAll());
             }
         };
-        refreshTimer.schedule(csvTask, 0L, 1000 * 60 * minutes);
+        refreshTimer.schedule(csvTask, 0L, 1000L * 60 * minutes);
     }
 
     private String stockItemToCsvString(StockItem si) {
