@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import java.security.SecureRandom;
 import java.util.*;
 
 /**
@@ -29,7 +30,7 @@ public class StockServiceImpl implements StockService {
     public StockItem getStock(Long productId) {
         StockItem stockItem = stockRepository.findOne(productId);
 
-        Random r = new Random();
+        SecureRandom r = new SecureRandom();
 
         if(stockItem == null){
             // todo: random stock if product is new -- test data only for PO demo purposes
@@ -50,14 +51,10 @@ public class StockServiceImpl implements StockService {
     }
 
     private void refreshStock(){
+        int intevalMinutes = 60;
 
-        Timer timer = new Timer();
-        TimerTask fiveMinTask = new TimerTask() {
-            @Override
-            public void run () {
-                CsvStock.refreshCsv(stockRepository.findAll());
-            }
-        };
-        timer.schedule (fiveMinTask, 0L, 1000*20);
+        CsvStock csvStock = CsvStock.getInstance();
+        csvStock.setRepository(stockRepository);
+        csvStock.setRefreshInterval(intevalMinutes);
     }
 }

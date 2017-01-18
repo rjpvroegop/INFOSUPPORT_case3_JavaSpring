@@ -1,27 +1,22 @@
 package com.infosupport.bsvoorraadbeheer.resource;
 
-import com.github.opendevl.JFlat;
-import com.google.gson.Gson;
 import com.infosupport.bsvoorraadbeheer.csv.CsvStock;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
 import com.infosupport.bsvoorraadbeheer.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.http.MediaType;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import javax.xml.bind.ValidationException;
 import java.util.Collection;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.POST;
+import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
 /**
  * Created by rjpvr on 17-1-2017.
@@ -54,8 +49,12 @@ public class StockResource {
     public FileSystemResource getCsv(HttpServletResponse response) {
         response.setContentType("application/csv");
         response.setHeader("Content-Disposition", "attachment; filename=stock.csv");
-        return new FileSystemResource(CsvStock.toCsv());
+        return new FileSystemResource(CsvStock.getInstance().toCsv());
     }
 
-
+    @RequestMapping(value = "/csv/interval", method = PUT)
+    public ResponseEntity<Integer> setUpdateInterval(@RequestBody Integer interval, HttpServletRequest request) {
+        CsvStock.getInstance().setRefreshInterval(interval);
+        return new ResponseEntity<>(interval, HttpStatus.ACCEPTED);
+    }
 }
