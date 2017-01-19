@@ -14,7 +14,6 @@ import java.util.List;
  */
 
 @Service("supplierService")
-@Repository
 public class SupplierServiceImpl implements SupplierService {
 
     @Autowired

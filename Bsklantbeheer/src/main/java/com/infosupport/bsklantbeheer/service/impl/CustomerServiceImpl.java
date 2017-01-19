@@ -17,7 +17,6 @@ import java.util.Collection;
  * Created by Sander on 9-1-17.
  */
 @Service("customerService")
-@Repository
 public class CustomerServiceImpl implements CustomerService {
 
     private CustomerRepository customerRepository;
