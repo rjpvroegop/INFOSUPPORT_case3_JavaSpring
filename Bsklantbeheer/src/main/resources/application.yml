@@ -10,6 +10,14 @@ eureka:
 spring:
   application:
     name: bsklantbeheer
+  datasource:
+    url: jdbc:mysql://localhost:3306/bsklantbeheer
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
 
 
 

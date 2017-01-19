@@ -14,6 +14,7 @@
 		<module>Bsbestellingbeheer</module>
 		<module>Bscatalogusbeheer</module>
 		<module>Bsklantbeheer</module>
+		<module>Bsvoorraadbeheer</module>
 		<module>Discoveryserver</module>
 		<module>Pcsbestellen</module>
 		<module>Pcswinkelen</module>
