@@ -8,6 +8,7 @@ import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import java.time.LocalDateTime;
@@ -46,6 +47,9 @@ public class Order {
 
     @OneToMany
     private List<OrderItem> items;
+
+    @ManyToOne
+    private Customer customer;
 
     public void inTreatment() throws OrderStateException {
         orderState.inTreatment(this);
