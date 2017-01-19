@@ -1,4 +1,4 @@
-package com.infosupport.builders;
+package com.infosupport.bsklantbeheer.builders;
 
 import com.infosupport.bsklantbeheer.domain.Address;
 import com.infosupport.bsklantbeheer.domain.Customer;

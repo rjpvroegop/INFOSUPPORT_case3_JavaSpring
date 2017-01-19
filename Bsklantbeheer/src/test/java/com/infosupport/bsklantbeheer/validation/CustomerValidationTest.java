@@ -7,7 +7,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.ArrayList;
 
-import static com.infosupport.builders.CustomerBuilder.testCustomerBuilder;
+import static com.infosupport.bsklantbeheer.builders.CustomerBuilder.testCustomerBuilder;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
