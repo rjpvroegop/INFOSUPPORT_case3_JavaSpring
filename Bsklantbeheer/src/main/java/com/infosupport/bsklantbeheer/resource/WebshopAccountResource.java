@@ -52,7 +52,6 @@ public class WebshopAccountResource {
 
     }
 
-
     private ResponseEntity<WebshopAccount> generateResponse(WebshopAccount account, HttpStatus statusSucces, HttpStatus statusFail) {
         HttpStatus statusResult;
         if (account != null) {

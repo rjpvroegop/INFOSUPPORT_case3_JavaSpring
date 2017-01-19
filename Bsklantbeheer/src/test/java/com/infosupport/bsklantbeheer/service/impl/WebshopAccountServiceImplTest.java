@@ -12,7 +12,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import javax.xml.bind.ValidationException;
 
-import static com.infosupport.builders.CustomerBuilder.testCustomerBuilder;
+import static com.infosupport.bsklantbeheer.builders.CustomerBuilder.testCustomerBuilder;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
