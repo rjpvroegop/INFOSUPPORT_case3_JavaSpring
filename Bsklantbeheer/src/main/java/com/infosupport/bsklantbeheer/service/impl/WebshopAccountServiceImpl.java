@@ -1,6 +1,7 @@
 package com.infosupport.bsklantbeheer.service.impl;
 
 import com.infosupport.bsklantbeheer.domain.WebshopAccount;
+import com.infosupport.bsklantbeheer.repository.CustomerRepository;
 import com.infosupport.bsklantbeheer.repository.WebshopAccountRepository;
 import com.infosupport.bsklantbeheer.service.WebshopAccountService;
 import com.infosupport.bsklantbeheer.validation.CustomerValidation;
@@ -18,10 +19,12 @@ import javax.xml.bind.ValidationException;
 public class WebshopAccountServiceImpl implements WebshopAccountService {
 
     private WebshopAccountRepository webshopAccountRepository;
+    private CustomerRepository customerRepository;
 
     @Autowired
-    public WebshopAccountServiceImpl(WebshopAccountRepository webshopAccountRepository) {
+    public WebshopAccountServiceImpl(WebshopAccountRepository webshopAccountRepository, CustomerRepository customerRepository) {
         this.webshopAccountRepository = webshopAccountRepository;
+        this.customerRepository = customerRepository;
     }
 
     @Override
@@ -41,6 +44,16 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
 
     @Override
     public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) throws ValidationException {
+        //create business key customer
+        long numberOfAccounts = customerRepository.count();
+        long bsKeyNumber = numberOfAccounts + 1;
+        String bsKeyPrefix = "CUST";
+        String bsKeyPostfix = String.valueOf(bsKeyNumber);
+        while(bsKeyPostfix.length() != 6){
+            bsKeyPostfix = "0" + bsKeyPostfix;
+        }
+        String bsKey = bsKeyPrefix + bsKeyPostfix;
+        webshopAccount.getCustomer().setBsKey(bsKey);
         if (checkSaveWebshopAccountValidity(webshopAccount) && CustomerValidation.validateCustomer(webshopAccount.getCustomer())) {
             return webshopAccountRepository.save(webshopAccount);
         } else {
