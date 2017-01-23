@@ -26,6 +26,7 @@ import java.util.List;
 public class Order {
     @Id
     private String id;
+    private String bsKey;
 
     @JsonSerialize(using = CustomLocalDateTimeSerializer.class)
     private LocalDateTime orderTime;

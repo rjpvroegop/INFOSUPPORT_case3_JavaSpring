@@ -18,6 +18,7 @@ import java.util.Collection;
 @Data
 public class Customer {
     private Long id;
+    private String bsKey;
     private String firstName;
     private String lastName;
     private String email;
