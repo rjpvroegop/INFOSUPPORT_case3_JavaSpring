@@ -44,6 +44,7 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
 
     @Override
     public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) throws ValidationException {
+        //create business key customer
         long numberOfAccounts = customerRepository.count();
         long bsKeyNumber = numberOfAccounts + 1;
         String bsKeyPrefix = "CUST";

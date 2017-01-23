@@ -18,4 +18,6 @@ public interface OrderService {
     Order packOrder(String id) throws Exception;
 
     Order sendOrder(String id) throws Exception;
+
+    Order saveOrder(Order order) throws Exception;
 }

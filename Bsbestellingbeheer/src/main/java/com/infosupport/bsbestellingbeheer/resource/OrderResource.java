@@ -44,12 +44,12 @@ public class OrderResource {
     }
 
     @RequestMapping(value = "/{id}", method = GET)
-    public Order getOder(@PathVariable("id") String id) {
+    public Order getOrder(@PathVariable("id") String id) {
         return orderService.getOrder(id);
     }
 
     @RequestMapping(value = "/pack/{id}", method = POST)
-    public Order packOder(@PathVariable("id") String id) throws Exception {
+    public Order packOrder(@PathVariable("id") String id) throws Exception {
         try {
             return orderService.packOrder(id);
         } catch (OrderStateException e) {
@@ -60,7 +60,7 @@ public class OrderResource {
     }
 
     @RequestMapping(value = "/sent/{id}", method = POST)
-    public Order sendOder(@PathVariable("id") String id) throws Exception {
+    public Order sendOrder(@PathVariable("id") String id) throws Exception {
         try {
             return orderService.sendOrder(id);
         } catch (OrderStateException e) {

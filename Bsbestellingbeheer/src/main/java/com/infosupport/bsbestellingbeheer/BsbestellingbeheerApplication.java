@@ -3,6 +3,7 @@ package com.infosupport.bsbestellingbeheer;
 import com.infosupport.bsbestellingbeheer.domain.*;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.repository.OrderRepository;
+import com.infosupport.bsbestellingbeheer.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +12,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,13 +24,16 @@ public class BsbestellingbeheerApplication {
     @Autowired
     private OrderRepository repository;
 
+    @Autowired
+    private OrderService orderService;
+
     public static void main(String[] args) {
         SpringApplication.run(BsbestellingbeheerApplication.class, args);
 
     }
 
     @Bean
-    CommandLineRunner onStartUp(OrderRepository orderRepository) {
+    CommandLineRunner onStartUp(OrderRepository orderRepository, OrderService orderService) {
         return (String... args) -> {
 
             orderRepository.deleteAll();
@@ -224,7 +229,7 @@ public class BsbestellingbeheerApplication {
             Payment payment3 = Payment.builder().method("Rembours").build();
 
             // save a couple of customers
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList1)
@@ -233,133 +238,133 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address2)
                     .build());
 
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList2)
                     .shippingAddress(address3)
                     .billingAddress(address3)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList3)
                     .shippingAddress(address4)
                     .billingAddress(address4)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList4)
                     .shippingAddress(address6)
                     .billingAddress(address5)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList5)
                     .shippingAddress(address1)
                     .billingAddress(address2)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList6)
                     .shippingAddress(address4)
                     .billingAddress(address4)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList7)
                     .shippingAddress(address1)
                     .billingAddress(address3)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList8)
                     .shippingAddress(address3)
                     .billingAddress(address1)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList9)
                     .shippingAddress(address2)
                     .billingAddress(address1)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList10)
                     .shippingAddress(address7)
                     .billingAddress(address8)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList11)
                     .shippingAddress(address1)
                     .billingAddress(address1)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList12)
                     .shippingAddress(address2)
                     .billingAddress(address2)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList13)
                     .shippingAddress(address8)
                     .billingAddress(address8)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList14)
                     .shippingAddress(address6)
                     .billingAddress(address6)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList15)
                     .shippingAddress(address1)
                     .billingAddress(address4)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList16)
                     .shippingAddress(address1)
                     .billingAddress(address4)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList17)
                     .shippingAddress(address6)
                     .billingAddress(address8)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList18)
                     .shippingAddress(address4)
                     .billingAddress(address8)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList19)
                     .shippingAddress(address1)
                     .billingAddress(address2)
                     .build());
-            orderRepository.save(Order.builder()
+            orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.FINISHED)
                     .items(orderItemList20)
@@ -374,6 +379,13 @@ public class BsbestellingbeheerApplication {
                 System.out.println(order.getId());
             }
             System.out.println();
+            System.out.println("Orders found with findByOrderTimeBetween():");
+            System.out.println("-------------------------------");
+            LocalDateTime startOfDay = LocalDateTime.now().with(LocalTime.MIN);
+            LocalDateTime endOfDay = LocalDateTime.now().with(LocalTime.MAX);
+            for (Order order : orderRepository.findByOrderTimeBetween(startOfDay, endOfDay)){
+                System.out.println(order.getBsKey());
+            }
         };
     }
 }
