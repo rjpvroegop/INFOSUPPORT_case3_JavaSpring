@@ -247,7 +247,6 @@ public class BsbestellingbeheerApplication {
             Payment payment1 = Payment.builder().paidDateTime(LocalDateTime.now().minusDays(30)).method("IDeal").build();
             Payment payment2 = Payment.builder().paidDateTime(LocalDateTime.now().minusDays(30)).method("Paypal").build();
             Payment payment3 = Payment.builder().method("Rembours").build();
-            //2, 'CUST000002','Kenzo', 'Dominicus', 'KD@gmail.com', '1993-05-18', 300, '0671495864');
 
             Customer customer1 = Customer.builder()
                     .id(1L)
