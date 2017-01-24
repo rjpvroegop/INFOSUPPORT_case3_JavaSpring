@@ -2,9 +2,7 @@ package com.infosupport.bsbestellingbeheer.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.infosupport.bsbestellingbeheer.util.CustomLocalDateTimeSerializer;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -14,6 +12,8 @@ import java.time.LocalDateTime;
 @Builder
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Payment {
     private String method;
     @JsonSerialize(using = CustomLocalDateTimeSerializer.class)
