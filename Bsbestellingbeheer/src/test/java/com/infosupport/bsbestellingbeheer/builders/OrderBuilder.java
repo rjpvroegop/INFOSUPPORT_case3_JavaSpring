@@ -44,12 +44,22 @@ public class OrderBuilder {
 
         Payment payment = Payment.builder().paidDateTime(LocalDateTime.now().minusDays(30)).method("IDeal").build();
 
+        Customer customer = Customer.builder()
+                .id(2L)
+                .bsKey("CUST000002")
+                .firstName("Kenzo")
+                .lastName("Dominicus")
+                .email("KD@gmail.com")
+                .birthDate("1993-05-18")
+                .phone("0671495864").build();
+
 
         return Order.builder()
                 .orderTime(LocalDateTime.now())
                 .sendTime(LocalDateTime.now().minusHours(60))
                 .items(orderItemList1)
                 .payment(payment)
+                .customer(customer)
                 .billingAddress(address1)
                 .shippingAddress(address2);
     }

@@ -45,8 +45,9 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     @Override
     public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) throws ValidationException {
         //create business key customer
-        webshopAccount.getCustomer().setBsKey(customerService.createBsKeyCustomer(webshopAccount.getCustomer()).getBsKey());
+
         if (checkSaveWebshopAccountValidity(webshopAccount) && CustomerValidation.validateCustomer(webshopAccount.getCustomer())) {
+            webshopAccount.getCustomer().setBsKey(customerService.createBsKeyCustomer(webshopAccount.getCustomer()).getBsKey());
             return webshopAccountRepository.save(webshopAccount);
         } else {
             throw new ValidationException("Invalid account data!");
