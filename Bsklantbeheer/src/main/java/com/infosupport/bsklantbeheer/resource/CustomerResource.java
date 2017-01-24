@@ -2,6 +2,7 @@ package com.infosupport.bsklantbeheer.resource;
 
 import com.infosupport.bsklantbeheer.domain.Customer;
 import com.infosupport.bsklantbeheer.service.CustomerService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 @RequestMapping("customers")
 public class CustomerResource {
 
+    private static Logger LOGGER = Logger.getLogger(CustomerResource.class);
+
     private CustomerService customerService;
 
     @Autowired
@@ -42,6 +45,7 @@ public class CustomerResource {
             customer = customerService.editCustomer(customer);
             return new ResponseEntity<>(customer, HttpStatus.OK);
         } catch (ValidationException e) {
+            LOGGER.info(e);
             throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
     }

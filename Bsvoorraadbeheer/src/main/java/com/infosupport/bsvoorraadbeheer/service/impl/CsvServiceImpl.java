@@ -67,7 +67,7 @@ public class CsvServiceImpl implements CsvService {
         try {
             Files.write(file, lines, Charset.forName("UTF-8"));
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.info(e);
         }
     }
 
@@ -77,7 +77,7 @@ public class CsvServiceImpl implements CsvService {
         try {
             Files.write(file, lines, Charset.forName("UTF-8"));
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.info(e);
         }
     }
 }

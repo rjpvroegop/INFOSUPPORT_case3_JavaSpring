@@ -61,12 +61,13 @@ public class CustomerServiceImpl implements CustomerService {
         long numberOfAccounts = customerRepository.count();
         long bsKeyNumber = numberOfAccounts + 1;
         String bsKeyPrefix = "CUST";
-        String bsKeyPostfix = String.valueOf(bsKeyNumber);
-        while(bsKeyPostfix.length() != 6){
-            bsKeyPostfix = "0" + bsKeyPostfix;
+        StringBuilder bsKey = new StringBuilder();
+        bsKey.append(String.valueOf(bsKeyNumber));
+        while(bsKey.toString().length() != 6){
+            bsKey.insert(0, "0");
         }
-        String bsKey = bsKeyPrefix + bsKeyPostfix;
-        customer.setBsKey(bsKey);
+        bsKey.insert(0, bsKeyPrefix);
+        customer.setBsKey(bsKey.toString());
         return customer;
     }
 }

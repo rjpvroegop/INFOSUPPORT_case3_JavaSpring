@@ -2,6 +2,7 @@ package com.infosupport.bsklantbeheer.resource;
 
 import com.infosupport.bsklantbeheer.domain.Address;
 import com.infosupport.bsklantbeheer.service.AddressService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 @RequestMapping("address")
 public class AddressResource {
 
+    private static Logger LOGGER = Logger.getLogger(AddressResource.class);
+
     private AddressService addressService;
 
     @Autowired
@@ -39,6 +42,7 @@ public class AddressResource {
             address = addressService.addAddress(address);
             return new ResponseEntity<>(address, HttpStatus.CREATED);
         } catch (ValidationException e) {
+            LOGGER.info(e);
             throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
     }

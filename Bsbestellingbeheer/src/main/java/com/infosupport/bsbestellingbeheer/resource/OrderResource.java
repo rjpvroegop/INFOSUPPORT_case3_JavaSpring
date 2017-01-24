@@ -6,6 +6,7 @@ import com.infosupport.bsbestellingbeheer.domain.Order;
 import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +30,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping("orders")
 public class OrderResource {
 
+    private static Logger LOGGER = Logger.getLogger(OrderResource.class);
     @Autowired
     private OrderService orderService;
 
@@ -57,8 +59,10 @@ public class OrderResource {
         try {
             return orderService.packOrder(id);
         } catch (OrderStateException e) {
+            LOGGER.info(e);
             throw new HttpRequestMethodNotSupportedException(e.getMessage());
         } catch (Exception e) {
+            LOGGER.info(e);
             throw new HttpMessageNotReadableException(e.getMessage());
         }
     }
@@ -68,8 +72,10 @@ public class OrderResource {
         try {
             return orderService.sendOrder(id);
         } catch (OrderStateException e) {
+            LOGGER.info(e);
             throw new Exception(e.getMessage());
         } catch (Exception e) {
+            LOGGER.info(e);
             throw new HttpMessageNotReadableException(e.getMessage());
         }
     }
@@ -80,6 +86,7 @@ public class OrderResource {
             Collection<DatavaultData> datavaultDataCollection = orderService.getDatavaultDataInterval(interval);
             return datavaultDataCollection;
         } catch (Exception e) {
+            LOGGER.info(e);
             throw new HttpMessageNotReadableException(e.getMessage());
         }
     }
@@ -91,6 +98,7 @@ public class OrderResource {
             order = orderService.saveOrder(order);
             return new ResponseEntity<>(order, HttpStatus.CREATED);
         } catch (NullPointerException e) {
+            LOGGER.info(e);
             throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
     }

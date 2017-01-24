@@ -2,6 +2,7 @@ package com.infosupport.bsklantbeheer.resource;
 
 import com.infosupport.bsklantbeheer.domain.WebshopAccount;
 import com.infosupport.bsklantbeheer.service.WebshopAccountService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RestController
 @RequestMapping("accounts")
 public class WebshopAccountResource {
+
+    private static Logger LOGGER = Logger.getLogger(WebshopAccount.class);
 
     private WebshopAccountService webshopAccountService;
 
@@ -47,6 +50,7 @@ public class WebshopAccountResource {
             webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
             return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
         } catch (ValidationException e) {
+            LOGGER.info(e);
             throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
 

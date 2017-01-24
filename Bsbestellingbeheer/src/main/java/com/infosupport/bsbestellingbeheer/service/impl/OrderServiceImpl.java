@@ -121,12 +121,15 @@ public class OrderServiceImpl implements OrderService {
         long bsKeyNumber = numberOfOrdersForOrderDateTime + 1;
         String bsKeyPrefix = "ORD";
         String bsKeyDate = order.getOrderTime().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-        String bsKeyPostfix = String.valueOf(bsKeyNumber);
-        while(bsKeyPostfix.length() != 5){
-            bsKeyPostfix = "0" + bsKeyPostfix;
+        StringBuilder bsKey = new StringBuilder();
+        bsKey.append(String.valueOf(bsKeyNumber));
+        while(bsKey.toString().length() != 5){
+            bsKey.insert(0,"0");
         }
-        String bsKey = bsKeyPrefix + bsKeyDate + "-"+ bsKeyPostfix;
-        order.setBsKey(bsKey);
+        bsKey.insert(0, "-");
+        bsKey.insert(0, bsKeyDate);
+        bsKey.insert(0, bsKeyPrefix);
+        order.setBsKey(bsKey.toString());
         return order;
     }
 }
