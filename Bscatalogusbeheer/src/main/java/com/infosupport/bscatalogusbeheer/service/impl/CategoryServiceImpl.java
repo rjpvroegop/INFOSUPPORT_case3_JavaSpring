@@ -27,6 +27,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<Category> findAllCategories() {
+        //Skip 4 main categories
         return categoryRepository.findAll()
                 .stream()
                 .skip(4)
