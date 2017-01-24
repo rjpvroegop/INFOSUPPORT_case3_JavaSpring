@@ -2,8 +2,7 @@ package com.infosupport.bsvoorraadbeheer.service.impl;
 
 import com.infosupport.bsvoorraadbeheer.domain.StockItemMutation;
 import com.infosupport.bsvoorraadbeheer.service.CsvService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedWriter;
@@ -26,7 +25,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Service("csvService")
 public class CsvServiceImpl implements CsvService {
-    private static Logger LOGGER = LoggerFactory.getLogger(CsvService.class);
+    private static Logger LOGGER = Logger.getLogger(CsvService.class);
     public void initiate(){
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
@@ -34,7 +33,7 @@ public class CsvServiceImpl implements CsvService {
             try {
                 storeOldStockData();
             } catch (IOException e) {
-                LOGGER.info(e.getMessage());
+                LOGGER.info(e);
             }
             createNewStockFile();
         };
