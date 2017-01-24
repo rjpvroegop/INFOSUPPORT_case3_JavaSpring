@@ -47,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
     public Order packOrder(String id) throws Exception {
         Order order = orderRepository.findOne(id);
         if (order == null)
-            throw new Exception("Order not found");
+            throw new NullPointerException("Order not found");
         order.pack();
         orderRepository.save(order);
         return order;
@@ -57,7 +57,7 @@ public class OrderServiceImpl implements OrderService {
     public Order sendOrder(String id) throws Exception {
         Order order = orderRepository.findOne(id);
         if (order == null)
-            throw new Exception("Order not found");
+            throw new NullPointerException("Order not found");
         order.send();
         orderRepository.save(order);
         return order;

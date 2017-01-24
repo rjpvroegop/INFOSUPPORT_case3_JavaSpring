@@ -35,9 +35,13 @@ public class StatesTest {
     @Test
     public void correctOrderProcessWithTreatment() throws OrderStateException{
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.INTREATMENT).build();
+        assertThat(order.getOrderState().toString(), is("In treatment"));
         order.post();
+        assertThat(order.getOrderState().toString(), is("Posted"));
         order.pack();
+        assertThat(order.getOrderState().toString(), is("Packed"));
         order.send();
+        assertThat(order.getOrderState().toString(), is("Finished"));
         assertThat(OrderState.FINISHED, is(order.getOrderState()));
     }
 
