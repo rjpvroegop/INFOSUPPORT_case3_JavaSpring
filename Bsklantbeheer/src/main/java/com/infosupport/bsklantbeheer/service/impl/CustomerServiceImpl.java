@@ -56,5 +56,17 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.findAll();
     }
 
-
+    @Override
+    public Customer createBsKeyCustomer(Customer customer) {
+        long numberOfAccounts = customerRepository.count();
+        long bsKeyNumber = numberOfAccounts + 1;
+        String bsKeyPrefix = "CUST";
+        String bsKeyPostfix = String.valueOf(bsKeyNumber);
+        while(bsKeyPostfix.length() != 6){
+            bsKeyPostfix = "0" + bsKeyPostfix;
+        }
+        String bsKey = bsKeyPrefix + bsKeyPostfix;
+        customer.setBsKey(bsKey);
+        return customer;
+    }
 }

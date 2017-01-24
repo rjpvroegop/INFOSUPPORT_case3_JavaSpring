@@ -3,6 +3,7 @@ package com.infosupport.bsklantbeheer.service.impl;
 import com.infosupport.bsklantbeheer.domain.WebshopAccount;
 import com.infosupport.bsklantbeheer.repository.CustomerRepository;
 import com.infosupport.bsklantbeheer.repository.WebshopAccountRepository;
+import com.infosupport.bsklantbeheer.service.CustomerService;
 import com.infosupport.bsklantbeheer.service.WebshopAccountService;
 import com.infosupport.bsklantbeheer.validation.CustomerValidation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,12 @@ import javax.xml.bind.ValidationException;
 public class WebshopAccountServiceImpl implements WebshopAccountService {
 
     private WebshopAccountRepository webshopAccountRepository;
-    private CustomerRepository customerRepository;
+    private CustomerService customerService;
 
     @Autowired
-    public WebshopAccountServiceImpl(WebshopAccountRepository webshopAccountRepository, CustomerRepository customerRepository) {
+    public WebshopAccountServiceImpl(WebshopAccountRepository webshopAccountRepository, CustomerService customerService) {
         this.webshopAccountRepository = webshopAccountRepository;
-        this.customerRepository = customerRepository;
+        this.customerService = customerService;
     }
 
     @Override
@@ -44,15 +45,7 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     @Override
     public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) throws ValidationException {
         //create business key customer
-        long numberOfAccounts = customerRepository.count();
-        long bsKeyNumber = numberOfAccounts + 1;
-        String bsKeyPrefix = "CUST";
-        String bsKeyPostfix = String.valueOf(bsKeyNumber);
-        while(bsKeyPostfix.length() != 6){
-            bsKeyPostfix = "0" + bsKeyPostfix;
-        }
-        String bsKey = bsKeyPrefix + bsKeyPostfix;
-        webshopAccount.getCustomer().setBsKey(bsKey);
+        webshopAccount.getCustomer().setBsKey(customerService.createBsKeyCustomer(webshopAccount.getCustomer()).getBsKey());
         if (checkSaveWebshopAccountValidity(webshopAccount) && CustomerValidation.validateCustomer(webshopAccount.getCustomer())) {
             return webshopAccountRepository.save(webshopAccount);
         } else {
@@ -76,5 +69,7 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
         }
         return false;
     }
+
+
 
 }

@@ -3,12 +3,16 @@ package com.infosupport.bsklantbeheer.service.impl;
 import com.infosupport.bsklantbeheer.domain.Address;
 import com.infosupport.bsklantbeheer.domain.Customer;
 import com.infosupport.bsklantbeheer.repository.CustomerRepository;
+import org.hamcrest.core.Is;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -84,6 +88,24 @@ public class CustomerServiceImplTest {
         Customer customer = customerService.getCustomer(1L);
 
         assertThat(customer, is(nullValue()));
+    }
+
+    @Test
+    public void createCustomerWithNoCustomersInDB(){
+        Customer customer = Customer.builder().addresses(Arrays.asList(Address.builder().build())).build();
+        when(customerRepository.count()).thenReturn(0L);
+        String expectedBsKey = "CUST" + "000001";
+        customer = customerService.createBsKeyCustomer(customer);
+        assertThat(customer.getBsKey(), Is.is(expectedBsKey));
+    }
+
+    @Test
+    public void createCustomerWithFourCustomersInDB(){
+        Customer customer = Customer.builder().addresses(Arrays.asList(Address.builder().build())).build();
+        when(customerRepository.count()).thenReturn(4L);
+        String expectedBsKey = "CUST" + "000005";
+        customer = customerService.createBsKeyCustomer(customer);
+        assertThat(customer.getBsKey(), Is.is(expectedBsKey));
     }
 
 }
