@@ -23,4 +23,6 @@ public interface OrderService {
     Order saveOrder(Order order) throws Exception;
 
     Collection<DatavaultData> getDatavaultDataInterval(long intervalInMinutes);
+
+    Order createBsKey(Order order);
 }

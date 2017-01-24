@@ -14,18 +14,21 @@ public class OrderBuilder {
     public static Order.OrderBuilder orderBuilder(){
         Product product1 = Product.builder()
                 .id(1L)
+                .bsKey("PRD00001")
                 .name("product1")
                 .supplierProductId("BK-T18Y-44")
                 .price(539.99)
                 .build();
         Product product2 = Product.builder()
                 .id(2L)
+                .bsKey("PRD00002")
                 .name("product2")
                 .supplierProductId("BK-T18Y-62")
                 .price(564.99)
                 .build();
         Product product3 = Product.builder()
                 .id(9L)
+                .bsKey("PRD00009")
                 .name("product9")
                 .supplierProductId("BS-S18B-29")
                 .price(35.24)

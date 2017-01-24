@@ -69,20 +69,8 @@ public class OrderServiceImpl implements OrderService {
             throw new Exception("Null order");
         } else {
             //create business key order
-            LocalDateTime startOfDay = order.getOrderTime().with(LocalTime.MIN);
-            LocalDateTime endOfDay = order.getOrderTime().with(LocalTime.MAX);
-            long numberOfOrdersForOrderDateTime = orderRepository.countByOrderTimeBetween(startOfDay, endOfDay);
-            long bsKeyNumber = numberOfOrdersForOrderDateTime + 1;
-            String bsKeyPrefix = "ORD";
-            String bsKeyDate = order.getOrderTime().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-            String bsKeyPostfix = String.valueOf(bsKeyNumber);
-            while(bsKeyPostfix.length() != 5){
-                bsKeyPostfix = "0" + bsKeyPostfix;
-            }
-            String bsKey = bsKeyPrefix + bsKeyDate + "-"+ bsKeyPostfix;
-            order.setBsKey(bsKey);
-
-            return orderRepository.save(order);
+            Order orderWithBsKey = createBsKey(order);
+            return orderRepository.save(orderWithBsKey);
         }
     }
 
@@ -103,5 +91,23 @@ public class OrderServiceImpl implements OrderService {
             datavaultDataCollection.add(new DatavaultData(orderKey, customerKey, bsKeysProducts));
         }
         return datavaultDataCollection;
+    }
+
+    @Override
+    public Order createBsKey(Order order) {
+        //create business key order
+        LocalDateTime startOfDay = order.getOrderTime().with(LocalTime.MIN);
+        LocalDateTime endOfDay = order.getOrderTime().with(LocalTime.MAX);
+        long numberOfOrdersForOrderDateTime = orderRepository.countByOrderTimeBetween(startOfDay, endOfDay);
+        long bsKeyNumber = numberOfOrdersForOrderDateTime + 1;
+        String bsKeyPrefix = "ORD";
+        String bsKeyDate = order.getOrderTime().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String bsKeyPostfix = String.valueOf(bsKeyNumber);
+        while(bsKeyPostfix.length() != 5){
+            bsKeyPostfix = "0" + bsKeyPostfix;
+        }
+        String bsKey = bsKeyPrefix + bsKeyDate + "-"+ bsKeyPostfix;
+        order.setBsKey(bsKey);
+        return order;
     }
 }
