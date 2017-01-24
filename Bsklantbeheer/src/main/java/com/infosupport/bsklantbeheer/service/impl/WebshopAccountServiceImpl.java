@@ -32,7 +32,7 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     }
 
     @Override
-    public WebshopAccount getWebshopAccount(String username, String password) {
+    public WebshopAccount login(String username, String password) {
         WebshopAccount account = webshopAccountRepository.findByUserName(username);
         if (validateAccountData(account, password)) {
             return account;

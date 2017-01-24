@@ -72,7 +72,7 @@ public class WebshopAccountServiceImplTest {
         when(repo.findByUserName(null)).thenReturn(null);
 
         //Act
-        WebshopAccount result = service.getWebshopAccount(null, null);
+        WebshopAccount result = service.login(null, null);
 
         //Assert
         assertThat(result, is(nullValue()));
@@ -85,7 +85,7 @@ public class WebshopAccountServiceImplTest {
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
 
         //Act
-        WebshopAccount result = service.getWebshopAccount("aa", null);
+        WebshopAccount result = service.login("aa", null);
 
         //Assert
         assertThat(result, is(nullValue()));
@@ -98,7 +98,7 @@ public class WebshopAccountServiceImplTest {
         when(repo.findByUserName(null)).thenReturn(null);
 
         //Act
-        WebshopAccount result = service.getWebshopAccount(null, "aaa");
+        WebshopAccount result = service.login(null, "aaa");
 
         //Assert
         assertThat(result, is(nullValue()));
@@ -111,7 +111,7 @@ public class WebshopAccountServiceImplTest {
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
 
         //Act
-        WebshopAccount result = service.getWebshopAccount("aa", "cc");
+        WebshopAccount result = service.login("aa", "cc");
 
         //Assert
         assertThat(result, is(nullValue()));
@@ -124,7 +124,7 @@ public class WebshopAccountServiceImplTest {
         when(repo.findByUserName(account.getUserName())).thenReturn(account);
 
         //Act
-        WebshopAccount result = service.getWebshopAccount("aa", "bb");
+        WebshopAccount result = service.login("aa", "bb");
 
         //Assert
         assertThat(result, is(account));
