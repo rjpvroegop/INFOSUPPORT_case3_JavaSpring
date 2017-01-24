@@ -1,6 +1,9 @@
 package com.infosupport.bsbestellingbeheer.service.impl;
 
+import com.infosupport.bsbestellingbeheer.domain.DatavaultData;
 import com.infosupport.bsbestellingbeheer.domain.Order;
+import com.infosupport.bsbestellingbeheer.domain.OrderItem;
+import com.infosupport.bsbestellingbeheer.domain.Product;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.repository.OrderRepository;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -80,5 +84,24 @@ public class OrderServiceImpl implements OrderService {
 
             return orderRepository.save(order);
         }
+    }
+
+    @Override
+    public Collection<DatavaultData> getDatavaultDataInterval(long intervalInMinutes) {
+        Collection<Order> orders = orderRepository.findByOrderTimeBetween(LocalDateTime.now().minusMinutes(intervalInMinutes), LocalDateTime.now());
+        Collection<DatavaultData> datavaultDataCollection = new ArrayList<>();
+        for (Order order : orders){
+            Collection<String> bsKeysProducts = new ArrayList<>();
+            for (OrderItem orderItem : order.getItems()){
+                bsKeysProducts.add(orderItem.getProduct().getBsKey());
+            }
+            String orderKey = order.getBsKey();
+            String customerKey = null;
+            if(order.getCustomer() != null){
+                customerKey = order.getCustomer().getBsKey();
+            }
+            datavaultDataCollection.add(new DatavaultData(orderKey, customerKey, bsKeysProducts));
+        }
+        return datavaultDataCollection;
     }
 }
