@@ -1,6 +1,7 @@
 package com.infosupport.bsbestellingbeheer.resource;
 
 import com.infosupport.bsbestellingbeheer.domain.Address;
+import com.infosupport.bsbestellingbeheer.domain.DatavaultData;
 import com.infosupport.bsbestellingbeheer.domain.Order;
 import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
@@ -67,7 +68,17 @@ public class OrderResource {
         try {
             return orderService.sendOrder(id);
         } catch (OrderStateException e) {
-            throw new HttpRequestMethodNotSupportedException(e.getMessage());
+            throw new Exception(e.getMessage());
+        } catch (Exception e) {
+            throw new HttpMessageNotReadableException(e.getMessage());
+        }
+    }
+
+    @RequestMapping(value = "/datavaultdata/{interval}", method = GET)
+    public Collection<DatavaultData> getDatavaultDataInterval(@PathVariable("interval") long interval) throws Exception{
+        try {
+            Collection<DatavaultData> datavaultDataCollection = orderService.getDatavaultDataInterval(interval);
+            return datavaultDataCollection;
         } catch (Exception e) {
             throw new HttpMessageNotReadableException(e.getMessage());
         }
