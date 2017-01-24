@@ -40,120 +40,140 @@ public class BsbestellingbeheerApplication {
 
             Product product1 = Product.builder()
                     .id(1L)
+                    .bsKey("PRD00001")
                     .name("HL Road Frame - Black, 58")
                     .supplierProductId("BK-T18Y-44")
                     .price(539.99)
                     .build();
             Product product2 = Product.builder()
                     .id(2L)
+                    .bsKey("PRD00002")
                     .name("HL Road Frame - Red, 58")
                     .supplierProductId("BK-T18Y-62")
                     .price(564.99)
                     .build();
             Product product3 = Product.builder()
                     .id(3L)
+                    .bsKey("PRD00003")
                     .name("Sport-100 Helmet, Red")
                     .supplierProductId("BK-R79Y-40")
                     .price(1700.99)
                     .build();
             Product product4 = Product.builder()
                     .id(4L)
+                    .bsKey("PRD00004")
                     .name("Sport-100 Helmet, Black")
                     .supplierProductId("BK-M38S-38")
                     .price(742.35)
                     .build();
             Product product5 = Product.builder()
                     .id(5L)
+                    .bsKey("PRD00005")
                     .name("Mountain Bike Socks, M")
                     .supplierProductId("BK-M18B-40")
                     .price(742.35)
                     .build();
             Product product6 = Product.builder()
                     .id(6L)
+                    .bsKey("PRD00006")
                     .name("Mountain Bike Socks, L")
                     .supplierProductId("BK-R19B-52")
                     .price(20.24)
                     .build();
             Product product7 = Product.builder()
                     .id(7L)
+                    .bsKey("PRD00007")
                     .name("Sport-100 Helmet, Blue")
                     .supplierProductId("BS-R19B-52")
                     .price(29.24)
                     .build();
             Product product8 = Product.builder()
                     .id(8L)
+                    .bsKey("PRD00008")
                     .name("AWC Logo Cap")
                     .supplierProductId("BS-R18B-29")
                     .price(35.24)
                     .build();
             Product product9 = Product.builder()
                     .id(9L)
+                    .bsKey("PRD00009")
                     .name("Long-Sleeve Logo Jersey, S")
                     .supplierProductId("BS-S18B-29")
                     .price(35.24)
                     .build();
             Product product10 = Product.builder()
                     .id(10L)
+                    .bsKey("PRD00010")
                     .name("Long-Sleeve Logo Jersey, M")
                     .supplierProductId("BS-R18B-50")
                     .price(50.59)
                     .build();
             Product product11 = Product.builder()
                     .id(11L)
+                    .bsKey("PRD00011")
                     .name("HL Road Frame - Red, 62")
                     .supplierProductId("BK-T18Y-44")
                     .price(539.99)
                     .build();
             Product product12 = Product.builder()
                     .id(12L)
+                    .bsKey("PRD00012")
                     .name("HL Road Frame - Red, 44")
                     .supplierProductId("BK-T18Y-62")
                     .price(564.99)
                     .build();
             Product product13 = Product.builder()
                     .id(13L)
+                    .bsKey("PRD00013")
                     .name("HL Road Frame - Red, 48")
                     .supplierProductId("BK-R79Y-40")
                     .price(1700.99)
                     .build();
             Product product14 = Product.builder()
                     .id(14L)
+                    .bsKey("PRD00014")
                     .name("LL Road Frame - Red, 44")
                     .supplierProductId("BK-M38S-38")
                     .price(742.35)
                     .build();
             Product product15 = Product.builder()
                     .id(15L)
+                    .bsKey("PRD00015")
                     .name("LL Road Frame - Red, 52")
                     .supplierProductId("BK-M18B-40")
                     .price(742.35)
                     .build();
             Product product16 = Product.builder()
                     .id(16L)
+                    .bsKey("PRD00016")
                     .name("LL Road Frame - Red, 60")
                     .supplierProductId("BK-R19B-52")
                     .price(20.24)
                     .build();
             Product product17 = Product.builder()
                     .id(17L)
+                    .bsKey("PRD00017")
                     .name("ML Road Frame - Red, 52")
                     .supplierProductId("BS-R19B-52")
                     .price(29.24)
                     .build();
             Product product18 = Product.builder()
                     .id(18L)
+                    .bsKey("PRD00018")
                     .name("HL Mountain Frame - Black, 48")
                     .supplierProductId("BS-R18B-29")
                     .price(35.24)
                     .build();
             Product product19 = Product.builder()
                     .id(19L)
+                    .bsKey("PRD00019")
                     .name("Road-150 Red, 48")
                     .supplierProductId("BS-S18B-29")
                     .price(35.24)
                     .build();
             Product product20 = Product.builder()
                     .id(20L)
+                    .bsKey("PRD00020")
                     .name("Road-450 Red, 58")
                     .supplierProductId("BS-R18B-50")
                     .price(50.59)
@@ -228,12 +248,29 @@ public class BsbestellingbeheerApplication {
             Payment payment2 = Payment.builder().paidDateTime(LocalDateTime.now().minusDays(30)).method("Paypal").build();
             Payment payment3 = Payment.builder().method("Rembours").build();
 
-            // save a couple of customers
+            Customer customer1 = Customer.builder()
+                    .id(1L)
+                    .bsKey("CUST000001")
+                    .firstName("Sander")
+                    .lastName("Blijlevens")
+                    .email("SB@hotmail.com")
+                    .birthDate("1995-12-31")
+                    .phone("0625235100").build();
+            Customer customer2 = Customer.builder()
+                    .id(2L)
+                    .bsKey("CUST000002")
+                    .firstName("Kenzo")
+                    .lastName("Dominicus")
+                    .email("KD@gmail.com")
+                    .birthDate("1993-05-18")
+                    .phone("0671495864").build();
+
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList1)
                     .payment(payment1)
+                    .customer(customer1)
                     .billingAddress(address1)
                     .shippingAddress(address2)
                     .build());
@@ -242,6 +279,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList2)
+                    .customer(customer2)
                     .shippingAddress(address3)
                     .billingAddress(address3)
                     .build());
@@ -249,6 +287,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList3)
+                    .customer(customer1)
                     .shippingAddress(address4)
                     .billingAddress(address4)
                     .build());
@@ -256,6 +295,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList4)
+                    .customer(customer2)
                     .shippingAddress(address6)
                     .billingAddress(address5)
                     .build());
@@ -263,6 +303,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList5)
+                    .customer(customer1)
                     .shippingAddress(address1)
                     .billingAddress(address2)
                     .build());
@@ -270,6 +311,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList6)
+                    .customer(customer2)
                     .shippingAddress(address4)
                     .billingAddress(address4)
                     .build());
@@ -277,6 +319,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList7)
+                    .customer(customer1)
                     .shippingAddress(address1)
                     .billingAddress(address3)
                     .build());
@@ -284,6 +327,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList8)
+                    .customer(customer2)
                     .shippingAddress(address3)
                     .billingAddress(address1)
                     .build());
@@ -291,6 +335,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList9)
+                    .customer(customer1)
                     .shippingAddress(address2)
                     .billingAddress(address1)
                     .build());
@@ -298,6 +343,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList10)
+                    .customer(customer2)
                     .shippingAddress(address7)
                     .billingAddress(address8)
                     .build());
@@ -305,6 +351,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList11)
+                    .customer(customer1)
                     .shippingAddress(address1)
                     .billingAddress(address1)
                     .build());
@@ -312,6 +359,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList12)
+                    .customer(customer2)
                     .shippingAddress(address2)
                     .billingAddress(address2)
                     .build());
@@ -319,6 +367,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList13)
+                    .customer(customer1)
                     .shippingAddress(address8)
                     .billingAddress(address8)
                     .build());
@@ -326,6 +375,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList14)
+                    .customer(customer2)
                     .shippingAddress(address6)
                     .billingAddress(address6)
                     .build());
@@ -333,6 +383,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList15)
+                    .customer(customer1)
                     .shippingAddress(address1)
                     .billingAddress(address4)
                     .build());
@@ -340,6 +391,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList16)
+                    .customer(customer2)
                     .shippingAddress(address1)
                     .billingAddress(address4)
                     .build());
@@ -347,6 +399,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList17)
+                    .customer(customer1)
                     .shippingAddress(address6)
                     .billingAddress(address8)
                     .build());
@@ -354,6 +407,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.PACKED)
                     .items(orderItemList18)
+                    .customer(customer2)
                     .shippingAddress(address4)
                     .billingAddress(address8)
                     .build());
@@ -361,6 +415,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.POSTED)
                     .items(orderItemList19)
+                    .customer(customer1)
                     .shippingAddress(address1)
                     .billingAddress(address2)
                     .build());
@@ -368,6 +423,7 @@ public class BsbestellingbeheerApplication {
                     .orderTime(LocalDateTime.now())
                     .orderState(OrderState.FINISHED)
                     .items(orderItemList20)
+                    .customer(customer2)
                     .shippingAddress(address3)
                     .billingAddress(address4)
                     .build());

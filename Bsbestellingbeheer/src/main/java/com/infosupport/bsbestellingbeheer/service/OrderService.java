@@ -1,5 +1,6 @@
 package com.infosupport.bsbestellingbeheer.service;
 
+import com.infosupport.bsbestellingbeheer.domain.DatavaultData;
 import com.infosupport.bsbestellingbeheer.domain.Order;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 
@@ -20,4 +21,6 @@ public interface OrderService {
     Order sendOrder(String id) throws Exception;
 
     Order saveOrder(Order order) throws Exception;
+
+    Collection<DatavaultData> getDatavaultDataInterval(long intervalInMinutes);
 }
