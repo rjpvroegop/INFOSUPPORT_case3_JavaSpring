@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
  */
 
 @Service("categoryService")
-@Repository
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired

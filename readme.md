@@ -1,5 +1,10 @@
 #Kantilever backend
 
+To access the API, use the base URL with the required parameters.
+For example, to find the stock item with `id == 1`, use the following url in development mode:
+
+>http://localhost:10001/bsvoorraadbeheer/stock/1
+
 ## Discovery server
 
 ### Ports

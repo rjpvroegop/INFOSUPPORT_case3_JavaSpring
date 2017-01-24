@@ -15,7 +15,6 @@ import javax.xml.bind.ValidationException;
  * Created by maart on 10-1-2017.
  */
 @Service("webshopAccountService")
-@Repository
 public class WebshopAccountServiceImpl implements WebshopAccountService {
 
     private WebshopAccountRepository webshopAccountRepository;

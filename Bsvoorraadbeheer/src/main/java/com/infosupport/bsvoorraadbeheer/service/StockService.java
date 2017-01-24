@@ -1,6 +1,7 @@
 package com.infosupport.bsvoorraadbeheer.service;
 
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
+import com.infosupport.bsvoorraadbeheer.domain.StockItemMutation;
 
 import java.util.Collection;
 
@@ -13,4 +14,5 @@ public interface StockService {
 
     Collection<StockItem> getAllStock();
 
+    void mutate(Collection<StockItemMutation> mutations);
 }

@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
  */
 
 @Service("productService")
-@Repository
 public class ProductServiceImpl implements ProductService {
 
     @Autowired

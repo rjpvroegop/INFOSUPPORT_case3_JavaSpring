@@ -1,7 +1,7 @@
 package com.infosupport.bsvoorraadbeheer.service.impl;
 
-import com.infosupport.bsvoorraadbeheer.csv.CsvStock;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
+import com.infosupport.bsvoorraadbeheer.domain.StockItemMutation;
 import com.infosupport.bsvoorraadbeheer.repository.StockRepository;
 import com.infosupport.bsvoorraadbeheer.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,6 @@ import java.util.Collection;
  * Created by rjpvr on 17-1-2017.
  */
 @Service("stockService")
-@Repository
 public class StockServiceImpl implements StockService {
 
     private StockRepository stockRepository;
@@ -23,7 +22,6 @@ public class StockServiceImpl implements StockService {
     @Autowired
     public StockServiceImpl(StockRepository stockRepository) {
         this.stockRepository = stockRepository;
-        refreshStock();
     }
 
     @Override
@@ -33,12 +31,7 @@ public class StockServiceImpl implements StockService {
         SecureRandom r = new SecureRandom();
 
         if (stockItem == null) {
-            // todo: random stock if product is new -- test data only for PO demo purposes
             stockItem = StockItem.builder().productId(productId).stock((long) r.nextInt(5)).build();
-
-            // todo: set stock to 0 if product is new
-            // stockItem = StockItem.builder().productId(productId).stock(0L).build();
-
             stockRepository.save(stockItem);
         }
 
@@ -50,11 +43,15 @@ public class StockServiceImpl implements StockService {
         return stockRepository.findAll();
     }
 
-    private void refreshStock() {
-        int intevalMinutes = 60;
 
-        CsvStock csvStock = CsvStock.getInstance();
-        csvStock.setRepository(stockRepository);
-        csvStock.setRefreshInterval(intevalMinutes);
+    @Override
+    public void mutate(Collection<StockItemMutation> mutations) {
+        for (StockItemMutation mutation : mutations) {
+            StockItem stockItem = stockRepository.findOne(mutation.getProductId());
+
+            stockItem.setStock(stockItem.getStock() + mutation.getMutationQuantity());
+
+            stockRepository.save(stockItem);
+        }
     }
 }

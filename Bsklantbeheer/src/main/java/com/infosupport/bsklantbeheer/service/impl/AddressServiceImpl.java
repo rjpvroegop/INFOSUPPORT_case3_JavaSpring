@@ -13,7 +13,6 @@ import javax.xml.bind.ValidationException;
  * Created by maart on 10-1-2017.
  */
 @Service("addressService")
-@Repository
 public class AddressServiceImpl implements AddressService {
 
     private AddressRepository addressRepository;
