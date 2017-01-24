@@ -35,9 +35,9 @@ public class WebshopAccountResource {
         return generateResponse(webshopAccount, HttpStatus.OK, HttpStatus.BAD_REQUEST);
     }
 
-    @RequestMapping(method = POST)
-    public ResponseEntity<WebshopAccount> getWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
-        webshopAccount = webshopAccountService.getWebshopAccount(webshopAccount.getUserName(), webshopAccount.getPassword());
+    @RequestMapping(value= "/login/{username}/{password}", method = GET)
+    public ResponseEntity<WebshopAccount> getWebshopAccount(@PathVariable("username") String username, @PathVariable("password") String password) {
+        WebshopAccount webshopAccount = webshopAccountService.login(username, password);
         return generateResponse(webshopAccount, HttpStatus.OK, HttpStatus.UNAUTHORIZED);
     }
 
