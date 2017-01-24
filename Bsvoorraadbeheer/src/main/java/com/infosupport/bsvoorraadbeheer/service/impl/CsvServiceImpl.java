@@ -37,7 +37,7 @@ public class CsvServiceImpl implements CsvService {
         };
 
         int initialDelay = 0;
-        int period = 1;
+        int period = 60;
         executor.scheduleAtFixedRate(task, initialDelay, period, TimeUnit.MINUTES);
     }
 

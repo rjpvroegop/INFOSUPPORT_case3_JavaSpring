@@ -19,5 +19,5 @@ public interface OrderService {
 
     Order sendOrder(String id) throws Exception;
 
-    Order saveOrder(Order order) throws Exception;
+    Order saveOrder(Order order) throws NullPointerException;
 }

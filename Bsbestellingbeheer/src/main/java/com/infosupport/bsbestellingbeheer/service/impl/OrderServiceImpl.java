@@ -60,25 +60,44 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order saveOrder(Order order) throws Exception {
-        if(order == null){
-            throw new Exception("Null order");
-        } else {
-            //create business key order
-            LocalDateTime startOfDay = order.getOrderTime().with(LocalTime.MIN);
-            LocalDateTime endOfDay = order.getOrderTime().with(LocalTime.MAX);
-            long numberOfOrdersForOrderDateTime = orderRepository.countByOrderTimeBetween(startOfDay, endOfDay);
-            long bsKeyNumber = numberOfOrdersForOrderDateTime + 1;
-            String bsKeyPrefix = "ORD";
-            String bsKeyDate = order.getOrderTime().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-            String bsKeyPostfix = String.valueOf(bsKeyNumber);
-            while(bsKeyPostfix.length() != 5){
-                bsKeyPostfix = "0" + bsKeyPostfix;
-            }
-            String bsKey = bsKeyPrefix + bsKeyDate + "-"+ bsKeyPostfix;
-            order.setBsKey(bsKey);
+    public Order saveOrder(Order order) throws NullPointerException {
+        // if order is not valid, throw exception
+        validateOrder(order);
 
-            return orderRepository.save(order);
+        //create business key order
+        LocalDateTime startOfDay = order.getOrderTime().with(LocalTime.MIN);
+        LocalDateTime endOfDay = order.getOrderTime().with(LocalTime.MAX);
+        long numberOfOrdersForOrderDateTime = orderRepository.countByOrderTimeBetween(startOfDay, endOfDay);
+        long bsKeyNumber = numberOfOrdersForOrderDateTime + 1;
+        String bsKeyPrefix = "ORD";
+        String bsKeyDate = order.getOrderTime().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String bsKeyPostfix = String.valueOf(bsKeyNumber);
+        while (bsKeyPostfix.length() != 5) {
+            bsKeyPostfix = "0" + bsKeyPostfix;
         }
+        String bsKey = bsKeyPrefix + bsKeyDate + "-" + bsKeyPostfix;
+        order.setBsKey(bsKey);
+
+        return orderRepository.save(order);
+    }
+
+    private Boolean validateOrder(Order order) {
+        if (order == null) {
+            throw new NullPointerException("No order provided");
+        } else if (order.getCustomer() == null) {
+            throw new NullPointerException("Order provided without customer");
+        } else if (order.getBillingAddress() == null) {
+            throw new NullPointerException("Order provided without billing address");
+        } else if (order.getShippingAddress() == null) {
+            throw new NullPointerException("Order provided without shipping address");
+        } else if (order.getItems() == null || order.getItems().size() == 0) {
+            throw new NullPointerException("Order provided without order items");
+        } else if (order.getOrderTime() == null) {
+            order.setOrderTime(LocalDateTime.now());
+        } else if (order.getPayment() == null) {
+            throw new NullPointerException("Order provided without order payment method");
+        }
+
+        return true;
     }
 }

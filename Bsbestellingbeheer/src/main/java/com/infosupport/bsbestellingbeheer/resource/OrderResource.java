@@ -1,17 +1,20 @@
 package com.infosupport.bsbestellingbeheer.resource;
 
+import com.infosupport.bsbestellingbeheer.domain.Address;
 import com.infosupport.bsbestellingbeheer.domain.Order;
 import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.xml.bind.ValidationException;
 import java.util.Collection;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -28,7 +31,7 @@ public class OrderResource {
     @Autowired
     private OrderService orderService;
 
-    @RequestMapping
+    @RequestMapping(method=GET)
     public Collection<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
@@ -69,5 +72,17 @@ public class OrderResource {
             throw new HttpMessageNotReadableException(e.getMessage());
         }
     }
+
+    @RequestMapping(method=POST)
+    public ResponseEntity<Order> placeOrder(@RequestBody Order order, HttpServletRequest request) throws HttpMediaTypeNotAcceptableException {
+        try {
+            order.setOrderState(OrderState.POSTED);
+            order = orderService.saveOrder(order);
+            return new ResponseEntity<>(order, HttpStatus.CREATED);
+        } catch (NullPointerException e) {
+            throw new HttpMediaTypeNotAcceptableException(e.getMessage());
+        }
+    }
+
 
 }
