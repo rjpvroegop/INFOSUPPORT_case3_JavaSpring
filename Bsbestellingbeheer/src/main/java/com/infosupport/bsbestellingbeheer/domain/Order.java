@@ -28,6 +28,7 @@ public class Order {
     @Id
     private String id;
     private String bsKey;
+    private Float shippingcost;
 
     @JsonSerialize(using = CustomLocalDateTimeSerializer.class)
     private LocalDateTime orderTime;

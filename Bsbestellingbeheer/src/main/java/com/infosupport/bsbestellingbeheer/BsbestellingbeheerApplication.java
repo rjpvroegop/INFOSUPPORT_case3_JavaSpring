@@ -273,6 +273,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer1)
                     .billingAddress(address1)
                     .shippingAddress(address2)
+                    .shippingcost(6.95F)
                     .build());
 
             orderService.saveOrder(Order.builder()
@@ -283,6 +284,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer2)
                     .shippingAddress(address3)
                     .billingAddress(address3)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -292,6 +294,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer1)
                     .shippingAddress(address4)
                     .billingAddress(address4)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -301,6 +304,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer2)
                     .shippingAddress(address6)
                     .billingAddress(address5)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -310,6 +314,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer1)
                     .shippingAddress(address1)
                     .billingAddress(address2)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -319,6 +324,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address4)
                     .billingAddress(address4)
                     .customer(customer2)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -328,6 +334,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address1)
                     .billingAddress(address3)
                     .customer(customer1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -337,6 +344,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer2)
                     .shippingAddress(address3)
                     .billingAddress(address1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -346,6 +354,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address2)
                     .billingAddress(address1)
                     .customer(customer1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -355,6 +364,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer2)
                     .shippingAddress(address7)
                     .billingAddress(address8)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -364,6 +374,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address1)
                     .billingAddress(address1)
                     .customer(customer1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -373,6 +384,7 @@ public class BsbestellingbeheerApplication {
                     .customer(customer2)
                     .shippingAddress(address2)
                     .billingAddress(address2)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -382,6 +394,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address8)
                     .billingAddress(address8)
                     .customer(customer1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -391,6 +404,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address6)
                     .billingAddress(address6)
                     .customer(customer2)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -400,6 +414,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address1)
                     .billingAddress(address4)
                     .customer(customer1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -409,6 +424,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address1)
                     .billingAddress(address4)
                     .customer(customer2)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -418,6 +434,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address6)
                     .billingAddress(address8)
                     .customer(customer1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -427,6 +444,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address4)
                     .billingAddress(address8)
                     .customer(customer2)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -436,6 +454,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address1)
                     .billingAddress(address2)
                     .customer(customer1)
+                    .shippingcost(6.95F)
                     .build());
             orderService.saveOrder(Order.builder()
                     .orderTime(LocalDateTime.now())
@@ -445,6 +464,7 @@ public class BsbestellingbeheerApplication {
                     .shippingAddress(address3)
                     .billingAddress(address4)
                     .customer(customer2)
+                    .shippingcost(6.95F)
                     .build());
 
             // fetch all customers
@@ -458,7 +478,7 @@ public class BsbestellingbeheerApplication {
             System.out.println("-------------------------------");
             LocalDateTime startOfDay = LocalDateTime.now().with(LocalTime.MIN);
             LocalDateTime endOfDay = LocalDateTime.now().with(LocalTime.MAX);
-            for (Order order : orderRepository.findByOrderTimeBetween(startOfDay, endOfDay)){
+            for (Order order : orderRepository.findByOrderTimeBetween(startOfDay, endOfDay)) {
                 System.out.println(order.getBsKey());
             }
         };
