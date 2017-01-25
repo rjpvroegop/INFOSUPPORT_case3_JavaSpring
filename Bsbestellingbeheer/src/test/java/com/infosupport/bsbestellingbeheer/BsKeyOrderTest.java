@@ -18,7 +18,6 @@ import java.time.format.DateTimeFormatter;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.isNull;
 import static org.mockito.Mockito.when;
 
 /**
@@ -36,7 +35,7 @@ public class BsKeyOrderTest {
     private OrderServiceImpl service;
 
     @Test
-    public void createOrderWithBsKeyAndWithNoOrdersOnTimeOfOrder(){
+    public void createOrderWithBsKeyAndWithNoOrdersOnTimeOfOrder() {
         Order order = OrderBuilder.orderBuilder().build();
         when(repo.countByOrderTimeBetween(LocalDateTime.now().with(LocalTime.MIN), LocalDateTime.now().with(LocalTime.MAX))).thenReturn(0L);
         String expectedBsKey = "ORD" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")) + "-00001";
@@ -45,7 +44,7 @@ public class BsKeyOrderTest {
     }
 
     @Test
-    public void createOrderWithBsKeyAndWithFourOrdersOnTimeOfOrder(){
+    public void createOrderWithBsKeyAndWithFourOrdersOnTimeOfOrder() {
         Order order = OrderBuilder.orderBuilder().build();
         when(repo.countByOrderTimeBetween(LocalDateTime.now().with(LocalTime.MIN), LocalDateTime.now().with(LocalTime.MAX))).thenReturn(4L);
         String expectedBsKey = "ORD" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd")) + "-00005";

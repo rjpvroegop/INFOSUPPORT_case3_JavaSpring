@@ -26,7 +26,29 @@ import java.util.concurrent.TimeUnit;
 @Service("csvService")
 public class CsvServiceImpl implements CsvService {
     private static Logger LOGGER = Logger.getLogger(CsvService.class);
-    public void initiate(){
+
+    private static void storeOldStockData() throws IOException {
+        System.out.println("backup");
+        List<String> lines = Files.readAllLines(Paths.get("csv/stock.csv"));
+        Path file = Paths.get("csv/stock" + System.currentTimeMillis() + ".csv");
+        try {
+            Files.write(file, lines, Charset.forName("UTF-8"));
+        } catch (IOException e) {
+            LOGGER.info(e);
+        }
+    }
+
+    private static void createNewStockFile() {
+        List<String> lines = Arrays.asList("productId, stock;");
+        Path file = Paths.get("csv/stock.csv");
+        try {
+            Files.write(file, lines, Charset.forName("UTF-8"));
+        } catch (IOException e) {
+            LOGGER.info(e);
+        }
+    }
+
+    public void initiate() {
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
         Runnable task = () -> {
@@ -58,26 +80,5 @@ public class CsvServiceImpl implements CsvService {
             output.append(sb.toString());
         }
         output.close();
-    }
-
-    private static void storeOldStockData() throws IOException {
-        System.out.println("backup");
-        List<String> lines = Files.readAllLines(Paths.get("csv/stock.csv"));
-        Path file = Paths.get("csv/stock" + System.currentTimeMillis() + ".csv");
-        try {
-            Files.write(file, lines, Charset.forName("UTF-8"));
-        } catch (IOException e) {
-            LOGGER.info(e);
-        }
-    }
-
-    private static void createNewStockFile(){
-        List<String> lines = Arrays.asList("productId, stock;");
-        Path file = Paths.get("csv/stock.csv");
-        try {
-            Files.write(file, lines, Charset.forName("UTF-8"));
-        } catch (IOException e) {
-            LOGGER.info(e);
-        }
     }
 }

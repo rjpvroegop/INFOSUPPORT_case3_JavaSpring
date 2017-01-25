@@ -2,16 +2,13 @@ package com.infosupport.bsklantbeheer.service.impl;
 
 import com.infosupport.bsklantbeheer.domain.Customer;
 import com.infosupport.bsklantbeheer.domain.WebshopAccount;
-import com.infosupport.bsklantbeheer.repository.CustomerRepository;
 import com.infosupport.bsklantbeheer.repository.WebshopAccountRepository;
-import com.infosupport.bsklantbeheer.service.CustomerService;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.internal.matchers.InstanceOf;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import javax.xml.bind.ValidationException;

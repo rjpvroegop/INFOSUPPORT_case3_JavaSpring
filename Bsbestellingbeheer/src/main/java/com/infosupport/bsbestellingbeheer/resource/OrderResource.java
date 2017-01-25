@@ -1,6 +1,5 @@
 package com.infosupport.bsbestellingbeheer.resource;
 
-import com.infosupport.bsbestellingbeheer.domain.Address;
 import com.infosupport.bsbestellingbeheer.domain.DatavaultData;
 import com.infosupport.bsbestellingbeheer.domain.Order;
 import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
@@ -16,7 +15,6 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.xml.bind.ValidationException;
 import java.util.Collection;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -34,7 +32,7 @@ public class OrderResource {
     @Autowired
     private OrderService orderService;
 
-    @RequestMapping(method=GET)
+    @RequestMapping(method = GET)
     public Collection<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
@@ -81,7 +79,7 @@ public class OrderResource {
     }
 
     @RequestMapping(value = "/datavaultdata/{interval}", method = GET)
-    public Collection<DatavaultData> getDatavaultDataInterval(@PathVariable("interval") long interval) throws Exception{
+    public Collection<DatavaultData> getDatavaultDataInterval(@PathVariable("interval") long interval) throws Exception {
         try {
             Collection<DatavaultData> datavaultDataCollection = orderService.getDatavaultDataInterval(interval);
             return datavaultDataCollection;
@@ -91,7 +89,7 @@ public class OrderResource {
         }
     }
 
-    @RequestMapping(method=POST)
+    @RequestMapping(method = POST)
     public ResponseEntity<Order> placeOrder(@RequestBody Order order, HttpServletRequest request) throws HttpMediaTypeNotAcceptableException {
         try {
             order.setOrderState(OrderState.POSTED);

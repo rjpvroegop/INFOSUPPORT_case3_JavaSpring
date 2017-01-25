@@ -4,7 +4,6 @@ import com.infosupport.bscatalogusbeheer.domain.Category;
 import com.infosupport.bscatalogusbeheer.domain.Product;
 import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;
 import com.infosupport.bscatalogusbeheer.repository.ProductRepository;
-import com.infosupport.bscatalogusbeheer.service.impl.CategoryServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,7 +42,7 @@ public class CategoryServiceImplTest {
 
     @Before
     public void init() {
-        Category category =  new Category();
+        Category category = new Category();
         categories.add(new Category(1L, "cat1"));
         categories.add(new Category(2L, "cat2"));
         categories.add(new Category(3L, "cat3"));

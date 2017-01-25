@@ -31,7 +31,7 @@ public class OrderValidationTest {
     private OrderServiceImpl service;
 
     @Test
-    public void saveOrder(){
+    public void saveOrder() {
         Order order = OrderBuilder.orderBuilder().build();
 
         when(repo.save(any(Order.class))).thenReturn(null);
@@ -40,7 +40,7 @@ public class OrderValidationTest {
     }
 
     @Test
-    public void saveOrderNoCustomerException(){
+    public void saveOrderNoCustomerException() {
         Order order = OrderBuilder.orderBuilder().customer(null).build();
 
         when(repo.save(any(Order.class))).thenReturn(null);
@@ -52,7 +52,7 @@ public class OrderValidationTest {
     }
 
     @Test
-    public void saveOrderNoProductsException(){
+    public void saveOrderNoProductsException() {
         Order order = OrderBuilder.orderBuilder().items(null).build();
 
         when(repo.save(any(Order.class))).thenReturn(null);
@@ -64,7 +64,7 @@ public class OrderValidationTest {
     }
 
     @Test
-    public void saveOrderNoBillingAddressException(){
+    public void saveOrderNoBillingAddressException() {
         Order order = OrderBuilder.orderBuilder().billingAddress(null).build();
 
         when(repo.save(any(Order.class))).thenReturn(null);
@@ -76,7 +76,7 @@ public class OrderValidationTest {
     }
 
     @Test
-    public void saveOrderNoShippingAddressException(){
+    public void saveOrderNoShippingAddressException() {
         Order order = OrderBuilder.orderBuilder().shippingAddress(null).build();
 
         when(repo.save(any(Order.class))).thenReturn(null);
@@ -88,7 +88,7 @@ public class OrderValidationTest {
     }
 
     @Test
-    public void saveOrderNoOrderTimeNoException(){
+    public void saveOrderNoOrderTimeNoException() {
         Order order = OrderBuilder.orderBuilder().orderTime(null).build();
 
         when(repo.save(any(Order.class))).thenReturn(null);
@@ -97,7 +97,7 @@ public class OrderValidationTest {
     }
 
     @Test
-    public void saveOrderNoOrderPaymentMethodException(){
+    public void saveOrderNoOrderPaymentMethodException() {
         Order order = OrderBuilder.orderBuilder().payment(null).build();
 
         when(repo.save(any(Order.class))).thenReturn(null);

@@ -10,9 +10,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -91,7 +88,7 @@ public class CustomerServiceImplTest {
     }
 
     @Test
-    public void createCustomerWithNoCustomersInDB(){
+    public void createCustomerWithNoCustomersInDB() {
         Customer customer = Customer.builder().addresses(Arrays.asList(Address.builder().build())).build();
         when(customerRepository.count()).thenReturn(0L);
         String expectedBsKey = "CUST" + "000001";
@@ -100,7 +97,7 @@ public class CustomerServiceImplTest {
     }
 
     @Test
-    public void createCustomerWithFourCustomersInDB(){
+    public void createCustomerWithFourCustomersInDB() {
         Customer customer = Customer.builder().addresses(Arrays.asList(Address.builder().build())).build();
         when(customerRepository.count()).thenReturn(4L);
         String expectedBsKey = "CUST" + "000005";
