@@ -17,7 +17,6 @@
         <module>Bsvoorraadbeheer</module>
         <module>Discoveryserver</module>
         <module>Pcsbestellen</module>
-        <module>Pcswinkelen</module>
         <module>Zuulapi</module>
         <module>isdatavault</module>
     </modules>
