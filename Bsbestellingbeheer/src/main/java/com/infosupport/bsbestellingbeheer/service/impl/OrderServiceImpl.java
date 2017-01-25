@@ -21,6 +21,10 @@ import java.util.Collection;
 @Service
 public class OrderServiceImpl implements OrderService {
 
+    private float shippingcost = 5F;
+    private float noshippingcost = 0F;
+    private float shippingcostTippingpoint = 200F;
+
     private OrderRepository orderRepository;
 
     @Autowired
@@ -69,7 +73,27 @@ public class OrderServiceImpl implements OrderService {
 
         order = createBsKey(order);
 
+        order = calculateShippingcost(order);
+
         return orderRepository.save(order);
+    }
+
+    private Order calculateShippingcost(Order order) {
+        float price = calculateTotalOrderPrice(order);
+        if (price >= shippingcostTippingpoint) {
+            order.setShippingcost(shippingcost);
+        } else {
+            order.setShippingcost(noshippingcost);
+        }
+        return order;
+    }
+
+    private float calculateTotalOrderPrice(Order order) {
+        float price = 0;
+        for (OrderItem orderItem : order.getItems()) {
+            price += orderItem.getProduct().getPrice() * orderItem.getAmount();
+        }
+        return price;
     }
 
     private Boolean validateOrder(Order order) {
