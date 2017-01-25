@@ -458,7 +458,7 @@ public class BsbestellingbeheerApplication {
             System.out.println("-------------------------------");
             LocalDateTime startOfDay = LocalDateTime.now().with(LocalTime.MIN);
             LocalDateTime endOfDay = LocalDateTime.now().with(LocalTime.MAX);
-            for (Order order : orderRepository.findByOrderTimeBetween(startOfDay, endOfDay)){
+            for (Order order : orderRepository.findByOrderTimeBetween(startOfDay, endOfDay)) {
                 System.out.println(order.getBsKey());
             }
         };

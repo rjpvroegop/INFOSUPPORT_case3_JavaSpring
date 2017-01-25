@@ -7,10 +7,6 @@ import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
-
-import javax.swing.undo.StateEdit;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -25,7 +21,7 @@ public class StatesTest {
     public ExpectedException thrown = ExpectedException.none();
 
     @Test
-    public void correctOrderProcessWithoutTreatment() throws OrderStateException{
+    public void correctOrderProcessWithoutTreatment() throws OrderStateException {
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.POSTED).build();
         order.pack();
         order.send();
@@ -33,7 +29,7 @@ public class StatesTest {
     }
 
     @Test
-    public void correctOrderProcessWithTreatment() throws OrderStateException{
+    public void correctOrderProcessWithTreatment() throws OrderStateException {
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.INTREATMENT).build();
         assertThat(order.getOrderState().toString(), is("In treatment"));
         order.post();
@@ -46,28 +42,28 @@ public class StatesTest {
     }
 
     @Test
-    public void correctOrderProcessCancelOnInTreatment() throws OrderStateException{
+    public void correctOrderProcessCancelOnInTreatment() throws OrderStateException {
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.INTREATMENT).build();
         order.cancel();
         assertThat(OrderState.FINISHED, is(order.getOrderState()));
     }
 
     @Test
-    public void correctOrderProcessCancelOnPosted() throws OrderStateException{
+    public void correctOrderProcessCancelOnPosted() throws OrderStateException {
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.POSTED).build();
         order.cancel();
         assertThat(OrderState.FINISHED, is(order.getOrderState()));
     }
 
     @Test
-    public void inCorrectOrderProcessEarlySend() throws OrderStateException{
+    public void inCorrectOrderProcessEarlySend() throws OrderStateException {
         thrown.expect(OrderStateException.class);
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.POSTED).build();
         order.send();
     }
 
     @Test
-    public void inCorrectOrderProcessCancelFinishedOrder() throws OrderStateException{
+    public void inCorrectOrderProcessCancelFinishedOrder() throws OrderStateException {
         thrown.expect(OrderStateException.class);
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.POSTED).build();
         order.pack();
@@ -76,7 +72,7 @@ public class StatesTest {
     }
 
     @Test
-    public void inCorrectOrderProcessPackSendOrder() throws OrderStateException{
+    public void inCorrectOrderProcessPackSendOrder() throws OrderStateException {
         thrown.expect(OrderStateException.class);
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.POSTED).build();
         order.pack();
@@ -85,7 +81,7 @@ public class StatesTest {
     }
 
     @Test
-    public void inCorrectOrderProcessPostCancelledOrder() throws OrderStateException{
+    public void inCorrectOrderProcessPostCancelledOrder() throws OrderStateException {
         thrown.expect(OrderStateException.class);
         Order order = OrderBuilder.orderBuilder().orderState(OrderState.POSTED).build();
         order.cancel();

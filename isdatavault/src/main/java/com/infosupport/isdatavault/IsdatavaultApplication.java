@@ -11,13 +11,13 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class IsdatavaultApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(IsdatavaultApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(IsdatavaultApplication.class, args);
+    }
 
-	@LoadBalanced
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+    @LoadBalanced
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }

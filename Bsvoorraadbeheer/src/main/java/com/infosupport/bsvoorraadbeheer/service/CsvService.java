@@ -10,5 +10,6 @@ import java.util.Collection;
  */
 public interface CsvService {
     void initiate();
+
     void addMutations(Collection<StockItemMutation> mutations) throws IOException;
 }

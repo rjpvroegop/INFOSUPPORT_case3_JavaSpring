@@ -3,7 +3,6 @@ package com.infosupport.bsbestellingbeheer.service.impl;
 import com.infosupport.bsbestellingbeheer.domain.DatavaultData;
 import com.infosupport.bsbestellingbeheer.domain.Order;
 import com.infosupport.bsbestellingbeheer.domain.OrderItem;
-import com.infosupport.bsbestellingbeheer.domain.Product;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.repository.OrderRepository;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
@@ -97,14 +96,14 @@ public class OrderServiceImpl implements OrderService {
     public Collection<DatavaultData> getDatavaultDataInterval(long intervalInMinutes) {
         Collection<Order> orders = orderRepository.findByOrderTimeBetween(LocalDateTime.now().minusMinutes(intervalInMinutes), LocalDateTime.now());
         Collection<DatavaultData> datavaultDataCollection = new ArrayList<>();
-        for (Order order : orders){
+        for (Order order : orders) {
             Collection<String> bsKeysProducts = new ArrayList<>();
-            for (OrderItem orderItem : order.getItems()){
+            for (OrderItem orderItem : order.getItems()) {
                 bsKeysProducts.add(orderItem.getProduct().getBsKey());
             }
             String orderKey = order.getBsKey();
             String customerKey = null;
-            if(order.getCustomer() != null){
+            if (order.getCustomer() != null) {
                 customerKey = order.getCustomer().getBsKey();
             }
             datavaultDataCollection.add(new DatavaultData(orderKey, customerKey, bsKeysProducts));
@@ -123,8 +122,8 @@ public class OrderServiceImpl implements OrderService {
         String bsKeyDate = order.getOrderTime().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         StringBuilder bsKey = new StringBuilder();
         bsKey.append(String.valueOf(bsKeyNumber));
-        while(bsKey.toString().length() != 5){
-            bsKey.insert(0,"0");
+        while (bsKey.toString().length() != 5) {
+            bsKey.insert(0, "0");
         }
         bsKey.insert(0, "-");
         bsKey.insert(0, bsKeyDate);

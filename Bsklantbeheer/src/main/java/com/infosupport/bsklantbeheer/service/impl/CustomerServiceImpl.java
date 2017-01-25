@@ -6,7 +6,6 @@ import com.infosupport.bsklantbeheer.repository.CustomerRepository;
 import com.infosupport.bsklantbeheer.service.CustomerService;
 import com.infosupport.bsklantbeheer.validation.CustomerValidation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
@@ -63,7 +62,7 @@ public class CustomerServiceImpl implements CustomerService {
         String bsKeyPrefix = "CUST";
         StringBuilder bsKey = new StringBuilder();
         bsKey.append(String.valueOf(bsKeyNumber));
-        while(bsKey.toString().length() != 6){
+        while (bsKey.toString().length() != 6) {
             bsKey.insert(0, "0");
         }
         bsKey.insert(0, bsKeyPrefix);

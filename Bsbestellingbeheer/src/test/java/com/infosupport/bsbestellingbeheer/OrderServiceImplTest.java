@@ -2,7 +2,6 @@ package com.infosupport.bsbestellingbeheer;
 
 import com.infosupport.bsbestellingbeheer.builders.OrderBuilder;
 import com.infosupport.bsbestellingbeheer.domain.Order;
-import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.repository.OrderRepository;
 import com.infosupport.bsbestellingbeheer.service.impl.OrderServiceImpl;
@@ -14,9 +13,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.when;
-import static org.hamcrest.core.Is.is;
+
 /**
  * Created by Sander on 24-1-17.
  */

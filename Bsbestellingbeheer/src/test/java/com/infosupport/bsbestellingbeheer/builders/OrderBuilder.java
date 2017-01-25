@@ -1,7 +1,6 @@
 package com.infosupport.bsbestellingbeheer.builders;
 
 import com.infosupport.bsbestellingbeheer.domain.*;
-import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,7 +10,7 @@ import java.util.List;
  * Created by Sander on 18-1-17.
  */
 public class OrderBuilder {
-    public static Order.OrderBuilder orderBuilder(){
+    public static Order.OrderBuilder orderBuilder() {
         Product product1 = Product.builder()
                 .id(1L)
                 .bsKey("PRD00001")
