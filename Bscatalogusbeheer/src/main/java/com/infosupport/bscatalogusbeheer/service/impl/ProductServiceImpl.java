@@ -5,7 +5,6 @@ import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;
 import com.infosupport.bscatalogusbeheer.repository.ProductRepository;
 import com.infosupport.bscatalogusbeheer.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -17,7 +16,6 @@ import java.util.stream.Collectors;
  */
 
 @Service("productService")
-@Repository
 public class ProductServiceImpl implements ProductService {
 
     @Autowired

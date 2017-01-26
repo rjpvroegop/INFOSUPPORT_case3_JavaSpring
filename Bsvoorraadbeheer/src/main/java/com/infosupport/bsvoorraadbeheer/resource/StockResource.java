@@ -1,16 +1,13 @@
 package com.infosupport.bsvoorraadbeheer.resource;
 
-import com.infosupport.bsvoorraadbeheer.csv.CsvStock;
 import com.infosupport.bsvoorraadbeheer.domain.StockItem;
+import com.infosupport.bsvoorraadbeheer.domain.StockItemMutation;
+import com.infosupport.bsvoorraadbeheer.service.CsvService;
 import com.infosupport.bsvoorraadbeheer.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Collection;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -26,10 +23,14 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 public class StockResource {
 
     private StockService stockService;
+    private CsvService csvService;
 
     @Autowired
-    public StockResource(StockService stockService) {
+    public StockResource(StockService stockService, CsvService csvService) {
         this.stockService = stockService;
+        this.csvService = csvService;
+
+        this.csvService.initiate();
     }
 
 
@@ -43,16 +44,9 @@ public class StockResource {
         return stockService.getAllStock();
     }
 
-    @RequestMapping(value = "/csv", method = GET)
-    public FileSystemResource getCsv(HttpServletResponse response) {
-        response.setContentType("application/csv");
-        response.setHeader("Content-Disposition", "attachment; filename=stock.csv");
-        return new FileSystemResource(CsvStock.getInstance().toCsv());
-    }
-
-    @RequestMapping(value = "/csv/interval", method = PUT)
-    public ResponseEntity<Integer> setUpdateInterval(@RequestBody Integer interval, HttpServletRequest request) {
-        CsvStock.getInstance().setRefreshInterval(interval);
-        return new ResponseEntity<>(interval, HttpStatus.ACCEPTED);
+    @RequestMapping(method = PUT)
+    public void mutateStock(@RequestBody Collection<StockItemMutation> mutations) throws IOException {
+        csvService.addMutations(mutations);
+        stockService.mutate(mutations);
     }
 }

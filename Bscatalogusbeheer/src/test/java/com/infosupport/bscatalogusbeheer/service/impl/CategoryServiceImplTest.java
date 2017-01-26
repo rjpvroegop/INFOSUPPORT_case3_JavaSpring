@@ -4,7 +4,6 @@ import com.infosupport.bscatalogusbeheer.domain.Category;
 import com.infosupport.bscatalogusbeheer.domain.Product;
 import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;
 import com.infosupport.bscatalogusbeheer.repository.ProductRepository;
-import com.infosupport.bscatalogusbeheer.service.impl.CategoryServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,6 +42,7 @@ public class CategoryServiceImplTest {
 
     @Before
     public void init() {
+        Category category = new Category();
         categories.add(new Category(1L, "cat1"));
         categories.add(new Category(2L, "cat2"));
         categories.add(new Category(3L, "cat3"));
@@ -94,6 +94,20 @@ public class CategoryServiceImplTest {
 
         //Assert
         assertThat(categories.get(0), is(this.categories.get(3)));
+        assertThat(categories.get(0).getId(), is(4L));
+        assertThat(categories.get(0).getName(), is("cat4"));
         assertThat(categories.get(1), is(this.categories.get(4)));
+    }
+
+    @Test
+    public void findAllCategories() throws Exception {
+        //Arrange
+        when(catRepo.findAll()).thenReturn(categories);
+
+        //Act
+        List<Category> categories = service.findAllCategories();
+
+        //Assert
+        assertThat(categories.size(), is(1));
     }
 }

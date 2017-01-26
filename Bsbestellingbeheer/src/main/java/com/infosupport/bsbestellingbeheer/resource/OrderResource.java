@@ -1,17 +1,20 @@
 package com.infosupport.bsbestellingbeheer.resource;
 
+import com.infosupport.bsbestellingbeheer.domain.DatavaultData;
 import com.infosupport.bsbestellingbeheer.domain.Order;
 import com.infosupport.bsbestellingbeheer.domain.OrderStateException;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.service.OrderService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -25,10 +28,11 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping("orders")
 public class OrderResource {
 
+    private static Logger LOGGER = Logger.getLogger(OrderResource.class);
     @Autowired
     private OrderService orderService;
 
-    @RequestMapping
+    @RequestMapping(method = GET)
     public Collection<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
@@ -44,30 +48,58 @@ public class OrderResource {
     }
 
     @RequestMapping(value = "/{id}", method = GET)
-    public Order getOder(@PathVariable("id") String id) {
+    public Order getOrder(@PathVariable("id") String id) {
         return orderService.getOrder(id);
     }
 
     @RequestMapping(value = "/pack/{id}", method = POST)
-    public Order packOder(@PathVariable("id") String id) throws Exception {
+    public Order packOrder(@PathVariable("id") String id) throws Exception {
         try {
             return orderService.packOrder(id);
         } catch (OrderStateException e) {
+            LOGGER.info(e);
             throw new HttpRequestMethodNotSupportedException(e.getMessage());
         } catch (Exception e) {
+            LOGGER.info(e);
             throw new HttpMessageNotReadableException(e.getMessage());
         }
     }
 
     @RequestMapping(value = "/sent/{id}", method = POST)
-    public Order sendOder(@PathVariable("id") String id) throws Exception {
+    public Order sendOrder(@PathVariable("id") String id) throws Exception {
         try {
             return orderService.sendOrder(id);
         } catch (OrderStateException e) {
-            throw new HttpRequestMethodNotSupportedException(e.getMessage());
+            LOGGER.info(e);
+            throw new Exception(e.getMessage());
         } catch (Exception e) {
+            LOGGER.info(e);
             throw new HttpMessageNotReadableException(e.getMessage());
         }
     }
+
+    @RequestMapping(value = "/datavaultdata/{interval}", method = GET)
+    public Collection<DatavaultData> getDatavaultDataInterval(@PathVariable("interval") long interval) throws Exception {
+        try {
+            Collection<DatavaultData> datavaultDataCollection = orderService.getDatavaultDataInterval(interval);
+            return datavaultDataCollection;
+        } catch (Exception e) {
+            LOGGER.info(e);
+            throw new HttpMessageNotReadableException(e.getMessage());
+        }
+    }
+
+    @RequestMapping(method = POST)
+    public ResponseEntity<Order> placeOrder(@RequestBody Order order, HttpServletRequest request) throws HttpMediaTypeNotAcceptableException {
+        try {
+            order.setOrderState(OrderState.POSTED);
+            order = orderService.saveOrder(order);
+            return new ResponseEntity<>(order, HttpStatus.CREATED);
+        } catch (NullPointerException e) {
+            LOGGER.info(e);
+            throw new HttpMediaTypeNotAcceptableException(e.getMessage());
+        }
+    }
+
 
 }

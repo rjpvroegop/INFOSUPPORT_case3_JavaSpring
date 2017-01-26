@@ -4,7 +4,6 @@ import com.infosupport.bsklantbeheer.domain.Address;
 import com.infosupport.bsklantbeheer.repository.AddressRepository;
 import com.infosupport.bsklantbeheer.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
@@ -13,7 +12,6 @@ import javax.xml.bind.ValidationException;
  * Created by maart on 10-1-2017.
  */
 @Service("addressService")
-@Repository
 public class AddressServiceImpl implements AddressService {
 
     private AddressRepository addressRepository;
