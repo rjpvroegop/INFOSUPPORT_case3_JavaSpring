@@ -1,9 +1,13 @@
 package com.infosupport.bsbestellingbeheer.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.Collection;
 
 /**
  * Created by Sander on 9-1-17.
@@ -14,7 +18,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class Customer {
     private Long id;
-    private String bsKey;
     private String firstName;
     private String lastName;
     private String email;

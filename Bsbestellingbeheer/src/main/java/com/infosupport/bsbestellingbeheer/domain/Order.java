@@ -1,6 +1,5 @@
 package com.infosupport.bsbestellingbeheer.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.infosupport.bsbestellingbeheer.domain.orderState.OrderState;
 import com.infosupport.bsbestellingbeheer.util.CustomLocalDateTimeSerializer;
@@ -27,8 +26,6 @@ import java.util.List;
 public class Order {
     @Id
     private String id;
-    private String bsKey;
-    private Float shippingcost;
 
     @JsonSerialize(using = CustomLocalDateTimeSerializer.class)
     private LocalDateTime orderTime;
@@ -49,7 +46,6 @@ public class Order {
     private OrderState orderState;
 
     @OneToMany
-    @JsonProperty("orderitems")
     private List<OrderItem> items;
 
     @ManyToOne

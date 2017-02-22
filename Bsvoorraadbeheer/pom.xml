@@ -63,10 +63,6 @@
             <artifactId>gson</artifactId>
             <version>LATEST</version>
         </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>

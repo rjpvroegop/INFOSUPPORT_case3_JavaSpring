@@ -4,6 +4,7 @@ import com.infosupport.bscatalogusbeheer.domain.Category;
 import com.infosupport.bscatalogusbeheer.domain.Product;
 import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;
 import com.infosupport.bscatalogusbeheer.repository.ProductRepository;
+import com.infosupport.bscatalogusbeheer.service.impl.ProductServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

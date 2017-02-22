@@ -51,300 +51,1120 @@ INSERT INTO category (id, name) VALUES ('39', 'Panniers');
 INSERT INTO category (id, name) VALUES ('40', 'Pumps');
 INSERT INTO category (id, name) VALUES ('41', 'Tires and Tubes');
 
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('1','8','HL Road Frame - Black, 58','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','1998-06-01',null,'FR-R92B-58','PRD00001');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('2','9','HL Road Frame - Red, 58','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','1998-06-01',null,'FR-R92R-58','PRD00002');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('3','2','Sport-100 Helmet, Red','Universal fit, well-vented, lightweight , snap-on visor.','no_image_available_small.gif','34.99','2001-07-01',null,'HL-U509-R','PRD00003');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('4','5','Sport-100 Helmet, Black','Universal fit, well-vented, lightweight , snap-on visor.','no_image_available_small.gif','34.99','2001-07-01',null,'HL-U509','PRD00004');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('5','6','Mountain Bike Socks, M','Combination of natural and synthetic fibers stays dry and provides just the right cushioning.','no_image_available_small.gif','9.5','2001-07-01','2002-06-30','SO-B909-M','PRD00005');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('6','2','Mountain Bike Socks, L','Combination of natural and synthetic fibers stays dry and provides just the right cushioning.','no_image_available_small.gif','9.5','2001-07-01','2002-06-30','SO-B909-L','PRD00006');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('7','8','Sport-100 Helmet, Blue','Universal fit, well-vented, lightweight , snap-on visor.','no_image_available_small.gif','34.99','2001-07-01',null,'HL-U509-B','PRD00007');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('8','2','AWC Logo Cap','Traditional style with a flip-up brim; one-size fits all.','no_image_available_small.gif','8.99','2001-07-01',null,'CA-1098','PRD00008');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('9','2','Long-Sleeve Logo Jersey, S','Unisex long-sleeve AWC logo microfiber cycling jersey','awc_jersey_male_small.gif','49.99','2001-07-01',null,'LJ-0192-S','PRD00009');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('10','7','Long-Sleeve Logo Jersey, M','Unisex long-sleeve AWC logo microfiber cycling jersey','awc_jersey_male_small.gif','49.99','2001-07-01',null,'LJ-0192-M','PRD00010');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('11','2','Long-Sleeve Logo Jersey, L','Unisex long-sleeve AWC logo microfiber cycling jersey','awc_jersey_male_small.gif','49.99','2001-07-01',null,'LJ-0192-L','PRD00011');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('12','6','Long-Sleeve Logo Jersey, XL','Unisex long-sleeve AWC logo microfiber cycling jersey','awc_jersey_male_small.gif','49.99','2001-07-01',null,'LJ-0192-X','PRD00012');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('13','3','HL Road Frame - Red, 62','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2001-07-01',null,'FR-R92R-62','PRD00013');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('14','8','HL Road Frame - Red, 44','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2001-07-01',null,'FR-R92R-44','PRD00014');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('15','8','HL Road Frame - Red, 48','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2001-07-01',null,'FR-R92R-48','PRD00015');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('16','2','HL Road Frame - Red, 52','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2001-07-01',null,'FR-R92R-52','PRD00016');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('17','6','HL Road Frame - Red, 56','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2001-07-01',null,'FR-R92R-56','PRD00017');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('18','4','LL Road Frame - Black, 58','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01',null,'FR-R38B-58','PRD00018');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('19','8','LL Road Frame - Black, 60','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01',null,'FR-R38B-60','PRD00019');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('20','2','LL Road Frame - Black, 62','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01',null,'FR-R38B-62','PRD00020');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('21','7','LL Road Frame - Red, 44','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01','2003-06-30','FR-R38R-44','PRD00021');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('22','2','LL Road Frame - Red, 48','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01','2003-06-30','FR-R38R-48','PRD00022');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('23','7','LL Road Frame - Red, 52','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01','2003-06-30','FR-R38R-52','PRD00023');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('24','8','LL Road Frame - Red, 58','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01','2003-06-30','FR-R38R-58','PRD00024');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('25','7','LL Road Frame - Red, 60','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01','2003-06-30','FR-R38R-60','PRD00025');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('26','7','LL Road Frame - Red, 62','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01','2003-06-30','FR-R38R-62','PRD00026');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('27','2','ML Road Frame - Red, 44','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.','no_image_available_small.gif','594.83','2001-07-01','2002-06-30','FR-R72R-44','PRD00027');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('28','3','ML Road Frame - Red, 48','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.','no_image_available_small.gif','594.83','2001-07-01','2002-06-30','FR-R72R-48','PRD00028');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('29','8','ML Road Frame - Red, 52','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.','no_image_available_small.gif','594.83','2001-07-01','2002-06-30','FR-R72R-52','PRD00029');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('30','5','ML Road Frame - Red, 58','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.','no_image_available_small.gif','594.83','2001-07-01','2002-06-30','FR-R72R-58','PRD00030');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('31','6','ML Road Frame - Red, 60','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.','no_image_available_small.gif','594.83','2001-07-01','2002-06-30','FR-R72R-60','PRD00031');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('32','7','LL Road Frame - Black, 44','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01',null,'FR-R38B-44','PRD00032');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('33','7','LL Road Frame - Black, 48','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01',null,'FR-R38B-48','PRD00033');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('34','6','LL Road Frame - Black, 52','The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.','no_image_available_small.gif','337.22','2001-07-01',null,'FR-R38B-52','PRD00034');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('35','4','HL Mountain Frame - Silver, 42','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_silver_small.gif','1364.5','2001-07-01',null,'FR-M94S-42','PRD00035');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('36','5','HL Mountain Frame - Silver, 44','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_silver_small.gif','1364.5','2001-07-01','2002-06-30','FR-M94S-44','PRD00036');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('37','1','HL Mountain Frame - Silver, 48','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_silver_small.gif','1364.5','2001-07-01','2002-06-30','FR-M94S-52','PRD00037');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('38','4','HL Mountain Frame - Silver, 46','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_silver_small.gif','1364.5','2001-07-01',null,'FR-M94S-46','PRD00038');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('39','5','HL Mountain Frame - Black, 42','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_black_small.gif','1349.6','2001-07-01',null,'FR-M94B-42','PRD00039');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('40','8','HL Mountain Frame - Black, 44','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_black_small.gif','1349.6','2001-07-01','2002-06-30','FR-M94B-44','PRD00040');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('41','7','HL Mountain Frame - Black, 48','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_black_small.gif','1349.6','2001-07-01','2002-06-30','FR-M94B-48','PRD00041');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('42','5','HL Mountain Frame - Black, 46','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_black_small.gif','1349.6','2001-07-01',null,'FR-M94B-46','PRD00042');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('43','9','HL Mountain Frame - Black, 38','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_black_small.gif','1349.6','2001-07-01',null,'FR-M94B-38','PRD00043');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('44','8','HL Mountain Frame - Silver, 38','Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.','frame_silver_small.gif','1364.5','2001-07-01',null,'FR-M94S-38','PRD00044');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('45','2','Road-150 Red, 62','This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.','superlight_red_small.gif','3578.27','2001-07-01','2002-06-30','BK-R93R-62','PRD00045');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('46','4','Road-150 Red, 44','This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.','superlight_red_small.gif','3578.27','2001-07-01','2002-06-30','BK-R93R-44','PRD00046');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('47','5','Road-150 Red, 48','This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.','superlight_red_small.gif','3578.27','2001-07-01','2002-06-30','BK-R93R-48','PRD00047');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('48','5','Road-150 Red, 52','This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.','superlight_red_small.gif','3578.27','2001-07-01','2002-06-30','BK-R93R-52','PRD00048');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('49','6','Road-150 Red, 56','This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.','superlight_red_small.gif','3578.27','2001-07-01','2002-06-30','BK-R93R-56','PRD00049');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('50','5','Road-450 Red, 58','A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.','roadster_red_small.gif','1457.99','2001-07-01','2002-06-30','BK-R68R-58','PRD00050');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('51','6','Road-450 Red, 60','A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.','roadster_red_small.gif','1457.99','2001-07-01','2002-06-30','BK-R68R-60','PRD00051');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('52','9','Road-450 Red, 44','A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.','roadster_red_small.gif','1457.99','2001-07-01','2002-06-30','BK-R68R-44','PRD00052');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('53','3','Road-450 Red, 48','A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.','roadster_red_small.gif','1457.99','2001-07-01','2002-06-30','BK-R68R-48','PRD00053');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('54','2','Road-450 Red, 52','A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.','roadster_red_small.gif','1457.99','2001-07-01','2002-06-30','BK-R68R-52','PRD00054');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('55','9','Road-650 Red, 58','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_red_small.gif','782.99','2001-07-01','2003-06-30','BK-R50R-58','PRD00055');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('56','1','Road-650 Red, 60','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_red_small.gif','782.99','2001-07-01','2003-06-30','BK-R50R-60','PRD00056');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('57','2','Road-650 Red, 62','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_red_small.gif','782.99','2001-07-01','2003-06-30','BK-R50R-62','PRD00057');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('58','3','Road-650 Red, 44','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_red_small.gif','782.99','2001-07-01','2003-06-30','BK-R50R-44','PRD00058');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('59','3','Road-650 Red, 48','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_red_small.gif','782.99','2001-07-01','2003-06-30','BK-R50R-48','PRD00059');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('60','7','Road-650 Red, 52','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_red_small.gif','782.99','2001-07-01','2003-06-30','BK-R50R-52','PRD00060');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('61','1','Road-650 Black, 58','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_black_small.gif','782.99','2001-07-01','2003-06-30','BK-R50B-58','PRD00061');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('62','4','Road-650 Black, 60','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_black_small.gif','782.99','2001-07-01','2003-06-30','BK-R50B-60','PRD00062');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('63','4','Road-650 Black, 62','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_black_small.gif','782.99','2001-07-01','2003-06-30','BK-R50B-62','PRD00063');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('64','4','Road-650 Black, 44','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_black_small.gif','782.99','2001-07-01','2003-06-30','BK-R50B-44','PRD00064');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('65','4','Road-650 Black, 48','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_black_small.gif','782.99','2001-07-01','2003-06-30','BK-R50B-48','PRD00065');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('66','5','Road-650 Black, 52','Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.','superlight_black_small.gif','782.99','2001-07-01','2003-06-30','BK-R50B-52','PRD00066');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('67','2','Mountain-100 Silver, 38','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_silver_small.gif','3399.99','2001-07-01','2002-06-30','BK-M82S-38','PRD00067');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('68','2','Mountain-100 Silver, 42','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_silver_small.gif','3399.99','2001-07-01','2002-06-30','BK-M82S-42','PRD00068');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('69','3','Mountain-100 Silver, 44','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_silver_small.gif','3399.99','2001-07-01','2002-06-30','BK-M82S-44','PRD00069');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('70','9','Mountain-100 Silver, 48','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_silver_small.gif','3399.99','2001-07-01','2002-06-30','BK-M82S-48','PRD00070');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('71','4','Mountain-100 Black, 38','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_black_small.gif','3374.99','2001-07-01','2002-06-30','BK-M82B-38','PRD00071');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('72','2','Mountain-100 Black, 42','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_black_small.gif','3374.99','2001-07-01','2002-06-30','BK-M82B-42','PRD00072');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('73','1','Mountain-100 Black, 44','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_black_small.gif','3374.99','2001-07-01','2002-06-30','BK-M82B-44','PRD00073');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('74','4','Mountain-100 Black, 48','Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.','superlight_black_small.gif','3374.99','2001-07-01','2002-06-30','BK-M82B-48','PRD00074');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('75','10','Mountain-200 Silver, 38','Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.','hotrodbike_silver_small.gif','2319.99','2002-07-01',null,'BK-M68S-38','PRD00075');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('76','7','Mountain-200 Silver, 42','Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.','hotrodbike_silver_small.gif','2319.99','2002-07-01',null,'BK-M68S-42','PRD00076');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('77','4','Mountain-200 Silver, 46','Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.','hotrodbike_silver_small.gif','2319.99','2002-07-01',null,'BK-M68S-46','PRD00077');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('78','7','Mountain-200 Black, 38','Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.','hotrodbike_black_small.gif','2294.99','2002-07-01',null,'BK-M68B-38','PRD00078');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('79','6','Mountain-200 Black, 42','Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.','hotrodbike_black_small.gif','2294.99','2002-07-01',null,'BK-M68B-42','PRD00079');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('80','6','Mountain-200 Black, 46','Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.','hotrodbike_black_small.gif','2294.99','2002-07-01',null,'BK-M68B-46','PRD00080');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('81','2','Mountain-300 Black, 38','For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.','hotrodbike_black_small.gif','1079.99','2002-07-01','2003-06-30','BK-M47B-38','PRD00081');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('82','7','Mountain-300 Black, 40','For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.','hotrodbike_black_small.gif','1079.99','2002-07-01','2003-06-30','BK-M47B-40','PRD00082');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('83','9','Mountain-300 Black, 44','For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.','hotrodbike_black_small.gif','1079.99','2002-07-01','2003-06-30','BK-M47B-44','PRD00083');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('84','5','Mountain-300 Black, 48','For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.','hotrodbike_black_small.gif','1079.99','2002-07-01','2003-06-30','BK-M47B-48','PRD00084');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('85','9','Road-250 Red, 44','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_red_small.gif','2443.35','2002-07-01','2003-06-30','BK-R89R-44','PRD00085');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('86','2','Road-250 Red, 48','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_red_small.gif','2443.35','2002-07-01','2003-06-30','BK-R89R-48','PRD00086');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('87','3','Road-250 Red, 52','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_red_small.gif','2443.35','2002-07-01','2003-06-30','BK-R89R-52','PRD00087');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('88','4','Road-250 Red, 58','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_red_small.gif','2443.35','2002-07-01',null,'BK-R89R-58','PRD00088');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('89','7','Road-250 Black, 44','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_black_small.gif','2443.35','2002-07-01',null,'BK-R89B-44','PRD00089');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('90','2','Road-250 Black, 48','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_black_small.gif','2443.35','2002-07-01',null,'BK-R89B-48','PRD00090');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('91','6','Road-250 Black, 52','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_black_small.gif','2443.35','2002-07-01',null,'BK-R89B-52','PRD00091');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('92','6','Road-250 Black, 58','Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.','racer_black_small.gif','2443.35','2002-07-01',null,'BK-R89B-58','PRD00092');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('93','3','Road-550-W Yellow, 38','Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.','racer02_yellow_f_small.gif','1120.49','2002-07-01',null,'BK-R64Y-38','PRD00093');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('94','9','Road-550-W Yellow, 40','Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.','racer02_yellow_f_small.gif','1120.49','2002-07-01',null,'BK-R64Y-40','PRD00094');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('95','5','Road-550-W Yellow, 42','Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.','racer02_yellow_f_small.gif','1120.49','2002-07-01',null,'BK-R64Y-42','PRD00095');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('96','8','Road-550-W Yellow, 44','Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.','racer02_yellow_f_small.gif','1120.49','2002-07-01',null,'BK-R64Y-44','PRD00096');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('97','10','Road-550-W Yellow, 48','Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.','racer02_yellow_f_small.gif','1120.49','2002-07-01',null,'BK-R64Y-48','PRD00097');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('98','5','LL Fork','Stout design absorbs shock and offers more precise steering.','fork_small.gif','148.22','2002-07-01','2003-06-30','FK-1639','PRD00098');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('99','8','ML Fork','Composite road fork with an aluminum steerer tube.','fork_small.gif','175.49','2002-07-01','2003-06-30','FK-5136','PRD00099');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('100','9','HL Fork','High-performance carbon road fork with curved legs.','fork_small.gif','229.49','2002-07-01','2003-06-30','FK-9939','PRD00100');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('101','3','LL Headset','Threadless headset provides quality at an economical price.','no_image_available_small.gif','34.2','2002-07-01','2003-06-30','HS-0296','PRD00101');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('102','7','ML Headset','Sealed cartridge keeps dirt out.','no_image_available_small.gif','102.29','2002-07-01','2003-06-30','HS-2451','PRD00102');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('103','10','HL Headset','High-quality 1\" threadless headset with a grease port for quick lubrication.','no_image_available_small.gif','124.73','2002-07-01','2003-06-30','HS-3479','PRD00103');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('104','5','LL Mountain Handlebars','All-purpose bar for on or off-road.','handlebar_small.gif','44.54','2002-07-01',null,'HB-M243','PRD00104');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('105','4','ML Mountain Handlebars','Tough aluminum alloy bars for downhill.','no_image_available_small.gif','61.92','2002-07-01',null,'HB-M763','PRD00105');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('106','4','HL Mountain Handlebars','Flat bar strong enough for the pro circuit.','no_image_available_small.gif','120.27','2002-07-01',null,'HB-M918','PRD00106');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('107','3','LL Road Handlebars','Unique shape provides easier reach to the levers.','no_image_available_small.gif','44.54','2002-07-01',null,'HB-R504','PRD00107');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('108','3','ML Road Handlebars','Anatomically shaped aluminum tube bar will suit all riders.','no_image_available_small.gif','61.92','2002-07-01',null,'HB-R720','PRD00108');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('109','6','HL Road Handlebars','Designed for racers; high-end anatomically shaped bar from aluminum alloy.','no_image_available_small.gif','120.27','2002-07-01',null,'HB-R956','PRD00109');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('110','1','ML Mountain Frame - Black, 38','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.','no_image_available_small.gif','348.76','2002-07-01','2003-06-30','FR-M63B-38','PRD00110');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('111','2','LL Mountain Front Wheel','Replacement mountain wheel for entry-level rider.','wheel_small.gif','60.75','2002-07-01','2003-06-30','FW-M423','PRD00111');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('112','6','ML Mountain Front Wheel','Replacement mountain wheel for the casual to serious rider.','wheel_small.gif','209.03','2002-07-01','2003-06-30','FW-M762','PRD00112');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('113','9','HL Mountain Front Wheel','High-performance mountain replacement wheel.','wheel_small.gif','300.22','2002-07-01','2003-06-30','FW-M928','PRD00113');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('114','1','LL Road Front Wheel','Replacement road front wheel for entry-level cyclist.','wheel_small.gif','85.57','2002-07-01','2003-06-30','FW-R623','PRD00114');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('115','9','ML Road Front Wheel','Sturdy alloy features a quick-release hub.','wheel_small.gif','248.39','2002-07-01','2003-06-30','FW-R762','PRD00115');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('116','1','HL Road Front Wheel','Strong wheel with double-walled rim.','wheel_small.gif','330.06','2002-07-01','2003-06-30','FW-R820','PRD00116');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('117','9','Touring Front Wheel','Aerodynamic rims for smooth riding.','wheel_small.gif','218.01','2002-07-01','2003-06-30','FW-T905','PRD00117');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('118','1','ML Road Frame-W - Yellow, 38','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.','no_image_available_small.gif','594.83','2002-07-01',null,'FR-R72Y-38','PRD00118');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('119','2','LL Mountain Rear Wheel','Replacement mountain wheel for entry-level rider.','wheel_small.gif','87.75','2002-07-01','2003-06-30','RW-M423','PRD00119');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('120','9','ML Mountain Rear Wheel','Replacement mountain wheel for the casual to serious rider.','wheel_small.gif','236.03','2002-07-01','2003-06-30','RW-M762','PRD00120');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('121','5','HL Mountain Rear Wheel','High-performance mountain replacement wheel.','wheel_small.gif','327.22','2002-07-01','2003-06-30','RW-M928','PRD00121');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('122','7','LL Road Rear Wheel','Replacement road rear wheel for entry-level cyclist.','wheel_small.gif','112.57','2002-07-01','2003-06-30','RW-R623','PRD00122');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('123','7','ML Road Rear Wheel','Aluminum alloy rim with stainless steel spokes; built for speed.','wheel_small.gif','275.39','2002-07-01','2003-06-30','RW-R762','PRD00123');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('124','7','HL Road Rear Wheel','Strong rear wheel with double-walled rim.','wheel_small.gif','357.06','2002-07-01','2003-06-30','RW-R820','PRD00124');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('125','1','Touring Rear Wheel','Excellent aerodynamic rims guarantee a smooth ride.','wheel_small.gif','245.01','2002-07-01','2003-06-30','RW-T905','PRD00125');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('126','1','ML Mountain Frame - Black, 40','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Women\'s version.','no_image_available_small.gif','348.76','2002-07-01','2003-06-30','FR-M63B-40','PRD00126');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('127','3','ML Mountain Frame - Black, 44','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Women\'s version.','no_image_available_small.gif','348.76','2002-07-01','2003-06-30','FR-M63B-44','PRD00127');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('128','8','ML Mountain Frame - Black, 48','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Women\'s version.','no_image_available_small.gif','348.76','2002-07-01','2003-06-30','FR-M63B-48','PRD00128');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('129','9','ML Road Frame-W - Yellow, 40','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.','no_image_available_small.gif','594.83','2002-07-01',null,'FR-R72Y-40','PRD00129');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('130','4','ML Road Frame-W - Yellow, 42','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.','no_image_available_small.gif','594.83','2002-07-01',null,'FR-R72Y-42','PRD00130');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('131','9','ML Road Frame-W - Yellow, 44','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.','no_image_available_small.gif','594.83','2002-07-01',null,'FR-R72Y-44','PRD00131');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('132','1','ML Road Frame-W - Yellow, 48','Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.','no_image_available_small.gif','594.83','2002-07-01',null,'FR-R72Y-48','PRD00132');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('133','4','HL Road Frame - Black, 62','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2002-07-01',null,'FR-R92B-62','PRD00133');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('134','8','HL Road Frame - Black, 44','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2002-07-01',null,'FR-R92B-44','PRD00134');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('135','4','HL Road Frame - Black, 48','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2002-07-01',null,'FR-R92B-48','PRD00135');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('136','6','HL Road Frame - Black, 52','Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.','no_image_available_small.gif','1431.5','2002-07-01',null,'FR-R92B-52','PRD00136');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('137','6','Men\'s Sports Shorts, S','Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.','shorts_male_small.gif','59.99','2002-07-01','2003-06-30','SH-M897-S','PRD00137');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('138','5','Touring-Panniers, Large','Durable, water-proof nylon construction with easy access. Large enough for weekend trips.','no_image_available_small.gif','125','2002-07-01','2003-06-30','PA-T100','PRD00138');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('139','4','Cable Lock','Wraps to fit front and rear tires, carrier and 2 keys included.','bike_lock_small.gif','25','2002-07-01','2003-06-30','LO-C100','PRD00139');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('140','5','Minipump','Designed for convenience. Fits in your pocket. Aluminum barrel. 160psi rated.','handpump_small.gif','19.99','2002-07-01','2003-06-30','PU-0452','PRD00140');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('141','10','Mountain Pump','Simple and light-weight. Emergency patches stored in handle.','bikepump_small.gif','24.99','2002-07-01','2003-06-30','PU-M044','PRD00141');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('142','4','Taillights - Battery-Powered','Affordable light for safe night riding - uses 3 AAA batteries','tail_lights_small.gif','13.99','2002-07-01','2003-06-30','LT-T990','PRD00142');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('143','10','Headlights - Dual-Beam','Rechargeable dual-beam headlight.','double_headlight_small.gif','34.99','2002-07-01','2003-06-30','LT-H902','PRD00143');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('144','7','Headlights - Weatherproof','Rugged weatherproof headlight.','single_headlight_small.gif','44.99','2002-07-01','2003-06-30','LT-H903','PRD00144');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('145','5','Men\'s Sports Shorts, M','Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.','shorts_male_small.gif','59.99','2002-07-01','2003-06-30','SH-M897-M','PRD00145');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('146','9','Men\'s Sports Shorts, L','Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.','shorts_male_small.gif','59.99','2002-07-01','2003-06-30','SH-M897-L','PRD00146');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('147','5','Men\'s Sports Shorts, XL','Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.','shorts_male_small.gif','59.99','2002-07-01','2003-06-30','SH-M897-X','PRD00147');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('148','5','Women\'s Tights, S','Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.','no_image_available_small.gif','74.99','2002-07-01','2003-06-30','TG-W091-S','PRD00148');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('149','10','Women\'s Tights, M','Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.','no_image_available_small.gif','74.99','2002-07-01','2003-06-30','TG-W091-M','PRD00149');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('150','9','Women\'s Tights, L','Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.','no_image_available_small.gif','74.99','2002-07-01','2003-06-30','TG-W091-L','PRD00150');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('151','9','Men\'s Bib-Shorts, S','Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.','no_image_available_small.gif','89.99','2002-07-01','2003-06-30','SB-M891-S','PRD00151');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('152','8','Men\'s Bib-Shorts, M','Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.','no_image_available_small.gif','89.99','2002-07-01','2003-06-30','SB-M891-M','PRD00152');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('153','4','Men\'s Bib-Shorts, L','Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.','no_image_available_small.gif','89.99','2002-07-01','2003-06-30','SB-M891-L','PRD00153');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('154','7','Half-Finger Gloves, S','Full padding, improved finger flex, durable palm, adjustable closure.','no_image_available_small.gif','24.49','2002-07-01',null,'GL-H102-S','PRD00154');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('155','9','Half-Finger Gloves, M','Full padding, improved finger flex, durable palm, adjustable closure.','no_image_available_small.gif','24.49','2002-07-01',null,'GL-H102-M','PRD00155');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('156','2','Half-Finger Gloves, L','Full padding, improved finger flex, durable palm, adjustable closure.','no_image_available_small.gif','24.49','2002-07-01',null,'GL-H102-L','PRD00156');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('157','3','Full-Finger Gloves, S','Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.','no_image_available_small.gif','37.99','2002-07-01','2003-06-30','GL-F110-S','PRD00157');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('158','4','Full-Finger Gloves, M','Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.','no_image_available_small.gif','37.99','2002-07-01','2003-06-30','GL-F110-M','PRD00158');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('159','3','Full-Finger Gloves, L','Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.','no_image_available_small.gif','37.99','2002-07-01','2003-06-30','GL-F110-L','PRD00159');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('160','6','Classic Vest, S','Light-weight, wind-resistant, packs to fit into a pocket.','no_image_available_small.gif','63.5','2003-07-01',null,'VE-C304-S','PRD00160');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('161','1','Classic Vest, M','Light-weight, wind-resistant, packs to fit into a pocket.','no_image_available_small.gif','63.5','2003-07-01',null,'VE-C304-M','PRD00161');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('162','6','Classic Vest, L','Light-weight, wind-resistant, packs to fit into a pocket.','no_image_available_small.gif','63.5','2003-07-01',null,'VE-C304-L','PRD00162');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('163','7','Women\'s Mountain Shorts, S','Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.','shorts_female_small.gif','69.99','2003-07-01',null,'SH-W890-S','PRD00163');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('164','2','Women\'s Mountain Shorts, M','Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.','shorts_female_small.gif','69.99','2003-07-01',null,'SH-W890-M','PRD00164');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('165','8','Women\'s Mountain Shorts, L','Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.','shorts_female_small.gif','69.99','2003-07-01',null,'SH-W890-L','PRD00165');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('166','4','Water Bottle - 30 oz.','AWC logo water bottle - holds 30 oz; leak-proof.','water_bottle_small.gif','4.99','2003-07-01',null,'WB-H098','PRD00166');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('167','8','Mountain Bottle Cage','Tough aluminum cage holds bottle securly on tough terrain.','no_image_available_small.gif','9.99','2003-07-01',null,'BC-M005','PRD00167');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('168','3','Road Bottle Cage','Aluminum cage is lighter than our mountain version; perfect for long distance trips.','water_bottle_cage_small.gif','8.99','2003-07-01',null,'BC-R205','PRD00168');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('169','9','Patch Kit/8 Patches','Includes 8 different size patches, glue and sandpaper.','tirepatch_kit_small.gif','2.29','2003-07-01',null,'PK-7098','PRD00169');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('170','6','Racing Socks, M','Thin, lightweight and durable with cuffs that stay up.','no_image_available_small.gif','8.99','2003-07-01',null,'SO-R809-M','PRD00170');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('171','3','Racing Socks, L','Thin, lightweight and durable with cuffs that stay up.','no_image_available_small.gif','8.99','2003-07-01',null,'SO-R809-L','PRD00171');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('172','5','Hitch Rack - 4-Bike','Carries 4 bikes securely; steel construction, fits 2\" receiver hitch.','no_image_available_small.gif','120','2003-07-01',null,'RA-H123','PRD00172');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('173','8','Bike Wash - Dissolver','Washes off the toughest road grime; dissolves grease, environmentally safe. 1-liter bottle.','no_image_available_small.gif','7.95','2003-07-01',null,'CL-9009','PRD00173');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('174','8','Fender Set - Mountain','Clip-on fenders fit most mountain bikes.','no_image_available_small.gif','21.98','2003-07-01',null,'FE-6654','PRD00174');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('175','6','All-Purpose Bike Stand','Perfect all-purpose bike stand for working on your bike at home. Quick-adjusting clamps and steel construction.','no_image_available_small.gif','159','2003-07-01',null,'ST-1401','PRD00175');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('176','2','Hydration Pack - 70 oz.','Versatile 70 oz hydration pack offers extra storage, easy-fill access, and a waist belt.','no_image_available_small.gif','54.99','2003-07-01',null,'HY-1023-70','PRD00176');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('177','4','Short-Sleeve Classic Jersey, S','Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.','awc_tee_male_yellow_small.gif','53.99','2003-07-01',null,'SJ-0194-S','PRD00177');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('178','2','Short-Sleeve Classic Jersey, M','Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.','awc_tee_male_yellow_small.gif','53.99','2003-07-01',null,'SJ-0194-M','PRD00178');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('179','4','Short-Sleeve Classic Jersey, L','Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.','awc_tee_male_yellow_small.gif','53.99','2003-07-01',null,'SJ-0194-L','PRD00179');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('180','8','Short-Sleeve Classic Jersey, XL','Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.','awc_tee_male_yellow_small.gif','53.99','2003-07-01',null,'SJ-0194-X','PRD00180');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('181','9','HL Touring Frame - Yellow, 60','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98Y-60','PRD00181');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('182','3','LL Touring Frame - Yellow, 62','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','frame_small.gif','333.42','2003-07-01',null,'FR-T67Y-62','PRD00182');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('183','3','HL Touring Frame - Yellow, 46','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98Y-46','PRD00183');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('184','5','HL Touring Frame - Yellow, 50','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98Y-50','PRD00184');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('185','8','HL Touring Frame - Yellow, 54','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98Y-54','PRD00185');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('186','8','HL Touring Frame - Blue, 46','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98U-46','PRD00186');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('187','8','HL Touring Frame - Blue, 50','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98U-50','PRD00187');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('188','5','HL Touring Frame - Blue, 54','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98U-54','PRD00188');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('189','7','HL Touring Frame - Blue, 60','The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.','no_image_available_small.gif','1003.91','2003-07-01',null,'FR-T98U-60','PRD00189');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('190','7','Rear Derailleur','Wide-link design.','sprocket_small.gif','121.46','2003-07-01',null,'RD-2308','PRD00190');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('191','7','LL Touring Frame - Blue, 50','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','no_image_available_small.gif','333.42','2003-07-01',null,'FR-T67U-50','PRD00191');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('192','7','LL Touring Frame - Blue, 54','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','no_image_available_small.gif','333.42','2003-07-01',null,'FR-T67U-54','PRD00192');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('193','8','LL Touring Frame - Blue, 58','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','no_image_available_small.gif','333.42','2003-07-01',null,'FR-T67U-58','PRD00193');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('194','3','LL Touring Frame - Blue, 62','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','no_image_available_small.gif','333.42','2003-07-01',null,'FR-T67U-62','PRD00194');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('195','5','LL Touring Frame - Yellow, 44','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','frame_small.gif','333.42','2003-07-01',null,'FR-T67Y-44','PRD00195');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('196','6','LL Touring Frame - Yellow, 50','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','frame_small.gif','333.42','2003-07-01',null,'FR-T67Y-50','PRD00196');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('197','7','LL Touring Frame - Yellow, 54','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','frame_small.gif','333.42','2003-07-01',null,'FR-T67Y-54','PRD00197');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('198','7','LL Touring Frame - Yellow, 58','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','frame_small.gif','333.42','2003-07-01',null,'FR-T67Y-58','PRD00198');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('199','1','LL Touring Frame - Blue, 44','Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.','no_image_available_small.gif','333.42','2003-07-01',null,'FR-T67U-44','PRD00199');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('200','6','ML Mountain Frame-W - Silver, 40','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.','no_image_available_small.gif','364.09','2003-07-01',null,'FR-M63S-40','PRD00200');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('201','9','ML Mountain Frame-W - Silver, 42','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.','no_image_available_small.gif','364.09','2003-07-01',null,'FR-M63S-42','PRD00201');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('202','1','ML Mountain Frame-W - Silver, 46','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.','no_image_available_small.gif','364.09','2003-07-01',null,'FR-M63S-46','PRD00202');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('203','10','LL Mountain Seat/Saddle','Synthetic leather. Features gel for increased comfort.','saddle_small.gif','27.12','2003-07-01',null,'SE-M236','PRD00203');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('204','5','ML Mountain Seat/Saddle','Designed to absorb shock.','no_image_available_small.gif','39.14','2003-07-01',null,'SE-M798','PRD00204');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('205','1','HL Mountain Seat/Saddle','Anatomic design for a full-day of riding in comfort. Durable leather.','no_image_available_small.gif','52.64','2003-07-01',null,'SE-M940','PRD00205');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('206','5','LL Road Seat/Saddle','Lightweight foam-padded saddle.','no_image_available_small.gif','27.12','2003-07-01',null,'SE-R581','PRD00206');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('207','3','ML Road Seat/Saddle','Rubber bumpers absorb bumps.','no_image_available_small.gif','39.14','2003-07-01',null,'SE-R908','PRD00207');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('208','7','HL Road Seat/Saddle','Lightweight kevlar racing saddle. Leather.','no_image_available_small.gif','52.64','2003-07-01',null,'SE-R995','PRD00208');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('209','7','LL Touring Seat/Saddle','Comfortable, ergonomically shaped gel saddle.','no_image_available_small.gif','27.12','2003-07-01',null,'SE-T312','PRD00209');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('210','6','ML Touring Seat/Saddle','New design relieves pressure for long rides.','no_image_available_small.gif','39.14','2003-07-01',null,'SE-T762','PRD00210');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('211','8','HL Touring Seat/Saddle','Cut-out shell for a more comfortable ride.','no_image_available_small.gif','52.64','2003-07-01',null,'SE-T924','PRD00211');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('212','2','LL Mountain Frame - Silver, 42','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','264.05','2003-07-01',null,'FR-M21S-42','PRD00212');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('213','9','LL Mountain Frame - Silver, 44','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','264.05','2003-07-01',null,'FR-M21S-44','PRD00213');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('214','10','LL Mountain Frame - Silver, 48','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','264.05','2003-07-01',null,'FR-M21S-48','PRD00214');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('215','10','LL Mountain Frame - Silver, 52','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','264.05','2003-07-01',null,'FR-M21S-52','PRD00215');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('216','1','Mountain Tire Tube','Self-sealing tube.','no_image_available_small.gif','4.99','2003-07-01',null,'TT-M928','PRD00216');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('217','3','Road Tire Tube','Conventional all-purpose tube.','no_image_available_small.gif','3.99','2003-07-01',null,'TT-R982','PRD00217');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('218','9','Touring Tire Tube','General purpose tube.','innertube_small.gif','4.99','2003-07-01',null,'TT-T092','PRD00218');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('219','1','LL Mountain Frame - Black, 42','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','249.79','2003-07-01',null,'FR-M21B-42','PRD00219');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('220','8','LL Mountain Frame - Black, 44','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','249.79','2003-07-01',null,'FR-M21B-44','PRD00220');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('221','4','LL Mountain Frame - Black, 48','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','249.79','2003-07-01',null,'FR-M21B-48','PRD00221');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('222','4','LL Mountain Frame - Black, 52','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','249.79','2003-07-01',null,'FR-M21B-52','PRD00222');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('223','4','LL Mountain Tire','Comparible traction, less expensive wire bead casing.','no_image_available_small.gif','24.99','2003-07-01',null,'TI-M267','PRD00223');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('224','7','ML Mountain Tire','Great traction, high-density rubber.','no_image_available_small.gif','29.99','2003-07-01',null,'TI-M602','PRD00224');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('225','2','HL Mountain Tire','Incredible traction, lightweight carbon reinforced.','mb_tires_small.gif','35','2003-07-01',null,'TI-M823','PRD00225');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('226','7','LL Road Tire','Same great treads as more expensive tire with a less expensive wire bead casing.','no_image_available_small.gif','21.49','2003-07-01',null,'TI-R092','PRD00226');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('227','10','ML Road Tire','Higher density rubber.','no_image_available_small.gif','24.99','2003-07-01',null,'TI-R628','PRD00227');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('228','2','HL Road Tire','Lightweight carbon reinforced  for an unrivaled ride at an un-compromised weight.','street_tires_small.gif','32.6','2003-07-01',null,'TI-R982','PRD00228');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('229','6','Touring Tire','High-density rubber.','no_image_available_small.gif','28.99','2003-07-01',null,'TI-T723','PRD00229');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('230','2','LL Mountain Pedal','Expanded platform so you can ride in any shoes; great for all-around riding.','pedal_small.gif','40.49','2003-07-01',null,'PD-M282','PRD00230');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('231','3','ML Mountain Pedal','Lightweight, durable, clipless pedal with adjustable tension.','pedal_small.gif','62.09','2003-07-01',null,'PD-M340','PRD00231');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('232','1','HL Mountain Pedal','Stainless steel; designed to shed mud easily.','pedal_small.gif','80.99','2003-07-01',null,'PD-M562','PRD00232');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('233','3','LL Road Pedal','Clipless pedals - aluminum.','clipless_pedals_small.gif','40.49','2003-07-01',null,'PD-R347','PRD00233');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('234','10','ML Road Pedal','Lightweight aluminum alloy construction.','clipless_pedals_small.gif','62.09','2003-07-01',null,'PD-R563','PRD00234');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('235','7','HL Road Pedal','Top-of-the-line clipless pedals with adjustable tension.','clipless_pedals_small.gif','80.99','2003-07-01',null,'PD-R853','PRD00235');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('236','6','Touring Pedal','A stable pedal for all-day riding.','clipless_pedals_small.gif','80.99','2003-07-01',null,'PD-T852','PRD00236');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('237','9','ML Mountain Frame-W - Silver, 38','The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.','no_image_available_small.gif','364.09','2003-07-01',null,'FR-M63S-38','PRD00237');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('238','5','LL Mountain Frame - Black, 40','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','249.79','2003-07-01',null,'FR-M21B-40','PRD00238');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('239','3','LL Mountain Frame - Silver, 40','Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.','no_image_available_small.gif','264.05','2003-07-01',null,'FR-M21S-40','PRD00239');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('240','6','Front Derailleur','Wide-link design.','no_image_available_small.gif','91.49','2003-07-01',null,'FD-2342','PRD00240');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('241','2','LL Touring Handlebars','Unique shape reduces fatigue for entry level riders.','no_image_available_small.gif','46.09','2003-07-01',null,'HB-T721','PRD00241');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('242','2','HL Touring Handlebars','A light yet stiff aluminum bar for long distance riding.','no_image_available_small.gif','91.57','2003-07-01',null,'HB-T928','PRD00242');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('243','4','Front Brakes','All-weather brake pads; provides superior stopping by applying more surface to the rim.','no_image_available_small.gif','106.5','2003-07-01',null,'FB-9873','PRD00243');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('244','5','LL Crankset','Super rigid spindle.','no_image_available_small.gif','175.49','2003-07-01',null,'CS-4759','PRD00244');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('245','7','ML Crankset','High-strength crank arm.','no_image_available_small.gif','256.49','2003-07-01',null,'CS-6583','PRD00245');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('246','2','HL Crankset','Triple crankset; alumunim crank arm; flawless shifting.','no_image_available_small.gif','404.99','2003-07-01',null,'CS-9183','PRD00246');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('247','8','Chain','Superior shifting performance.','silver_chain_small.gif','20.24','2003-07-01',null,'CH-0234','PRD00247');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('248','7','Touring-2000 Blue, 60','The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.','julianax_r_02_blue_small.gif','1214.85','2003-07-01',null,'BK-T44U-60','PRD00248');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('249','5','Touring-1000 Yellow, 46','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_yellow_small.gif','2384.07','2003-07-01',null,'BK-T79Y-46','PRD00249');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('250','7','Touring-1000 Yellow, 50','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_yellow_small.gif','2384.07','2003-07-01',null,'BK-T79Y-50','PRD00250');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('251','8','Touring-1000 Yellow, 54','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_yellow_small.gif','2384.07','2003-07-01',null,'BK-T79Y-54','PRD00251');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('252','8','Touring-1000 Yellow, 60','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_yellow_small.gif','2384.07','2003-07-01',null,'BK-T79Y-60','PRD00252');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('253','3','Touring-3000 Blue, 54','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_blue_small.gif','742.35','2003-07-01',null,'BK-T18U-54','PRD00253');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('254','6','Touring-3000 Blue, 58','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_blue_small.gif','742.35','2003-07-01',null,'BK-T18U-58','PRD00254');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('255','8','Touring-3000 Blue, 62','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_blue_small.gif','742.35','2003-07-01',null,'BK-T18U-62','PRD00255');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('256','7','Touring-3000 Yellow, 44','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_yellow_small.gif','742.35','2003-07-01',null,'BK-T18Y-44','PRD00256');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('257','7','Touring-3000 Yellow, 50','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_yellow_small.gif','742.35','2003-07-01',null,'BK-T18Y-50','PRD00257');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('258','4','Touring-3000 Yellow, 54','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_yellow_small.gif','742.35','2003-07-01',null,'BK-T18Y-54','PRD00258');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('259','3','Touring-3000 Yellow, 58','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_yellow_small.gif','742.35','2003-07-01',null,'BK-T18Y-58','PRD00259');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('260','7','Touring-3000 Yellow, 62','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_yellow_small.gif','742.35','2003-07-01',null,'BK-T18Y-62','PRD00260');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('261','3','Touring-1000 Blue, 46','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_blue_small.gif','2384.07','2003-07-01',null,'BK-T79U-46','PRD00261');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('262','10','Touring-1000 Blue, 50','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_blue_small.gif','2384.07','2003-07-01',null,'BK-T79U-50','PRD00262');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('263','4','Touring-1000 Blue, 54','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_blue_small.gif','2384.07','2003-07-01',null,'BK-T79U-54','PRD00263');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('264','6','Touring-1000 Blue, 60','Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.','julianax_r_02_blue_small.gif','2384.07','2003-07-01',null,'BK-T79U-60','PRD00264');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('265','5','Touring-2000 Blue, 46','The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.','julianax_r_02_blue_small.gif','1214.85','2003-07-01',null,'BK-T44U-46','PRD00265');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('266','6','Touring-2000 Blue, 50','The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.','julianax_r_02_blue_small.gif','1214.85','2003-07-01',null,'BK-T44U-50','PRD00266');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('267','1','Touring-2000 Blue, 54','The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.','julianax_r_02_blue_small.gif','1214.85','2003-07-01',null,'BK-T44U-54','PRD00267');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('268','4','Road-350-W Yellow, 40','Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.','roadster_yellow_f_small.gif','1700.99','2003-07-01',null,'BK-R79Y-40','PRD00268');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('269','9','Road-350-W Yellow, 42','Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.','roadster_yellow_f_small.gif','1700.99','2003-07-01',null,'BK-R79Y-42','PRD00269');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('270','5','Road-350-W Yellow, 44','Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.','roadster_yellow_f_small.gif','1700.99','2003-07-01',null,'BK-R79Y-44','PRD00270');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('271','9','Road-350-W Yellow, 48','Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.','roadster_yellow_f_small.gif','1700.99','2003-07-01',null,'BK-R79Y-48','PRD00271');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('272','5','Road-750 Black, 58','Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.','roadster_black_small.gif','539.99','2003-07-01',null,'BK-R19B-58','PRD00272');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('273','1','Touring-3000 Blue, 44','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_blue_small.gif','742.35','2003-07-01',null,'BK-T18U-44','PRD00273');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('274','8','Touring-3000 Blue, 50','All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.','julianax_r_02_blue_small.gif','742.35','2003-07-01',null,'BK-T18U-50','PRD00274');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('275','9','Mountain-400-W Silver, 38','This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.','hotrodbike_f_small.gif','769.49','2003-07-01',null,'BK-M38S-38','PRD00275');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('276','2','Mountain-400-W Silver, 40','This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.','hotrodbike_f_small.gif','769.49','2003-07-01',null,'BK-M38S-40','PRD00276');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('277','8','Mountain-400-W Silver, 42','This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.','hotrodbike_f_small.gif','769.49','2003-07-01',null,'BK-M38S-42','PRD00277');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('278','4','Mountain-400-W Silver, 46','This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.','hotrodbike_f_small.gif','769.49','2003-07-01',null,'BK-M38S-46','PRD00278');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('279','2','Mountain-500 Silver, 40','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','564.99','2003-07-01',null,'BK-M18S-40','PRD00279');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('280','2','Mountain-500 Silver, 42','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','564.99','2003-07-01',null,'BK-M18S-42','PRD00280');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('281','9','Mountain-500 Silver, 44','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','564.99','2003-07-01',null,'BK-M18S-44','PRD00281');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('282','7','Mountain-500 Silver, 48','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','564.99','2003-07-01',null,'BK-M18S-48','PRD00282');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('283','4','Mountain-500 Silver, 52','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','564.99','2003-07-01',null,'BK-M18S-52','PRD00283');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('284','7','Mountain-500 Black, 40','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','539.99','2003-07-01',null,'BK-M18B-40','PRD00284');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('285','2','Mountain-500 Black, 42','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','539.99','2003-07-01',null,'BK-M18B-42','PRD00285');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('286','5','Mountain-500 Black, 44','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','539.99','2003-07-01',null,'BK-M18B-44','PRD00286');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('287','2','Mountain-500 Black, 48','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','539.99','2003-07-01',null,'BK-M18B-48','PRD00287');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('288','1','Mountain-500 Black, 52','Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.','no_image_available_small.gif','539.99','2003-07-01',null,'BK-M18B-52','PRD00288');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('289','4','LL Bottom Bracket','Chromoly steel.','no_image_available_small.gif','53.99','2003-07-01',null,'BB-7421','PRD00289');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('290','5','ML Bottom Bracket','Aluminum alloy cups; large diameter spindle.','no_image_available_small.gif','101.24','2003-07-01',null,'BB-8107','PRD00290');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('291','3','HL Bottom Bracket','Aluminum alloy cups and a hollow axle.','no_image_available_small.gif','121.49','2003-07-01',null,'BB-9108','PRD00291');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('292','2','Road-750 Black, 44','Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.','roadster_black_small.gif','539.99','2003-07-01',null,'BK-R19B-44','PRD00292');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('293','1','Road-750 Black, 48','Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.','roadster_black_small.gif','539.99','2003-07-01',null,'BK-R19B-48','PRD00293');
-INSERT INTO product (id,supplier_id,name,description,image,price,available_from,available_until,supplier_product_id,bs_key) VALUES ('294','6','Road-750 Black, 52','Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.','roadster_black_small.gif','539.99','2003-07-01',null,'BK-R19B-52','PRD00294');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('1', '8', 'HL Road Frame - Black, 58',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '1998-06-01', NULL, 'FR-R92B-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('2', '9', 'HL Road Frame - Red, 58',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '1998-06-01', NULL, 'FR-R92R-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('3', '2', 'Sport-100 Helmet, Red', 'Universal fit, well-vented, lightweight , snap-on visor.',
+        'no_image_available_small.gif', '34.99', '2001-07-01', NULL, 'HL-U509-R');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('4', '5', 'Sport-100 Helmet, Black', 'Universal fit, well-vented, lightweight , snap-on visor.',
+        'no_image_available_small.gif', '34.99', '2001-07-01', NULL, 'HL-U509');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('5', '6', 'Mountain Bike Socks, M',
+        'Combination of natural and synthetic fibers stays dry and provides just the right cushioning.',
+        'no_image_available_small.gif', '9.5', '2001-07-01', '2002-06-30', 'SO-B909-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('6', '2', 'Mountain Bike Socks, L',
+        'Combination of natural and synthetic fibers stays dry and provides just the right cushioning.',
+        'no_image_available_small.gif', '9.5', '2001-07-01', '2002-06-30', 'SO-B909-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('7', '8', 'Sport-100 Helmet, Blue', 'Universal fit, well-vented, lightweight , snap-on visor.',
+        'no_image_available_small.gif', '34.99', '2001-07-01', NULL, 'HL-U509-B');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('8', '2', 'AWC Logo Cap', 'Traditional style with a flip-up brim; one-size fits all.',
+        'no_image_available_small.gif', '8.99', '2001-07-01', NULL, 'CA-1098');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('9', '2', 'Long-Sleeve Logo Jersey, S', 'Unisex long-sleeve AWC logo microfiber cycling jersey',
+        'awc_jersey_male_small.gif', '49.99', '2001-07-01', NULL, 'LJ-0192-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('10', '7', 'Long-Sleeve Logo Jersey, M', 'Unisex long-sleeve AWC logo microfiber cycling jersey',
+        'awc_jersey_male_small.gif', '49.99', '2001-07-01', NULL, 'LJ-0192-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('11', '2', 'Long-Sleeve Logo Jersey, L', 'Unisex long-sleeve AWC logo microfiber cycling jersey',
+        'awc_jersey_male_small.gif', '49.99', '2001-07-01', NULL, 'LJ-0192-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('12', '6', 'Long-Sleeve Logo Jersey, XL', 'Unisex long-sleeve AWC logo microfiber cycling jersey',
+        'awc_jersey_male_small.gif', '49.99', '2001-07-01', NULL, 'LJ-0192-X');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('13', '3', 'HL Road Frame - Red, 62',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2001-07-01', NULL, 'FR-R92R-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('14', '8', 'HL Road Frame - Red, 44',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2001-07-01', NULL, 'FR-R92R-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('15', '8', 'HL Road Frame - Red, 48',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2001-07-01', NULL, 'FR-R92R-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('16', '2', 'HL Road Frame - Red, 52',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2001-07-01', NULL, 'FR-R92R-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('17', '6', 'HL Road Frame - Red, 56',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2001-07-01', NULL, 'FR-R92R-56');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('18', '4', 'LL Road Frame - Black, 58',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', NULL, 'FR-R38B-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('19', '8', 'LL Road Frame - Black, 60',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', NULL, 'FR-R38B-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('20', '2', 'LL Road Frame - Black, 62',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', NULL, 'FR-R38B-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('21', '7', 'LL Road Frame - Red, 44',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', '2003-06-30', 'FR-R38R-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('22', '2', 'LL Road Frame - Red, 48',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', '2003-06-30', 'FR-R38R-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('23', '7', 'LL Road Frame - Red, 52',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', '2003-06-30', 'FR-R38R-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('24', '8', 'LL Road Frame - Red, 58',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', '2003-06-30', 'FR-R38R-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('25', '7', 'LL Road Frame - Red, 60',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', '2003-06-30', 'FR-R38R-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('26', '7', 'LL Road Frame - Red, 62',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', '2003-06-30', 'FR-R38R-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('27', '2', 'ML Road Frame - Red, 44',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.',
+        'no_image_available_small.gif', '594.83', '2001-07-01', '2002-06-30', 'FR-R72R-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('28', '3', 'ML Road Frame - Red, 48',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.',
+        'no_image_available_small.gif', '594.83', '2001-07-01', '2002-06-30', 'FR-R72R-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('29', '8', 'ML Road Frame - Red, 52',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.',
+        'no_image_available_small.gif', '594.83', '2001-07-01', '2002-06-30', 'FR-R72R-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('30', '5', 'ML Road Frame - Red, 58',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.',
+        'no_image_available_small.gif', '594.83', '2001-07-01', '2002-06-30', 'FR-R72R-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('31', '6', 'ML Road Frame - Red, 60',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Men\'s version.',
+        'no_image_available_small.gif', '594.83', '2001-07-01', '2002-06-30', 'FR-R72R-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('32', '7', 'LL Road Frame - Black, 44',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', NULL, 'FR-R38B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('33', '7', 'LL Road Frame - Black, 48',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', NULL, 'FR-R38B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('34', '6', 'LL Road Frame - Black, 52',
+        'The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.',
+        'no_image_available_small.gif', '337.22', '2001-07-01', NULL, 'FR-R38B-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('35', '4', 'HL Mountain Frame - Silver, 42',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_silver_small.gif', '1364.5', '2001-07-01', NULL, 'FR-M94S-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('36', '5', 'HL Mountain Frame - Silver, 44',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_silver_small.gif', '1364.5', '2001-07-01', '2002-06-30', 'FR-M94S-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('37', '1', 'HL Mountain Frame - Silver, 48',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_silver_small.gif', '1364.5', '2001-07-01', '2002-06-30', 'FR-M94S-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('38', '4', 'HL Mountain Frame - Silver, 46',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_silver_small.gif', '1364.5', '2001-07-01', NULL, 'FR-M94S-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('39', '5', 'HL Mountain Frame - Black, 42',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_black_small.gif', '1349.6', '2001-07-01', NULL, 'FR-M94B-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('40', '8', 'HL Mountain Frame - Black, 44',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_black_small.gif', '1349.6', '2001-07-01', '2002-06-30', 'FR-M94B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('41', '7', 'HL Mountain Frame - Black, 48',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_black_small.gif', '1349.6', '2001-07-01', '2002-06-30', 'FR-M94B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('42', '5', 'HL Mountain Frame - Black, 46',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_black_small.gif', '1349.6', '2001-07-01', NULL, 'FR-M94B-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('43', '9', 'HL Mountain Frame - Black, 38',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_black_small.gif', '1349.6', '2001-07-01', NULL, 'FR-M94B-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('44', '8', 'HL Mountain Frame - Silver, 38',
+        'Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.',
+        'frame_silver_small.gif', '1364.5', '2001-07-01', NULL, 'FR-M94S-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('45', '2', 'Road-150 Red, 62',
+        'This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.',
+        'superlight_red_small.gif', '3578.27', '2001-07-01', '2002-06-30', 'BK-R93R-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('46', '4', 'Road-150 Red, 44',
+        'This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.',
+        'superlight_red_small.gif', '3578.27', '2001-07-01', '2002-06-30', 'BK-R93R-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('47', '5', 'Road-150 Red, 48',
+        'This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.',
+        'superlight_red_small.gif', '3578.27', '2001-07-01', '2002-06-30', 'BK-R93R-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('48', '5', 'Road-150 Red, 52',
+        'This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.',
+        'superlight_red_small.gif', '3578.27', '2001-07-01', '2002-06-30', 'BK-R93R-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('49', '6', 'Road-150 Red, 56',
+        'This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.',
+        'superlight_red_small.gif', '3578.27', '2001-07-01', '2002-06-30', 'BK-R93R-56');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('50', '5', 'Road-450 Red, 58',
+        'A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.',
+        'roadster_red_small.gif', '1457.99', '2001-07-01', '2002-06-30', 'BK-R68R-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('51', '6', 'Road-450 Red, 60',
+        'A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.',
+        'roadster_red_small.gif', '1457.99', '2001-07-01', '2002-06-30', 'BK-R68R-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('52', '9', 'Road-450 Red, 44',
+        'A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.',
+        'roadster_red_small.gif', '1457.99', '2001-07-01', '2002-06-30', 'BK-R68R-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('53', '3', 'Road-450 Red, 48',
+        'A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.',
+        'roadster_red_small.gif', '1457.99', '2001-07-01', '2002-06-30', 'BK-R68R-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('54', '2', 'Road-450 Red, 52',
+        'A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.',
+        'roadster_red_small.gif', '1457.99', '2001-07-01', '2002-06-30', 'BK-R68R-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('55', '9', 'Road-650 Red, 58',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_red_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50R-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('56', '1', 'Road-650 Red, 60',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_red_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50R-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('57', '2', 'Road-650 Red, 62',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_red_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50R-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('58', '3', 'Road-650 Red, 44',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_red_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50R-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('59', '3', 'Road-650 Red, 48',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_red_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50R-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('60', '7', 'Road-650 Red, 52',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_red_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50R-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('61', '1', 'Road-650 Black, 58',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_black_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50B-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('62', '4', 'Road-650 Black, 60',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_black_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50B-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('63', '4', 'Road-650 Black, 62',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_black_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50B-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('64', '4', 'Road-650 Black, 44',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_black_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('65', '4', 'Road-650 Black, 48',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_black_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('66', '5', 'Road-650 Black, 52',
+        'Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we\'re famous for.',
+        'superlight_black_small.gif', '782.99', '2001-07-01', '2003-06-30', 'BK-R50B-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('67', '2', 'Mountain-100 Silver, 38',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_silver_small.gif', '3399.99', '2001-07-01', '2002-06-30', 'BK-M82S-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('68', '2', 'Mountain-100 Silver, 42',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_silver_small.gif', '3399.99', '2001-07-01', '2002-06-30', 'BK-M82S-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('69', '3', 'Mountain-100 Silver, 44',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_silver_small.gif', '3399.99', '2001-07-01', '2002-06-30', 'BK-M82S-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('70', '9', 'Mountain-100 Silver, 48',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_silver_small.gif', '3399.99', '2001-07-01', '2002-06-30', 'BK-M82S-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('71', '4', 'Mountain-100 Black, 38',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_black_small.gif', '3374.99', '2001-07-01', '2002-06-30', 'BK-M82B-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('72', '2', 'Mountain-100 Black, 42',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_black_small.gif', '3374.99', '2001-07-01', '2002-06-30', 'BK-M82B-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('73', '1', 'Mountain-100 Black, 44',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_black_small.gif', '3374.99', '2001-07-01', '2002-06-30', 'BK-M82B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('74', '4', 'Mountain-100 Black, 48',
+        'Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.',
+        'superlight_black_small.gif', '3374.99', '2001-07-01', '2002-06-30', 'BK-M82B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('75', '10', 'Mountain-200 Silver, 38',
+        'Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.',
+        'hotrodbike_silver_small.gif', '2319.99', '2002-07-01', NULL, 'BK-M68S-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('76', '7', 'Mountain-200 Silver, 42',
+        'Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.',
+        'hotrodbike_silver_small.gif', '2319.99', '2002-07-01', NULL, 'BK-M68S-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('77', '4', 'Mountain-200 Silver, 46',
+        'Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.',
+        'hotrodbike_silver_small.gif', '2319.99', '2002-07-01', NULL, 'BK-M68S-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('78', '7', 'Mountain-200 Black, 38',
+        'Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.',
+        'hotrodbike_black_small.gif', '2294.99', '2002-07-01', NULL, 'BK-M68B-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('79', '6', 'Mountain-200 Black, 42',
+        'Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.',
+        'hotrodbike_black_small.gif', '2294.99', '2002-07-01', NULL, 'BK-M68B-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('80', '6', 'Mountain-200 Black, 46',
+        'Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.',
+        'hotrodbike_black_small.gif', '2294.99', '2002-07-01', NULL, 'BK-M68B-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('81', '2', 'Mountain-300 Black, 38',
+        'For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.',
+        'hotrodbike_black_small.gif', '1079.99', '2002-07-01', '2003-06-30', 'BK-M47B-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('82', '7', 'Mountain-300 Black, 40',
+        'For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.',
+        'hotrodbike_black_small.gif', '1079.99', '2002-07-01', '2003-06-30', 'BK-M47B-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('83', '9', 'Mountain-300 Black, 44',
+        'For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.',
+        'hotrodbike_black_small.gif', '1079.99', '2002-07-01', '2003-06-30', 'BK-M47B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('84', '5', 'Mountain-300 Black, 48',
+        'For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.',
+        'hotrodbike_black_small.gif', '1079.99', '2002-07-01', '2003-06-30', 'BK-M47B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('85', '9', 'Road-250 Red, 44',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_red_small.gif', '2443.35', '2002-07-01', '2003-06-30', 'BK-R89R-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('86', '2', 'Road-250 Red, 48',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_red_small.gif', '2443.35', '2002-07-01', '2003-06-30', 'BK-R89R-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('87', '3', 'Road-250 Red, 52',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_red_small.gif', '2443.35', '2002-07-01', '2003-06-30', 'BK-R89R-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('88', '4', 'Road-250 Red, 58',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_red_small.gif', '2443.35', '2002-07-01', NULL, 'BK-R89R-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('89', '7', 'Road-250 Black, 44',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_black_small.gif', '2443.35', '2002-07-01', NULL, 'BK-R89B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('90', '2', 'Road-250 Black, 48',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_black_small.gif', '2443.35', '2002-07-01', NULL, 'BK-R89B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('91', '6', 'Road-250 Black, 52',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_black_small.gif', '2443.35', '2002-07-01', NULL, 'BK-R89B-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('92', '6', 'Road-250 Black, 58',
+        'Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.',
+        'racer_black_small.gif', '2443.35', '2002-07-01', NULL, 'BK-R89B-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('93', '3', 'Road-550-W Yellow, 38',
+        'Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.',
+        'racer02_yellow_f_small.gif', '1120.49', '2002-07-01', NULL, 'BK-R64Y-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('94', '9', 'Road-550-W Yellow, 40',
+        'Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.',
+        'racer02_yellow_f_small.gif', '1120.49', '2002-07-01', NULL, 'BK-R64Y-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('95', '5', 'Road-550-W Yellow, 42',
+        'Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.',
+        'racer02_yellow_f_small.gif', '1120.49', '2002-07-01', NULL, 'BK-R64Y-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('96', '8', 'Road-550-W Yellow, 44',
+        'Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.',
+        'racer02_yellow_f_small.gif', '1120.49', '2002-07-01', NULL, 'BK-R64Y-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('97', '10', 'Road-550-W Yellow, 48',
+        'Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.',
+        'racer02_yellow_f_small.gif', '1120.49', '2002-07-01', NULL, 'BK-R64Y-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('98', '5', 'LL Fork', 'Stout design absorbs shock and offers more precise steering.', 'fork_small.gif', '148.22',
+   '2002-07-01', '2003-06-30', 'FK-1639');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('99', '8', 'ML Fork', 'Composite road fork with an aluminum steerer tube.', 'fork_small.gif', '175.49', '2002-07-01',
+   '2003-06-30', 'FK-5136');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('100', '9', 'HL Fork', 'High-performance carbon road fork with curved legs.', 'fork_small.gif', '229.49',
+        '2002-07-01', '2003-06-30', 'FK-9939');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('101', '3', 'LL Headset', 'Threadless headset provides quality at an economical price.',
+        'no_image_available_small.gif', '34.2', '2002-07-01', '2003-06-30', 'HS-0296');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('102', '7', 'ML Headset', 'Sealed cartridge keeps dirt out.', 'no_image_available_small.gif', '102.29', '2002-07-01',
+   '2003-06-30', 'HS-2451');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('103', '10', 'HL Headset', 'High-quality 1\" threadless headset with a grease port for quick lubrication.',
+        'no_image_available_small.gif', '124.73', '2002-07-01', '2003-06-30', 'HS-3479');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('104', '5', 'LL Mountain Handlebars', 'All-purpose bar for on or off-road.', 'handlebar_small.gif', '44.54',
+        '2002-07-01', NULL, 'HB-M243');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('105', '4', 'ML Mountain Handlebars', 'Tough aluminum alloy bars for downhill.', 'no_image_available_small.gif',
+        '61.92', '2002-07-01', NULL, 'HB-M763');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('106', '4', 'HL Mountain Handlebars', 'Flat bar strong enough for the pro circuit.', 'no_image_available_small.gif',
+   '120.27', '2002-07-01', NULL, 'HB-M918');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('107', '3', 'LL Road Handlebars', 'Unique shape provides easier reach to the levers.',
+        'no_image_available_small.gif', '44.54', '2002-07-01', NULL, 'HB-R504');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('108', '3', 'ML Road Handlebars', 'Anatomically shaped aluminum tube bar will suit all riders.',
+        'no_image_available_small.gif', '61.92', '2002-07-01', NULL, 'HB-R720');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('109', '6', 'HL Road Handlebars', 'Designed for racers; high-end anatomically shaped bar from aluminum alloy.',
+        'no_image_available_small.gif', '120.27', '2002-07-01', NULL, 'HB-R956');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('110', '1', 'ML Mountain Frame - Black, 38',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.',
+        'no_image_available_small.gif', '348.76', '2002-07-01', '2003-06-30', 'FR-M63B-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('111', '2', 'LL Mountain Front Wheel', 'Replacement mountain wheel for entry-level rider.', 'wheel_small.gif',
+        '60.75', '2002-07-01', '2003-06-30', 'FW-M423');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('112', '6', 'ML Mountain Front Wheel', 'Replacement mountain wheel for the casual to serious rider.',
+        'wheel_small.gif', '209.03', '2002-07-01', '2003-06-30', 'FW-M762');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('113', '9', 'HL Mountain Front Wheel', 'High-performance mountain replacement wheel.', 'wheel_small.gif', '300.22',
+   '2002-07-01', '2003-06-30', 'FW-M928');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('114', '1', 'LL Road Front Wheel', 'Replacement road front wheel for entry-level cyclist.', 'wheel_small.gif',
+        '85.57', '2002-07-01', '2003-06-30', 'FW-R623');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('115', '9', 'ML Road Front Wheel', 'Sturdy alloy features a quick-release hub.', 'wheel_small.gif', '248.39',
+        '2002-07-01', '2003-06-30', 'FW-R762');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('116', '1', 'HL Road Front Wheel', 'Strong wheel with double-walled rim.', 'wheel_small.gif', '330.06', '2002-07-01',
+   '2003-06-30', 'FW-R820');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('117', '9', 'Touring Front Wheel', 'Aerodynamic rims for smooth riding.', 'wheel_small.gif', '218.01', '2002-07-01',
+   '2003-06-30', 'FW-T905');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('118', '1', 'ML Road Frame-W - Yellow, 38',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.',
+        'no_image_available_small.gif', '594.83', '2002-07-01', NULL, 'FR-R72Y-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('119', '2', 'LL Mountain Rear Wheel', 'Replacement mountain wheel for entry-level rider.', 'wheel_small.gif',
+        '87.75', '2002-07-01', '2003-06-30', 'RW-M423');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('120', '9', 'ML Mountain Rear Wheel', 'Replacement mountain wheel for the casual to serious rider.',
+        'wheel_small.gif', '236.03', '2002-07-01', '2003-06-30', 'RW-M762');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('121', '5', 'HL Mountain Rear Wheel', 'High-performance mountain replacement wheel.', 'wheel_small.gif', '327.22',
+   '2002-07-01', '2003-06-30', 'RW-M928');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('122', '7', 'LL Road Rear Wheel', 'Replacement road rear wheel for entry-level cyclist.', 'wheel_small.gif',
+        '112.57', '2002-07-01', '2003-06-30', 'RW-R623');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('123', '7', 'ML Road Rear Wheel', 'Aluminum alloy rim with stainless steel spokes; built for speed.',
+        'wheel_small.gif', '275.39', '2002-07-01', '2003-06-30', 'RW-R762');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('124', '7', 'HL Road Rear Wheel', 'Strong rear wheel with double-walled rim.', 'wheel_small.gif', '357.06',
+        '2002-07-01', '2003-06-30', 'RW-R820');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('125', '1', 'Touring Rear Wheel', 'Excellent aerodynamic rims guarantee a smooth ride.', 'wheel_small.gif', '245.01',
+   '2002-07-01', '2003-06-30', 'RW-T905');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('126', '1', 'ML Mountain Frame - Black, 40',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Women\'s version.',
+        'no_image_available_small.gif', '348.76', '2002-07-01', '2003-06-30', 'FR-M63B-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('127', '3', 'ML Mountain Frame - Black, 44',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Women\'s version.',
+        'no_image_available_small.gif', '348.76', '2002-07-01', '2003-06-30', 'FR-M63B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('128', '8', 'ML Mountain Frame - Black, 48',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Women\'s version.',
+        'no_image_available_small.gif', '348.76', '2002-07-01', '2003-06-30', 'FR-M63B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('129', '9', 'ML Road Frame-W - Yellow, 40',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.',
+        'no_image_available_small.gif', '594.83', '2002-07-01', NULL, 'FR-R72Y-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('130', '4', 'ML Road Frame-W - Yellow, 42',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.',
+        'no_image_available_small.gif', '594.83', '2002-07-01', NULL, 'FR-R72Y-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('131', '9', 'ML Road Frame-W - Yellow, 44',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.',
+        'no_image_available_small.gif', '594.83', '2002-07-01', NULL, 'FR-R72Y-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('132', '1', 'ML Road Frame-W - Yellow, 48',
+        'Made from the same aluminum alloy as our top-of-the line HL frame, the ML features a lightweight down-tube milled to the perfect diameter for optimal strength. Women\'s version.',
+        'no_image_available_small.gif', '594.83', '2002-07-01', NULL, 'FR-R72Y-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('133', '4', 'HL Road Frame - Black, 62',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2002-07-01', NULL, 'FR-R92B-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('134', '8', 'HL Road Frame - Black, 44',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2002-07-01', NULL, 'FR-R92B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('135', '4', 'HL Road Frame - Black, 48',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2002-07-01', NULL, 'FR-R92B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('136', '6', 'HL Road Frame - Black, 52',
+        'Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.',
+        'no_image_available_small.gif', '1431.5', '2002-07-01', NULL, 'FR-R92B-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('137', '6', 'Men\'s Sports Shorts, S',
+        'Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.', 'shorts_male_small.gif',
+        '59.99', '2002-07-01', '2003-06-30', 'SH-M897-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('138', '5', 'Touring-Panniers, Large',
+        'Durable, water-proof nylon construction with easy access. Large enough for weekend trips.',
+        'no_image_available_small.gif', '125', '2002-07-01', '2003-06-30', 'PA-T100');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('139', '4', 'Cable Lock', 'Wraps to fit front and rear tires, carrier and 2 keys included.', 'bike_lock_small.gif',
+   '25', '2002-07-01', '2003-06-30', 'LO-C100');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('140', '5', 'Minipump', 'Designed for convenience. Fits in your pocket. Aluminum barrel. 160psi rated.',
+        'handpump_small.gif', '19.99', '2002-07-01', '2003-06-30', 'PU-0452');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('141', '10', 'Mountain Pump', 'Simple and light-weight. Emergency patches stored in handle.', 'bikepump_small.gif',
+   '24.99', '2002-07-01', '2003-06-30', 'PU-M044');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('142', '4', 'Taillights - Battery-Powered', 'Affordable light for safe night riding - uses 3 AAA batteries',
+        'tail_lights_small.gif', '13.99', '2002-07-01', '2003-06-30', 'LT-T990');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('143', '10', 'Headlights - Dual-Beam', 'Rechargeable dual-beam headlight.', 'double_headlight_small.gif', '34.99',
+   '2002-07-01', '2003-06-30', 'LT-H902');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('144', '7', 'Headlights - Weatherproof', 'Rugged weatherproof headlight.', 'single_headlight_small.gif', '44.99',
+   '2002-07-01', '2003-06-30', 'LT-H903');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('145', '5', 'Men\'s Sports Shorts, M',
+        'Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.', 'shorts_male_small.gif',
+        '59.99', '2002-07-01', '2003-06-30', 'SH-M897-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('146', '9', 'Men\'s Sports Shorts, L',
+        'Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.', 'shorts_male_small.gif',
+        '59.99', '2002-07-01', '2003-06-30', 'SH-M897-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('147', '5', 'Men\'s Sports Shorts, XL',
+        'Men\'s 8-panel racing shorts - lycra with an elastic waistband and leg grippers.', 'shorts_male_small.gif',
+        '59.99', '2002-07-01', '2003-06-30', 'SH-M897-X');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('148', '5', 'Women\'s Tights, S',
+        'Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.',
+        'no_image_available_small.gif', '74.99', '2002-07-01', '2003-06-30', 'TG-W091-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('149', '10', 'Women\'s Tights, M',
+        'Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.',
+        'no_image_available_small.gif', '74.99', '2002-07-01', '2003-06-30', 'TG-W091-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('150', '9', 'Women\'s Tights, L',
+        'Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.',
+        'no_image_available_small.gif', '74.99', '2002-07-01', '2003-06-30', 'TG-W091-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('151', '9', 'Men\'s Bib-Shorts, S',
+        'Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.',
+        'no_image_available_small.gif', '89.99', '2002-07-01', '2003-06-30', 'SB-M891-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('152', '8', 'Men\'s Bib-Shorts, M',
+        'Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.',
+        'no_image_available_small.gif', '89.99', '2002-07-01', '2003-06-30', 'SB-M891-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('153', '4', 'Men\'s Bib-Shorts, L',
+        'Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.',
+        'no_image_available_small.gif', '89.99', '2002-07-01', '2003-06-30', 'SB-M891-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('154', '7', 'Half-Finger Gloves, S', 'Full padding, improved finger flex, durable palm, adjustable closure.',
+        'no_image_available_small.gif', '24.49', '2002-07-01', NULL, 'GL-H102-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('155', '9', 'Half-Finger Gloves, M', 'Full padding, improved finger flex, durable palm, adjustable closure.',
+        'no_image_available_small.gif', '24.49', '2002-07-01', NULL, 'GL-H102-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('156', '2', 'Half-Finger Gloves, L', 'Full padding, improved finger flex, durable palm, adjustable closure.',
+        'no_image_available_small.gif', '24.49', '2002-07-01', NULL, 'GL-H102-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('157', '3', 'Full-Finger Gloves, S',
+        'Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.',
+        'no_image_available_small.gif', '37.99', '2002-07-01', '2003-06-30', 'GL-F110-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('158', '4', 'Full-Finger Gloves, M',
+        'Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.',
+        'no_image_available_small.gif', '37.99', '2002-07-01', '2003-06-30', 'GL-F110-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('159', '3', 'Full-Finger Gloves, L',
+        'Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.',
+        'no_image_available_small.gif', '37.99', '2002-07-01', '2003-06-30', 'GL-F110-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('160', '6', 'Classic Vest, S', 'Light-weight, wind-resistant, packs to fit into a pocket.',
+        'no_image_available_small.gif', '63.5', '2003-07-01', NULL, 'VE-C304-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('161', '1', 'Classic Vest, M', 'Light-weight, wind-resistant, packs to fit into a pocket.',
+        'no_image_available_small.gif', '63.5', '2003-07-01', NULL, 'VE-C304-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('162', '6', 'Classic Vest, L', 'Light-weight, wind-resistant, packs to fit into a pocket.',
+        'no_image_available_small.gif', '63.5', '2003-07-01', NULL, 'VE-C304-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('163', '7', 'Women\'s Mountain Shorts, S',
+        'Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.',
+        'shorts_female_small.gif', '69.99', '2003-07-01', NULL, 'SH-W890-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('164', '2', 'Women\'s Mountain Shorts, M',
+        'Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.',
+        'shorts_female_small.gif', '69.99', '2003-07-01', NULL, 'SH-W890-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('165', '8', 'Women\'s Mountain Shorts, L',
+        'Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.',
+        'shorts_female_small.gif', '69.99', '2003-07-01', NULL, 'SH-W890-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('166', '4', 'Water Bottle - 30 oz.', 'AWC logo water bottle - holds 30 oz; leak-proof.', 'water_bottle_small.gif',
+   '4.99', '2003-07-01', NULL, 'WB-H098');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('167', '8', 'Mountain Bottle Cage', 'Tough aluminum cage holds bottle securly on tough terrain.',
+        'no_image_available_small.gif', '9.99', '2003-07-01', NULL, 'BC-M005');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('168', '3', 'Road Bottle Cage',
+        'Aluminum cage is lighter than our mountain version; perfect for long distance trips.',
+        'water_bottle_cage_small.gif', '8.99', '2003-07-01', NULL, 'BC-R205');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('169', '9', 'Patch Kit/8 Patches', 'Includes 8 different size patches, glue and sandpaper.',
+        'tirepatch_kit_small.gif', '2.29', '2003-07-01', NULL, 'PK-7098');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('170', '6', 'Racing Socks, M', 'Thin, lightweight and durable with cuffs that stay up.',
+        'no_image_available_small.gif', '8.99', '2003-07-01', NULL, 'SO-R809-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('171', '3', 'Racing Socks, L', 'Thin, lightweight and durable with cuffs that stay up.',
+        'no_image_available_small.gif', '8.99', '2003-07-01', NULL, 'SO-R809-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('172', '5', 'Hitch Rack - 4-Bike', 'Carries 4 bikes securely; steel construction, fits 2\" receiver hitch.',
+        'no_image_available_small.gif', '120', '2003-07-01', NULL, 'RA-H123');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('173', '8', 'Bike Wash - Dissolver',
+        'Washes off the toughest road grime; dissolves grease, environmentally safe. 1-liter bottle.',
+        'no_image_available_small.gif', '7.95', '2003-07-01', NULL, 'CL-9009');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('174', '8', 'Fender Set - Mountain', 'Clip-on fenders fit most mountain bikes.', 'no_image_available_small.gif',
+        '21.98', '2003-07-01', NULL, 'FE-6654');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('175', '6', 'All-Purpose Bike Stand',
+        'Perfect all-purpose bike stand for working on your bike at home. Quick-adjusting clamps and steel construction.',
+        'no_image_available_small.gif', '159', '2003-07-01', NULL, 'ST-1401');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('176', '2', 'Hydration Pack - 70 oz.',
+        'Versatile 70 oz hydration pack offers extra storage, easy-fill access, and a waist belt.',
+        'no_image_available_small.gif', '54.99', '2003-07-01', NULL, 'HY-1023-70');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('177', '4', 'Short-Sleeve Classic Jersey, S',
+        'Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.',
+        'awc_tee_male_yellow_small.gif', '53.99', '2003-07-01', NULL, 'SJ-0194-S');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('178', '2', 'Short-Sleeve Classic Jersey, M',
+        'Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.',
+        'awc_tee_male_yellow_small.gif', '53.99', '2003-07-01', NULL, 'SJ-0194-M');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('179', '4', 'Short-Sleeve Classic Jersey, L',
+        'Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.',
+        'awc_tee_male_yellow_small.gif', '53.99', '2003-07-01', NULL, 'SJ-0194-L');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('180', '8', 'Short-Sleeve Classic Jersey, XL',
+        'Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.',
+        'awc_tee_male_yellow_small.gif', '53.99', '2003-07-01', NULL, 'SJ-0194-X');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('181', '9', 'HL Touring Frame - Yellow, 60',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98Y-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('182', '3', 'LL Touring Frame - Yellow, 62',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'frame_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67Y-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('183', '3', 'HL Touring Frame - Yellow, 46',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98Y-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('184', '5', 'HL Touring Frame - Yellow, 50',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98Y-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('185', '8', 'HL Touring Frame - Yellow, 54',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98Y-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('186', '8', 'HL Touring Frame - Blue, 46',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98U-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('187', '8', 'HL Touring Frame - Blue, 50',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98U-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('188', '5', 'HL Touring Frame - Blue, 54',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98U-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('189', '7', 'HL Touring Frame - Blue, 60',
+        'The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men\'s version.',
+        'no_image_available_small.gif', '1003.91', '2003-07-01', NULL, 'FR-T98U-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('190', '7', 'Rear Derailleur', 'Wide-link design.', 'sprocket_small.gif', '121.46', '2003-07-01', NULL, 'RD-2308');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('191', '7', 'LL Touring Frame - Blue, 50',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'no_image_available_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67U-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('192', '7', 'LL Touring Frame - Blue, 54',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'no_image_available_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67U-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('193', '8', 'LL Touring Frame - Blue, 58',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'no_image_available_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67U-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('194', '3', 'LL Touring Frame - Blue, 62',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'no_image_available_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67U-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('195', '5', 'LL Touring Frame - Yellow, 44',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'frame_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67Y-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('196', '6', 'LL Touring Frame - Yellow, 50',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'frame_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67Y-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('197', '7', 'LL Touring Frame - Yellow, 54',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'frame_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67Y-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('198', '7', 'LL Touring Frame - Yellow, 58',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'frame_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67Y-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('199', '1', 'LL Touring Frame - Blue, 44',
+        'Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.',
+        'no_image_available_small.gif', '333.42', '2003-07-01', NULL, 'FR-T67U-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('200', '6', 'ML Mountain Frame-W - Silver, 40',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.',
+        'no_image_available_small.gif', '364.09', '2003-07-01', NULL, 'FR-M63S-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('201', '9', 'ML Mountain Frame-W - Silver, 42',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.',
+        'no_image_available_small.gif', '364.09', '2003-07-01', NULL, 'FR-M63S-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('202', '1', 'ML Mountain Frame-W - Silver, 46',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.',
+        'no_image_available_small.gif', '364.09', '2003-07-01', NULL, 'FR-M63S-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('203', '10', 'LL Mountain Seat/Saddle', 'Synthetic leather. Features gel for increased comfort.', 'saddle_small.gif',
+   '27.12', '2003-07-01', NULL, 'SE-M236');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('204', '5', 'ML Mountain Seat/Saddle', 'Designed to absorb shock.', 'no_image_available_small.gif', '39.14',
+        '2003-07-01', NULL, 'SE-M798');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('205', '1', 'HL Mountain Seat/Saddle', 'Anatomic design for a full-day of riding in comfort. Durable leather.',
+        'no_image_available_small.gif', '52.64', '2003-07-01', NULL, 'SE-M940');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('206', '5', 'LL Road Seat/Saddle', 'Lightweight foam-padded saddle.', 'no_image_available_small.gif', '27.12',
+        '2003-07-01', NULL, 'SE-R581');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('207', '3', 'ML Road Seat/Saddle', 'Rubber bumpers absorb bumps.', 'no_image_available_small.gif', '39.14',
+        '2003-07-01', NULL, 'SE-R908');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('208', '7', 'HL Road Seat/Saddle', 'Lightweight kevlar racing saddle. Leather.', 'no_image_available_small.gif',
+        '52.64', '2003-07-01', NULL, 'SE-R995');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('209', '7', 'LL Touring Seat/Saddle', 'Comfortable, ergonomically shaped gel saddle.',
+        'no_image_available_small.gif', '27.12', '2003-07-01', NULL, 'SE-T312');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('210', '6', 'ML Touring Seat/Saddle', 'New design relieves pressure for long rides.', 'no_image_available_small.gif',
+   '39.14', '2003-07-01', NULL, 'SE-T762');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('211', '8', 'HL Touring Seat/Saddle', 'Cut-out shell for a more comfortable ride.', 'no_image_available_small.gif',
+   '52.64', '2003-07-01', NULL, 'SE-T924');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('212', '2', 'LL Mountain Frame - Silver, 42',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '264.05', '2003-07-01', NULL, 'FR-M21S-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('213', '9', 'LL Mountain Frame - Silver, 44',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '264.05', '2003-07-01', NULL, 'FR-M21S-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('214', '10', 'LL Mountain Frame - Silver, 48',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '264.05', '2003-07-01', NULL, 'FR-M21S-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('215', '10', 'LL Mountain Frame - Silver, 52',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '264.05', '2003-07-01', NULL, 'FR-M21S-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('216', '1', 'Mountain Tire Tube', 'Self-sealing tube.', 'no_image_available_small.gif', '4.99', '2003-07-01', NULL,
+   'TT-M928');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('217', '3', 'Road Tire Tube', 'Conventional all-purpose tube.', 'no_image_available_small.gif', '3.99', '2003-07-01',
+   NULL, 'TT-R982');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('218', '9', 'Touring Tire Tube', 'General purpose tube.', 'innertube_small.gif', '4.99', '2003-07-01', NULL,
+        'TT-T092');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('219', '1', 'LL Mountain Frame - Black, 42',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '249.79', '2003-07-01', NULL, 'FR-M21B-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('220', '8', 'LL Mountain Frame - Black, 44',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '249.79', '2003-07-01', NULL, 'FR-M21B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('221', '4', 'LL Mountain Frame - Black, 48',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '249.79', '2003-07-01', NULL, 'FR-M21B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('222', '4', 'LL Mountain Frame - Black, 52',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '249.79', '2003-07-01', NULL, 'FR-M21B-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('223', '4', 'LL Mountain Tire', 'Comparible traction, less expensive wire bead casing.',
+        'no_image_available_small.gif', '24.99', '2003-07-01', NULL, 'TI-M267');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('224', '7', 'ML Mountain Tire', 'Great traction, high-density rubber.', 'no_image_available_small.gif', '29.99',
+        '2003-07-01', NULL, 'TI-M602');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('225', '2', 'HL Mountain Tire', 'Incredible traction, lightweight carbon reinforced.', 'mb_tires_small.gif', '35',
+   '2003-07-01', NULL, 'TI-M823');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('226', '7', 'LL Road Tire', 'Same great treads as more expensive tire with a less expensive wire bead casing.',
+        'no_image_available_small.gif', '21.49', '2003-07-01', NULL, 'TI-R092');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('227', '10', 'ML Road Tire', 'Higher density rubber.', 'no_image_available_small.gif', '24.99', '2003-07-01', NULL,
+   'TI-R628');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('228', '2', 'HL Road Tire', 'Lightweight carbon reinforced  for an unrivaled ride at an un-compromised weight.',
+        'street_tires_small.gif', '32.6', '2003-07-01', NULL, 'TI-R982');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('229', '6', 'Touring Tire', 'High-density rubber.', 'no_image_available_small.gif', '28.99', '2003-07-01', NULL,
+        'TI-T723');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('230', '2', 'LL Mountain Pedal', 'Expanded platform so you can ride in any shoes; great for all-around riding.',
+        'pedal_small.gif', '40.49', '2003-07-01', NULL, 'PD-M282');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('231', '3', 'ML Mountain Pedal', 'Lightweight, durable, clipless pedal with adjustable tension.', 'pedal_small.gif',
+   '62.09', '2003-07-01', NULL, 'PD-M340');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('232', '1', 'HL Mountain Pedal', 'Stainless steel; designed to shed mud easily.', 'pedal_small.gif', '80.99',
+        '2003-07-01', NULL, 'PD-M562');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('233', '3', 'LL Road Pedal', 'Clipless pedals - aluminum.', 'clipless_pedals_small.gif', '40.49', '2003-07-01', NULL,
+   'PD-R347');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('234', '10', 'ML Road Pedal', 'Lightweight aluminum alloy construction.', 'clipless_pedals_small.gif', '62.09',
+        '2003-07-01', NULL, 'PD-R563');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('235', '7', 'HL Road Pedal', 'Top-of-the-line clipless pedals with adjustable tension.', 'clipless_pedals_small.gif',
+   '80.99', '2003-07-01', NULL, 'PD-R853');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('236', '6', 'Touring Pedal', 'A stable pedal for all-day riding.', 'clipless_pedals_small.gif', '80.99',
+        '2003-07-01', NULL, 'PD-T852');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('237', '9', 'ML Mountain Frame-W - Silver, 38',
+        'The ML frame is a heat-treated aluminum frame made with the same detail and quality as our HL frame. It offers superior performance. Men\'s version.',
+        'no_image_available_small.gif', '364.09', '2003-07-01', NULL, 'FR-M63S-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('238', '5', 'LL Mountain Frame - Black, 40',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '249.79', '2003-07-01', NULL, 'FR-M21B-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('239', '3', 'LL Mountain Frame - Silver, 40',
+        'Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.',
+        'no_image_available_small.gif', '264.05', '2003-07-01', NULL, 'FR-M21S-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('240', '6', 'Front Derailleur', 'Wide-link design.', 'no_image_available_small.gif', '91.49', '2003-07-01', NULL,
+   'FD-2342');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('241', '2', 'LL Touring Handlebars', 'Unique shape reduces fatigue for entry level riders.',
+        'no_image_available_small.gif', '46.09', '2003-07-01', NULL, 'HB-T721');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('242', '2', 'HL Touring Handlebars', 'A light yet stiff aluminum bar for long distance riding.',
+        'no_image_available_small.gif', '91.57', '2003-07-01', NULL, 'HB-T928');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('243', '4', 'Front Brakes',
+        'All-weather brake pads; provides superior stopping by applying more surface to the rim.',
+        'no_image_available_small.gif', '106.5', '2003-07-01', NULL, 'FB-9873');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('244', '5', 'LL Crankset', 'Super rigid spindle.', 'no_image_available_small.gif', '175.49', '2003-07-01', NULL,
+        'CS-4759');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('245', '7', 'ML Crankset', 'High-strength crank arm.', 'no_image_available_small.gif', '256.49', '2003-07-01', NULL,
+   'CS-6583');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('246', '2', 'HL Crankset', 'Triple crankset; alumunim crank arm; flawless shifting.', 'no_image_available_small.gif',
+   '404.99', '2003-07-01', NULL, 'CS-9183');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('247', '8', 'Chain', 'Superior shifting performance.', 'silver_chain_small.gif', '20.24', '2003-07-01', NULL,
+        'CH-0234');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('248', '7', 'Touring-2000 Blue, 60',
+        'The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.',
+        'julianax_r_02_blue_small.gif', '1214.85', '2003-07-01', NULL, 'BK-T44U-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('249', '5', 'Touring-1000 Yellow, 46',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_yellow_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79Y-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('250', '7', 'Touring-1000 Yellow, 50',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_yellow_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79Y-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('251', '8', 'Touring-1000 Yellow, 54',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_yellow_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79Y-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('252', '8', 'Touring-1000 Yellow, 60',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_yellow_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79Y-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('253', '3', 'Touring-3000 Blue, 54',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_blue_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18U-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('254', '6', 'Touring-3000 Blue, 58',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_blue_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18U-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('255', '8', 'Touring-3000 Blue, 62',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_blue_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18U-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('256', '7', 'Touring-3000 Yellow, 44',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_yellow_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18Y-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('257', '7', 'Touring-3000 Yellow, 50',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_yellow_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18Y-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('258', '4', 'Touring-3000 Yellow, 54',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_yellow_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18Y-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('259', '3', 'Touring-3000 Yellow, 58',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_yellow_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18Y-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('260', '7', 'Touring-3000 Yellow, 62',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_yellow_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18Y-62');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('261', '3', 'Touring-1000 Blue, 46',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_blue_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79U-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('262', '10', 'Touring-1000 Blue, 50',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_blue_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79U-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('263', '4', 'Touring-1000 Blue, 54',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_blue_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79U-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('264', '6', 'Touring-1000 Blue, 60',
+        'Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.',
+        'julianax_r_02_blue_small.gif', '2384.07', '2003-07-01', NULL, 'BK-T79U-60');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('265', '5', 'Touring-2000 Blue, 46',
+        'The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.',
+        'julianax_r_02_blue_small.gif', '1214.85', '2003-07-01', NULL, 'BK-T44U-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('266', '6', 'Touring-2000 Blue, 50',
+        'The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.',
+        'julianax_r_02_blue_small.gif', '1214.85', '2003-07-01', NULL, 'BK-T44U-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('267', '1', 'Touring-2000 Blue, 54',
+        'The plush custom saddle keeps you riding all day,  and there\'s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.',
+        'julianax_r_02_blue_small.gif', '1214.85', '2003-07-01', NULL, 'BK-T44U-54');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('268', '4', 'Road-350-W Yellow, 40',
+        'Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.',
+        'roadster_yellow_f_small.gif', '1700.99', '2003-07-01', NULL, 'BK-R79Y-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('269', '9', 'Road-350-W Yellow, 42',
+        'Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.',
+        'roadster_yellow_f_small.gif', '1700.99', '2003-07-01', NULL, 'BK-R79Y-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('270', '5', 'Road-350-W Yellow, 44',
+        'Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.',
+        'roadster_yellow_f_small.gif', '1700.99', '2003-07-01', NULL, 'BK-R79Y-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('271', '9', 'Road-350-W Yellow, 48',
+        'Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.',
+        'roadster_yellow_f_small.gif', '1700.99', '2003-07-01', NULL, 'BK-R79Y-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('272', '5', 'Road-750 Black, 58',
+        'Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.',
+        'roadster_black_small.gif', '539.99', '2003-07-01', NULL, 'BK-R19B-58');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('273', '1', 'Touring-3000 Blue, 44',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_blue_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18U-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('274', '8', 'Touring-3000 Blue, 50',
+        'All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.',
+        'julianax_r_02_blue_small.gif', '742.35', '2003-07-01', NULL, 'BK-T18U-50');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('275', '9', 'Mountain-400-W Silver, 38',
+        'This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.',
+        'hotrodbike_f_small.gif', '769.49', '2003-07-01', NULL, 'BK-M38S-38');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('276', '2', 'Mountain-400-W Silver, 40',
+        'This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.',
+        'hotrodbike_f_small.gif', '769.49', '2003-07-01', NULL, 'BK-M38S-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('277', '8', 'Mountain-400-W Silver, 42',
+        'This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.',
+        'hotrodbike_f_small.gif', '769.49', '2003-07-01', NULL, 'BK-M38S-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('278', '4', 'Mountain-400-W Silver, 46',
+        'This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.',
+        'hotrodbike_f_small.gif', '769.49', '2003-07-01', NULL, 'BK-M38S-46');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('279', '2', 'Mountain-500 Silver, 40',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '564.99', '2003-07-01', NULL, 'BK-M18S-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('280', '2', 'Mountain-500 Silver, 42',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '564.99', '2003-07-01', NULL, 'BK-M18S-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('281', '9', 'Mountain-500 Silver, 44',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '564.99', '2003-07-01', NULL, 'BK-M18S-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('282', '7', 'Mountain-500 Silver, 48',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '564.99', '2003-07-01', NULL, 'BK-M18S-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('283', '4', 'Mountain-500 Silver, 52',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '564.99', '2003-07-01', NULL, 'BK-M18S-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('284', '7', 'Mountain-500 Black, 40',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '539.99', '2003-07-01', NULL, 'BK-M18B-40');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('285', '2', 'Mountain-500 Black, 42',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '539.99', '2003-07-01', NULL, 'BK-M18B-42');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('286', '5', 'Mountain-500 Black, 44',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '539.99', '2003-07-01', NULL, 'BK-M18B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('287', '2', 'Mountain-500 Black, 48',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '539.99', '2003-07-01', NULL, 'BK-M18B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('288', '1', 'Mountain-500 Black, 52',
+        'Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.',
+        'no_image_available_small.gif', '539.99', '2003-07-01', NULL, 'BK-M18B-52');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('289', '4', 'LL Bottom Bracket', 'Chromoly steel.', 'no_image_available_small.gif', '53.99', '2003-07-01', NULL,
+        'BB-7421');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('290', '5', 'ML Bottom Bracket', 'Aluminum alloy cups; large diameter spindle.', 'no_image_available_small.gif',
+        '101.24', '2003-07-01', NULL, 'BB-8107');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES
+  ('291', '3', 'HL Bottom Bracket', 'Aluminum alloy cups and a hollow axle.', 'no_image_available_small.gif', '121.49',
+   '2003-07-01', NULL, 'BB-9108');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('292', '2', 'Road-750 Black, 44',
+        'Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.',
+        'roadster_black_small.gif', '539.99', '2003-07-01', NULL, 'BK-R19B-44');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('293', '1', 'Road-750 Black, 48',
+        'Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.',
+        'roadster_black_small.gif', '539.99', '2003-07-01', NULL, 'BK-R19B-48');
+INSERT INTO product (id, supplier_id, name, description, image, price, available_from, available_until, supplier_product_id)
+VALUES ('294', '6', 'Road-750 Black, 52',
+        'Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.',
+        'roadster_black_small.gif', '539.99', '2003-07-01', NULL, 'BK-R19B-52');
 
 # UPDATE product SET image = '' where image = '';
 

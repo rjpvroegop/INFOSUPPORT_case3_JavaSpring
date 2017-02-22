@@ -6,6 +6,7 @@ import com.infosupport.bsklantbeheer.repository.CustomerRepository;
 import com.infosupport.bsklantbeheer.service.CustomerService;
 import com.infosupport.bsklantbeheer.validation.CustomerValidation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
@@ -16,6 +17,7 @@ import java.util.Collection;
  * Created by Sander on 9-1-17.
  */
 @Service("customerService")
+@Repository
 public class CustomerServiceImpl implements CustomerService {
 
     private CustomerRepository customerRepository;
@@ -55,18 +57,5 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.findAll();
     }
 
-    @Override
-    public Customer createBsKeyCustomer(Customer customer) {
-        long numberOfAccounts = customerRepository.count();
-        long bsKeyNumber = numberOfAccounts + 1;
-        String bsKeyPrefix = "CUST";
-        StringBuilder bsKey = new StringBuilder();
-        bsKey.append(String.valueOf(bsKeyNumber));
-        while (bsKey.toString().length() != 6) {
-            bsKey.insert(0, "0");
-        }
-        bsKey.insert(0, bsKeyPrefix);
-        customer.setBsKey(bsKey.toString());
-        return customer;
-    }
+
 }

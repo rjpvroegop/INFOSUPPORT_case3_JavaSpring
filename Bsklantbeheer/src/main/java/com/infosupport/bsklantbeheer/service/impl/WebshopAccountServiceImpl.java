@@ -2,10 +2,10 @@ package com.infosupport.bsklantbeheer.service.impl;
 
 import com.infosupport.bsklantbeheer.domain.WebshopAccount;
 import com.infosupport.bsklantbeheer.repository.WebshopAccountRepository;
-import com.infosupport.bsklantbeheer.service.CustomerService;
 import com.infosupport.bsklantbeheer.service.WebshopAccountService;
 import com.infosupport.bsklantbeheer.validation.CustomerValidation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
@@ -14,15 +14,14 @@ import javax.xml.bind.ValidationException;
  * Created by maart on 10-1-2017.
  */
 @Service("webshopAccountService")
+@Repository
 public class WebshopAccountServiceImpl implements WebshopAccountService {
 
     private WebshopAccountRepository webshopAccountRepository;
-    private CustomerService customerService;
 
     @Autowired
-    public WebshopAccountServiceImpl(WebshopAccountRepository webshopAccountRepository, CustomerService customerService) {
+    public WebshopAccountServiceImpl(WebshopAccountRepository webshopAccountRepository) {
         this.webshopAccountRepository = webshopAccountRepository;
-        this.customerService = customerService;
     }
 
     @Override
@@ -31,7 +30,7 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
     }
 
     @Override
-    public WebshopAccount login(String username, String password) {
+    public WebshopAccount getWebshopAccount(String username, String password) {
         WebshopAccount account = webshopAccountRepository.findByUserName(username);
         if (validateAccountData(account, password)) {
             return account;
@@ -42,10 +41,7 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
 
     @Override
     public WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) throws ValidationException {
-        //create business key customer
-
         if (checkSaveWebshopAccountValidity(webshopAccount) && CustomerValidation.validateCustomer(webshopAccount.getCustomer())) {
-            webshopAccount.getCustomer().setBsKey(customerService.createBsKeyCustomer(webshopAccount.getCustomer()).getBsKey());
             return webshopAccountRepository.save(webshopAccount);
         } else {
             throw new ValidationException("Invalid account data!");
@@ -68,6 +64,5 @@ public class WebshopAccountServiceImpl implements WebshopAccountService {
         }
         return false;
     }
-
 
 }

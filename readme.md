@@ -1,14 +1,4 @@
-# Kantilever backend
-
-To access the API, use the base URL with the required parameters.
-For example, to find the stock item with `id == 1`, use the following url in development mode:
-
->http://localhost:10001/bsvoorraadbeheer/stock/1
-
-To access the API, use the base URL with the required parameters.
-For example, to find the stock item with `id == 1`, use the following url in development mode:
-
->http://localhost:10001/bsvoorraadbeheer/stock/1
+#Kantilever backend
 
 ## Discovery server
 
@@ -32,102 +22,44 @@ For example, to find the stock item with `id == 1`, use the following url in dev
 
 ### API Methods
 
-API Endpoints
+**/bsvoorraadbeheer**
 
-1. Eureka:
+Redirects the API calls to the voorraadbeheer API endpoints
 
-a. http://localhost:10000
+##Business Services
 
-2. Zuul API:
+###Voorraadbeheer
 
-```
-i. http://localhost:10001/{{servicename}}
+####API Methods
 
-ii.    http://localhost:10001/login (post a user)
+---
 
-iii.   http://localhost:10001/logout
-```
+> GET **/stock**
 
-3. BSCatalogusbeheer
+Returns one array with all stock items.
 
-a. http://localhost:10001/bscatalogusbeheer
+Example: `[{"productId":1,"stock":3}]`
 
-```
-i. /orders                   get all orders
+---
 
-ii.    /orders/posted             get posted orders
+> GET **/stock/{stockitemId}**
 
-iii.   /orders/packed          get packed orders
+Returns one stockitem.
 
-iv.    /orders/{{id}}             get order
+Example: `{"productId":1,"stock":3}`
 
-v. /orders/pack/{{id}}          (post) change status
+---
 
-vi.    /orders/send/{{id}}          (post) change status
+> GET **/stock/csv**
 
-vii.   /orders/datavaultdata/{{interval}}    get BSKeys
+Returns the stock items in a CSV file
 
-viii.  /orders                (post)     new order
-```
+---
 
-4. BSKlantbeheer
+> PUT **/stock/csv/interval**
 
-a. http://localhost:10001/bsklantbeheer
+Change the CSV Generator interval in minutes
 
-```
-i. /address            (post) new Address
+The request body should be an integer representing the amount of minutes.
 
-ii.    /address/{{addressid}}          get address
-
-iii.   /address/delete/{{addressid}}     (put)  remove address
-
-iv.    /customers/{{id}}           get customer
-
-v. /customers/editcustomer       (put)  edit customer
-
-vi.    /accounts/{{id}}            get account
-
-vii.   /accounts/login/{{username}}/{{password}}  login
-
-viii.  /accounts/newaccount         (post) register
-```
-
-5. BSVoorraadbeheer
-
-a. http://localhost:10001/bsvoorraadbeheer
-
-```
-i. /stock/{{productid}}            get stock item
-
-ii.    /stock             (put)  mutate stock item
-
-iii.   /stock                get all stock items
-```
-
-6. BSBestellingenbeheer
-
-a. http://localhost:10001/bsbestellingenbeheer
-```
-i. /orders                   get all orders
-
-ii.    /orders/posted             get posted orders
-
-iii.   /orders/packed          get packed orders
-
-iv.    /orders/{{id}}             get order
-
-v. /orders/pack/{{id}}          (post) pack order
-
-vi.    /orders/send/{{id}}          (post) send order
-
-vii.   /orders/datavaultdata/{{interval}}    get order BSKeys of interval
-
-viii.  /orders                (post) new order
-```
-7. ISDatavault
-
-a. http://localhost:10001/isdatavault
-```
-i. /datavault/{{interval}}             get order BSKeys of interval
-```
-
+---

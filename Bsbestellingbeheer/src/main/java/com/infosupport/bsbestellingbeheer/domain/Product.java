@@ -12,7 +12,6 @@ import lombok.*;
 @AllArgsConstructor
 public class Product {
     private Long id;
-    private String bsKey;
     private String name;
     private String supplierProductId;
     private Double price;

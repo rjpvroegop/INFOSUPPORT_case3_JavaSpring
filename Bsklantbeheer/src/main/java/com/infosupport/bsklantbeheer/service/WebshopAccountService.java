@@ -11,7 +11,7 @@ public interface WebshopAccountService {
 
     WebshopAccount getWebshopAccount(Long id);
 
-    WebshopAccount login(String username, String password);
+    WebshopAccount getWebshopAccount(String username, String password);
 
     WebshopAccount saveWebshopAccount(WebshopAccount webshopAccount) throws ValidationException;
 }

@@ -5,6 +5,7 @@ import com.infosupport.bscatalogusbeheer.repository.CategoryRepository;
 import com.infosupport.bscatalogusbeheer.repository.ProductRepository;
 import com.infosupport.bscatalogusbeheer.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
  */
 
 @Service("categoryService")
+@Repository
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
@@ -26,7 +28,6 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<Category> findAllCategories() {
-        //Skip 4 main categories
         return categoryRepository.findAll()
                 .stream()
                 .skip(4)

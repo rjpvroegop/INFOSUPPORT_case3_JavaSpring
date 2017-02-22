@@ -16,6 +16,4 @@ public interface CustomerService {
 
     Collection<Customer> getAllCustomers();
 
-    Customer createBsKeyCustomer(Customer customer);
-
 }

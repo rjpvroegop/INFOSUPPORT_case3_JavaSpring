@@ -2,7 +2,6 @@ package com.infosupport.bsklantbeheer.resource;
 
 import com.infosupport.bsklantbeheer.domain.WebshopAccount;
 import com.infosupport.bsklantbeheer.service.WebshopAccountService;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +21,6 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping("accounts")
 public class WebshopAccountResource {
 
-    private static Logger LOGGER = Logger.getLogger(WebshopAccount.class);
-
     private WebshopAccountService webshopAccountService;
 
     @Autowired
@@ -38,9 +35,9 @@ public class WebshopAccountResource {
         return generateResponse(webshopAccount, HttpStatus.OK, HttpStatus.BAD_REQUEST);
     }
 
-    @RequestMapping(value = "/login/{username}/{password}", method = GET)
-    public ResponseEntity<WebshopAccount> getWebshopAccount(@PathVariable("username") String username, @PathVariable("password") String password) {
-        WebshopAccount webshopAccount = webshopAccountService.login(username, password);
+    @RequestMapping(method = POST)
+    public ResponseEntity<WebshopAccount> getWebshopAccount(@RequestBody WebshopAccount webshopAccount) {
+        webshopAccount = webshopAccountService.getWebshopAccount(webshopAccount.getUserName(), webshopAccount.getPassword());
         return generateResponse(webshopAccount, HttpStatus.OK, HttpStatus.UNAUTHORIZED);
     }
 
@@ -50,7 +47,6 @@ public class WebshopAccountResource {
             webshopAccount = webshopAccountService.saveWebshopAccount(webshopAccount);
             return generateResponse(webshopAccount, HttpStatus.CREATED, HttpStatus.CONFLICT);
         } catch (ValidationException e) {
-            LOGGER.info(e);
             throw new HttpMediaTypeNotAcceptableException(e.getMessage());
         }
 
